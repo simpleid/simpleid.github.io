@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Donate
 date: 2009-06-10 22:19:44
 ---

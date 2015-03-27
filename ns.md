@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: SimpleID Namespace URI
 date: 2009-06-06 18:47:11
 permalink: /ns/

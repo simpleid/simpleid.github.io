@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Compare SimpleID editions
 date: 2012-03-04 13:20:36
 published: false

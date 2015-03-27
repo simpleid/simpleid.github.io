@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: SimpleID Version Type URI
 date: 2009-10-05 22:39:31
 ---
