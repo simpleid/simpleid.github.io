@@ -3,8 +3,7 @@ layout: post
 title: ! 'Patch for SimpleID 0.6: OpenID 1.1 Authentication'
 created: 1226128800
 categories:
-- !binary |-
-  cGF0Y2hlcw==
+- news
 ---
 <p>A patch has been released for SimpleID version 0.6.  The patch fixes an issue in relation to the <code>return_to</code> parameter not matching when using SimpleID with certain relying parties under OpenID version 1.1.</p>
 

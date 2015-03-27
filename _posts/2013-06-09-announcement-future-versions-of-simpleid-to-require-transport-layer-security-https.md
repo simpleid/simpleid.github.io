@@ -4,8 +4,7 @@ title: ! 'Announcement: Future versions of SimpleID to require Transport Layer S
   (HTTPS)'
 created: 1370741251
 categories:
-- !binary |-
-  YW5ub3VuY2VtZW50cw==
+- news
 ---
 One of the current features of SimpleID is the ability for you to log in securely without using a HTTPS connection.  It does so by sending a digest of your password (generated using Javascript on your browser) to SimpleID instead of the password itself.
 
