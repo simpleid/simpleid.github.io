@@ -14,10 +14,16 @@
       </a>
 
       <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% for link in data.nav %}
+
+          {% assign link_url = link.url | append:"/" %}
+          {% if link_url == page.url %}
+          {% assign c = "current" %}
+          {% else %}
+          {% assign c = "" %}
           {% endif %}
+
+          <a class="page-link {{ c }} {% if link.class %}{{ link.class }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
         {% endfor %}
       </div>
     </nav>
