@@ -10,7 +10,7 @@ permalink: /docs/1/identity-files/
 
 An **identity file** is a text file containing information about a particular SimpleID user.
 
-There is one identity file for each SimpleID user.  They are stored in the [identities directory](/documentation/getting-started/installing-simpleid#directories) and are named <code>username.identity</code>, where <var>username</var> is the name of the SimpleID user.
+There is one identity file for each SimpleID user.  They are stored in the [identities directory](/docs/1/installing/#directories) and are named <code>username.identity</code>, where <var>username</var> is the name of the SimpleID user.
 
 Identity files are text files formatted as Windows INI file format.  See [Wikipedia](http://en.wikipedia.org/wiki/INI_file) for more information about this file format.  If a value contains non-alphanumeric characters, you will need to surround it with quotation marks.
 
