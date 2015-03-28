@@ -2,7 +2,7 @@
 layout: docs
 title: Claim your identifier
 date: 2009-05-27 21:00:48
-permalink: /docs/1/identity-claim
+permalink: /docs/1/identity-claim/
 redirect_from: /documentation/getting-started/setting-identity/claim-your-identifier/
 ---
 

@@ -26,6 +26,6 @@ Setting up an identity involves the following three steps.
 
 1. Decide on your user name, password and identity URL.  See the [requirements for an identity](/docs/1/identity-requirements) for more details.
 
-2. Tell SimpleID about that identity by creating an [identity file](docs/1/identity-files).
+2. Tell SimpleID about that identity by creating an [identity file](/docs/1/identity-files).
 
-3. [Claim your identifier](docs/1/identity-claim).
+3. [Claim your identifier](/docs/1/identity-claim).
