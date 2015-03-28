@@ -4,20 +4,54 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <div class="hero-panel">
+        <div class="hero-content">
+            <p><span class="hero-title">SimpleID</span> is a simple, personal OpenID provider written in PHP.</p>
+        </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p><a href="/about" class="front-link">Learn&nbsp;more</a></p>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="panels-wrapper">
+        <div class="features-panel panel panel-first">
+            <h2 class="panel-title">Features</h2>
 
+            <div class="panel-content">
+                <ul>
+                    <li>Support for OpenID 1.1 and&nbsp;2.0</li>
+                    <li>Support for OpenID&nbsp;extensions</li>
+                    <li>Multiple identities with one&nbsp;installation</li>
+                    <li>Flat files only, no database&nbsp;required</li>
+                </ul>
+
+                <p><a href="/about" class="front-link">Learn&nbsp;more</a></p>
+            </div>
+        </div>
+
+        <div class="get-started-panel panel">
+            <h2 class="panel-title">Get started</h2>
+
+            <div class="panel-content">
+                <p>Read how you could run your own OpenID&nbsp;provider.</p>
+
+                <p><a href="/documentation/getting-started" class="front-link">Getting Started&nbsp;Guide</a></p>
+            </div>
+        </div>
+
+
+        <div class="downloads-panel panel panel-last">
+            <h2 class="panel-title">Downloads</h2>
+
+            <div class="panel-content">
+                <div>Latest releases</div>
+                {% for post in site.categories.release limit:1 %}
+                <div><a href="{{ post.url | prepend: site.baseurl }}">SimpleID {{ post.release_version }}</a></div>
+                {% endfor %}
+
+                <p><a href="/releases" class="front-link">Download now</a></p>
+            </div>
+        </div>
+
+    </div>
 </div>
