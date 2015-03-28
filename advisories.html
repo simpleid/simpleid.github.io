@@ -1,0 +1,24 @@
+---
+layout: page
+permalink: /advisories/
+---
+
+<p>
+    This page contains a list of identified security threats to the SimpleID software.
+    Due to the nature of many security threats, some of these cannot be disclosed before
+    they have been analysed and mitigants developed.
+</p>
+
+<p>To report a security issue, <a href="http://trac.simpleid.koinic.net/wiki/ReportingSecurityIssues">see here</a>.</p>
+
+<ul class="post-list">
+{% for post in site.categories.advisory %}
+  <li>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+    <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+  </li>
+{% endfor %}
+</ul>
