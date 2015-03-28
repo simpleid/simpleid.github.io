@@ -18,12 +18,12 @@
 
           {% assign link_url = link.url | append:"/" %}
           {% if link_url == page.url %}
-          {% assign c = "current" %}
+          {% assign current_class = "current" %}
           {% else %}
-          {% assign c = "" %}
+          {% assign current_class = "" %}
           {% endif %}
 
-          <a class="page-link {{ c }} {% if link.class %}{{ link.class }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
+          <a class="page-link {{ current_class }} {% if link.class %}{{ link.class }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
         {% endfor %}
       </div>
     </nav>
