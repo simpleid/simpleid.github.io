@@ -14,7 +14,7 @@
       </a>
 
       <div class="trigger">
-        {% for link in data.nav %}
+        {% for link in site.data.nav %}
 
           {% assign link_url = link.url | append:"/" %}
           {% if link_url == page.url %}
