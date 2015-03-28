@@ -1,0 +1,30 @@
+---
+layout: page
+permalink: /releases/
+title: Releases
+---
+
+
+
+<table class="releases-table">
+    <thead>
+        <tr>
+            <th>Package</th>
+            <th>Version</th>
+            <th>Download</th>
+            <th>Date</th>
+            <th>Release Announcement</th>
+        </tr>
+  </thead>
+  <tbody>
+{% for post in site.categories.release %}
+        <tr class="{% cycle 'odd', 'even' %}">
+            <td>{{ post.release_package }}</td>
+            <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.release_version }}</a></td>
+            <td><a href="{{ post.download_url }}">Download</a></td>
+            <td>{{ post.date | date: "%F" }}</td>
+            <td><a href="{{ post.url | prepend: site.baseurl }}">Announcement</a></td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
