@@ -2,7 +2,7 @@
 layout: page
 title: About SimpleID
 date: 2009-05-17 13:55:16
-permalink: /about
+permalink: /about/
 ---
 
 ## What is SimpleID?

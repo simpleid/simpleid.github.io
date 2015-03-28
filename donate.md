@@ -2,6 +2,7 @@
 layout: page
 title: Donate
 date: 2009-06-10 22:19:44
+permalink: /donate/
 ---
 
 As you are probably aware, developing software takes a lot of time and resources.  If you enjoy using SimpleID, please consider making a donation to support the ongoing development work.  Your donation is very much appreciated.

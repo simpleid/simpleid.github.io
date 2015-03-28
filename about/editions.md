@@ -3,6 +3,7 @@ layout: page
 title: Compare SimpleID editions
 date: 2012-03-04 13:20:36
 published: false
+permalink: /about/editions/
 ---
 
 SimpleID comes in two editions: version 1.0 and earlier (Classic) and version 2.0 and later.
