@@ -9,7 +9,7 @@ To log in into an OpenID-enabled site:
 
 1. You should see an OpenID log in box on your site, which should look like the following.
 
-    ![OpenID login box](/docs/1/openid-login-box.png)
+    ![OpenID login box](/assets/files/openid-login-box.png)
 
 2. Type your [identifier URL](/docs/1/identity) and submit the form.  The site will now contact your SimpleID server to establish a secure connection.  Depending on the speed of your web server, this may take about half a minute.
 
@@ -17,7 +17,7 @@ To log in into an OpenID-enabled site:
 
 4. When you log into an OpenID-enabled site for the first time, you will be presented with a page that is similar to the following.
 
-    ![Site login page](/docs/1/rp.png)
+    ![Site login page](/assets/files/rp.png)
 
     The page will vary depending the extensions you have installed.
 
