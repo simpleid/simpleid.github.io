@@ -32,4 +32,4 @@ Topics for advanced users.
 
 ## Developer Documentation
 
-SimpleID provides an application programming interface (API) to allow developers to extend its functionality.  The developer documentation can be accessed on the [developer's site](http://simpleid.koinic.net/trac).
+SimpleID provides an application programming interface (API) to allow developers to extend its functionality.  The developer documentation can be accessed on the [developer's site](http://trac.simpleid.koinic.net).
