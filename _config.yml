@@ -1,3 +1,6 @@
+title: SimpleID
+description: 'SimpleID is a simple, personal OpenID provider written in PHP.'
+
 collections:
     docs:
         output: true
