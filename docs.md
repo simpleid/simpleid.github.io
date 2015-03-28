@@ -2,7 +2,7 @@
 layout: page
 title: Documentation
 date: 2009-05-13 22:19:16
-redirect_from: /documentation
+redirect_from: /documentation/
 permalink: /docs/
 ---
 
