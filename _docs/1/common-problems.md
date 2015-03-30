@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Common problems
 date: 2013-05-03 20:33:12
 permalink: /docs/1/common-problems/

@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Extensions
 date: 2009-07-12 14:49:15
 permalink: /docs/1/extensions/

@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Third party extensions
 date: 2012-06-14 19:48:05
 permalink: /docs/1/extensions-third-party

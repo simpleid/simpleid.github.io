@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Getting Started
 date: 2009-05-13 22:20:07
 redirect_from: /documentation/getting-started/

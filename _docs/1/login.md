@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Logging into SimpleID
 date: 2009-07-11 18:25:28
 permalink: /docs/1/login/

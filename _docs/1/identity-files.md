@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Identity files
 date: 2009-05-15 21:36:20
 redirect_from: /documentation/getting-started/setting-identity/identity-files/

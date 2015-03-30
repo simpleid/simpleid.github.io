@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: How to troubleshoot
 date: 2009-05-27 20:42:18
 permalink: /docs/1/troubleshooting/

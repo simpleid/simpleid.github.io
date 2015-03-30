@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Requirements for an identity
 date: 2009-05-28 08:48:37
 permalink: /docs/1/identity-requirements/

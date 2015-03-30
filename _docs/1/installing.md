@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Installing SimpleID (version 1.0 and earlier)
 date: 2009-05-15 21:20:18
 permalink: /docs/1/installing/

@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Logging into OpenID-enabled web sites
 date: 2009-07-11 18:09:39
 permalink: /docs/1/openid/

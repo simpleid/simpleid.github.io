@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Installing SimpleID from PEAR (version 1.0 and earlier)
 date: 2013-01-21 21:17:56
 permalink: /docs/1/pear/

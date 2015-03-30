@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Upgrading
 date: 2009-06-26 16:16:34
 permalink: /docs/1/upgrading/

@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Claim your identifier
 date: 2009-05-27 21:00:48
 permalink: /docs/1/identity-claim/

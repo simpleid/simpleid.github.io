@@ -1,5 +1,6 @@
 ---
 layout: docs
+doctree: doctree1
 title: Login verification
 date: 2013-05-03 20:39:33
 permalink: /docs/1/login-verification/
