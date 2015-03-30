@@ -1,0 +1,29 @@
+{% if doctree == null %}
+    {% assign doctree = page.doctree %}
+{% endif %}
+{% assign docs = site.data[doctree] %}
+
+{% if tag == null %}{% assign tag = "h4" %}{% endif %}
+
+{% for section in docs %}
+<div class="doc-section">
+    <{{tag}}>{{ section.title }}</{{tag}}>
+
+    <ul>
+    {% for item in section.docs %}
+        {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+        {% if item_url == page.url %}
+            {% assign cls = "current" %}
+        {% else %}
+            {% assign c = "" %}
+        {% endif %}
+        {% for p in site.docs %}
+            {% if p.url == item_url %}
+                <li class="{{ c }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </ul>
+</div>
+{% endfor %}

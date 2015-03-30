@@ -10,21 +10,7 @@ permalink: /docs/
 
 The following user documentation is available.
 
-### [Getting Started Guide](documentation/getting-started)
-
-If you are new to SimpleID, this should be your first read. It shows you how to install SimpleID on your web server and how to create your first identity.
-
-### [Using SimpleID](documentation/using-simpleid)
-
-Basics on using SimpleID--logging in and out, the home page, extending SimpleID.
-
-### [Troubleshooting](documentation/troubleshooting)
-
-Things that commonly go wrong and how to fix them.
-
-### [Advanced Topics](documentation/advanced-topics)
-
-Topics for advanced users.
+{% include doctree.html with "doctree1" %}
 
 ### Reference 
 
