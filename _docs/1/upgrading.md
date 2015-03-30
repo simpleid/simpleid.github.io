@@ -44,7 +44,7 @@ To upgrade your installation of SimpleID, follow the following steps.
 
 5. Some versions may require you to [run upgrade.php](#upgrade.php).  Review <code>UPGRADE.txt</code> and the sections below to see if this is required.
 
-## Running upgrade.php {#upgrade.php}
+## Running upgrade.php    {#upgrade.php}
 
 More recent versions of SimpleID requires you to run upgrade.php script to update some of the data it stores.
 

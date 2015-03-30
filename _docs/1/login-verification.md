@@ -28,3 +28,7 @@ Login verification is then enabled.  Every time you attempt to log in using this
 
 1. [Log in to SimpleID](/docs/1/login)
 2. From the **My Profile** page, go to the **Login Verification** box, then click **Disable**.
+
+## How to recover
+
+If login verification is enabled and you have lost the device that generates the verification code, you can [recover your account](/docs/1/common-problems#otp).
