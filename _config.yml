@@ -7,8 +7,14 @@ collections:
 
 permalink: /:categories/:year/:month/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: 
+    - .rvmrc
+    - .rbenv-version
+    - README.md
+    - Gemfile
+    - vendor
+
 highlighter: pygments
 
 gems:
-  - jekyll-redirect-from
+    - jekyll-redirect-from
