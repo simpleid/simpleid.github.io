@@ -1,9 +1,14 @@
-{% if doctree == null %}
-    {% assign doctree = page.doctree %}
+{% if include.doctree %}
+    {% assign docs = site.data[include.doctree] %}
+{% else %}
+    {% assign docs = site.data[page.doctree] %}
 {% endif %}
-{% assign docs = site.data[doctree] %}
 
-{% if tag == null %}{% assign tag = "h4" %}{% endif %}
+{% if include.tag %}
+    {% assign tag = include.tag %}
+{% else %}
+    {% assign tag = "h4" %}
+{% endif %}
 
 {% for section in docs %}
 <div class="doc-section">
@@ -15,11 +20,11 @@
         {% if item_url == page.url %}
             {% assign cls = "current" %}
         {% else %}
-            {% assign c = "" %}
+            {% assign cls = "" %}
         {% endif %}
         {% for p in site.docs %}
             {% if p.url == item_url %}
-                <li class="{{ c }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+                <li class="{{ cls }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
                 {% break %}
             {% endif %}
         {% endfor %}

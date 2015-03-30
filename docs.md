@@ -10,7 +10,7 @@ permalink: /docs/
 
 The following user documentation is available.
 
-{% include doctree.html with "doctree1" %}
+{% include doctree.html doctree="doctree1" tag="h3" %}
 
 ### Reference 
 

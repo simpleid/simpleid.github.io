@@ -3,7 +3,7 @@ layout: docs
 doctree: doctree1
 title: Using HTTPS (version 0.8 and earlier)
 date: 2013-02-07 20:12:02
-permalink: /docs/1/https
+permalink: /docs/1/https/
 ---
 
 <div class="warning">

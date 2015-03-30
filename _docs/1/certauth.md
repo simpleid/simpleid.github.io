@@ -3,7 +3,7 @@ layout: docs
 doctree: doctree1
 title: Logging in using client SSL certificates (version 0.9 and later)
 date: 2011-09-01 22:10:18
-permalink: /docs/1/certauth
+permalink: /docs/1/certauth/
 ---
 
 ## Introduction
