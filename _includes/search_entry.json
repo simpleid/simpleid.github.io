@@ -1,0 +1,9 @@
+{
+    "id": "{{ include.prefix }}{{ forloop.index }}",
+    "url": "{{ page.url }}",
+    "title": "{{ page.title | remove:'"' }}",
+    "date": "{{ page.date }}",    
+    "categories": "{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
+    "layout": "{{ page.layout }}",
+    "body": "{{ page.content | strip_html | strip_newlines | remove:'"' }}"
+}

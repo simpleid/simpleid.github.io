@@ -1,0 +1,69 @@
+---
+title: Search
+layout: page
+---
+
+<script src="{{ "/assets/js/underscore-min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/search/lunr.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+
+<div id="search-results">
+</div>
+
+<script type="text/template" id="results-tpl">
+  <ul>
+  <% _.each(results, function(result) { %>
+    <li>
+      <h2>
+        <a class="post-link" href="<%= result.url %>"><%= result.title %></a>
+      </h2>
+    </li>
+  <% }); %>
+  </ul>
+</script>
+
+<script type="text/javascript">
+(function ($) {
+    var index;
+    var pages = [];
+    var results_tpl;
+
+    $(document).ready(function () {
+        results_tpl = _.template($('#results-tpl').html());
+        index = lunr(function () {
+            this.field('title', {boost: 10});
+            this.field('body');
+        });
+
+        $.getJSON('{{ "/search/index.json" | prepend: site.baseurl }}').done(function(data) {
+            _.each(data, function(page) {
+                if (page.category == '') return;
+                index.add(page);
+                pages.push({ id: page.id, title: page.title, url: page.url });
+            });
+            $(window).trigger("hashchange");
+        });        
+    });
+
+    $(window).bind("hashchange", function() {
+        var pairs = window.location.hash.substring(1).split('&');
+
+        var params = {};
+        _.each(pairs, function(pair) {
+            pair = pair.split('=');
+            params[pair[0]] = decodeURIComponent(pair[1] || '');
+        });
+
+        if (params.q) {
+            var matches = index.search(params.q);
+            if (matches && matches.length > 0) {
+                var results = _.map(matches, function (match) {
+                    return _.findWhere(pages, {id: match.ref});
+                });
+                $('#search-results').html(results_tpl({results: results}));
+            } else {
+                $('#search-results').html('Nothing found.');
+            }
+        }
+    })
+})(jQuery);
+</script>
