@@ -3,21 +3,28 @@ title: Search
 layout: page
 ---
 
-<script src="{{ "/assets/js/underscore-min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-<script src="{{ "/search/lunr.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<div id="search-form" style="display: none">
+    <input type="text" name="q" id="q">
+    <button id="search-button">Search</button>
+</div>
 
 <div id="search-results">
 </div>
 
+<script src="{{ "/assets/js/underscore-min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/search/lunr.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 <script type="text/template" id="results-tpl">
-  <ul>
-  <% _.each(results, function(result) { %>
+  <ul class="post-list">
+  <% _.each(results, function(result) { 
+    if (result.title) { %>
     <li>
       <h2>
         <a class="post-link" href="<%= result.url %>"><%= result.title %></a>
       </h2>
     </li>
-  <% }); %>
+  <% 
+    }
+  }); %>
   </ul>
 </script>
 
@@ -34,14 +41,22 @@ layout: page
             this.field('body');
         });
 
-        $.getJSON('{{ "/search/index.json" | prepend: site.baseurl }}').done(function(data) {
-            _.each(data, function(page) {
-                if (page.category == '') return;
-                index.add(page);
-                pages.push({ id: page.id, title: page.title, url: page.url });
+        $.getJSON('{{ "/search/search_entries.json" | prepend: site.baseurl }}').done(function(entries) {
+            _.each(entries, function(entry) {
+                if (entry.category == '') return;
+                index.add(entry);
+                pages.push({ id: entry.id, title: entry.title, url: entry.url });
             });
+            $('#search-form').show();
             $(window).trigger("hashchange");
         });        
+    });
+
+    $('#search-button').click(function() {
+        var q = $('#q').val();
+        if (q) {
+            window.location.hash = '#q=' + encodeURIComponent(q);
+        }
     });
 
     $(window).bind("hashchange", function() {
@@ -54,6 +69,7 @@ layout: page
         });
 
         if (params.q) {
+            $('#q').val(params.q);
             var matches = index.search(params.q);
             if (matches && matches.length > 0) {
                 var results = _.map(matches, function (match) {
