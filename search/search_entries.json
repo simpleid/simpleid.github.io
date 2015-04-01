@@ -1,11 +1,16 @@
 ---
+lunr_exclude: true
 ---
 [
     {% for page in site.pages %}
-      {% include search_entry.json prefix="page-" %}{% unless forloop.last %},{% endunless %}
+      {% include search_entry.json prefix="page-" index=forloop.index first=forloop.first %}
     {% endfor %}
     {% if site.posts %},{% endif %}
     {% for page in site.posts %}
-      {% include search_entry.json prefix="post-" %}{% unless forloop.last %},{% endunless %}
+      {% include search_entry.json prefix="post-" index=forloop.index first=forloop.first %}
+    {% endfor %}
+    {% if site.documents %},{% endif %}
+    {% for page in site.documents %}
+      {% include search_entry.json prefix="doc-" index=forloop.index first=forloop.first %}
     {% endfor %}
 ]

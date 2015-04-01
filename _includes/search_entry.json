@@ -1,5 +1,6 @@
-{
-    "id": "{{ include.prefix }}{{ forloop.index }}",
+{% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
+{% unless include.first %},{% endunless %}{
+    "id": "{{ include.prefix }}{{ include.index }}",
     "url": "{{ page.url }}",
     "title": "{{ page.title | remove:'"' }}",
     "date": "{{ page.date }}",    
@@ -7,3 +8,4 @@
     "layout": "{{ page.layout }}",
     "body": "{{ page.content | strip_html | strip_newlines | remove:'"' }}"
 }
+{% endunless %}
