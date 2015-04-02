@@ -1,6 +1,10 @@
 title: SimpleID
 description: 'SimpleID is a simple, personal OpenID provider written in PHP.'
 
+sourceforge:
+    project_url: http://sourceforge.net/projects/simpleid
+    group_id: 203264
+
 collections:
     docs:
         output: true
