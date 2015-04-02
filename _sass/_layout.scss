@@ -197,10 +197,10 @@
         color: #ffffff;
         display: inline-block;
         padding: $spacing-unit / 2;
-        background: linear-gradient(to bottom, $grey-color-dark 0%, $grey-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to bottom, $grey-color 0%, $grey-color-dark 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 
         &:hover {
-            background-color: $grey-color;
+            background-color: $grey-color-dark;
             background-image: none;
         }
     }
