@@ -2,9 +2,9 @@
 <p xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package    http://pear.php.net/dtd/rest.package.xsd">
 <n>SimpleID</n>
 <c>simpleid.koinic.net</c>
-<ca xlink:href="/rest/c/Default">Default</ca>
+<ca xlink:href="/pear/rest/c/Default">Default</ca>
 <l>GPL</l>
 <s>SimpleID is a simple, personal OpenID provider</s>
 <d>SimpleID is a simple, personal OpenID provider written in PHP.</d>
-<r xlink:href="/rest/r/simpleid" />
+<r xlink:href="/pear/rest/r/simpleid" />
 </p>
