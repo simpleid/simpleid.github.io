@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://simpleid.koinic.net/pear</id>
+    <updated>2014-04-17T23:25:46+00:00</updated>
+    <title>SimpleID PEAR channel Latest Releases</title>
+    <link href="http://simpleid.koinic.net/pear/feed.xml" rel="self" />
+    <author>
+        <name>http://simpleid.koinic.net/pear</name>
+    </author>
+
+    <entry>
+        <title>SimpleID 0.9 (beta)</title>
+        <link href="http://simpleid.koinic.net/pear/get/SimpleID-0.9.tgz" />
+        <id>http://simpleid.koinic.net/pear/get/SimpleID-0.9.tgz</id>
+        <author>
+            <name>kmo</name>
+        </author>
+        <updated>2014-04-17T23:24:58+00:00</updated>
+        <content>
+            
+See README.txt
+ 
+        </content>
+    </entry>    <entry>
+        <title>SimpleID 0.8.5 (beta)</title>
+        <link href="http://simpleid.koinic.net/pear/get/SimpleID-0.8.5.tgz" />
+        <id>http://simpleid.koinic.net/pear/get/SimpleID-0.8.5.tgz</id>
+        <author>
+            <name>kmo</name>
+        </author>
+        <updated>2013-12-13T05:39:35+00:00</updated>
+        <content>
+            
+See README.txt
+ 
+        </content>
+    </entry>    <entry>
+        <title>SimpleID 0.8.4 (beta)</title>
+        <link href="http://simpleid.koinic.net/pear/get/SimpleID-0.8.4.tgz" />
+        <id>http://simpleid.koinic.net/pear/get/SimpleID-0.8.4.tgz</id>
+        <author>
+            <name>kmo</name>
+        </author>
+        <updated>2013-06-09T00:36:32+00:00</updated>
+        <content>
+            
+See README.txt
+ 
+        </content>
+    </entry>    <entry>
+        <title>SimpleID 0.8.3 (beta)</title>
+        <link href="http://simpleid.koinic.net/pear/get/SimpleID-0.8.3.tgz" />
+        <id>http://simpleid.koinic.net/pear/get/SimpleID-0.8.3.tgz</id>
+        <author>
+            <name>kmo</name>
+        </author>
+        <updated>2012-12-30T22:04:11+00:00</updated>
+        <content>
+            
+See README.txt
+ 
+        </content>
+    </entry>    <entry>
+        <title>SimpleID 0.8.2 (beta)</title>
+        <link href="http://simpleid.koinic.net/pear/get/SimpleID-0.8.2.tgz" />
+        <id>http://simpleid.koinic.net/pear/get/SimpleID-0.8.2.tgz</id>
+        <author>
+            <name>kmo</name>
+        </author>
+        <updated>2012-12-01T04:14:24+00:00</updated>
+        <content>
+            
+See README.txt
+ 
+        </content>
+    </entry>
+</feed>

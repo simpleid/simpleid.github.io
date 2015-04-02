@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+    <p xlink:href="/rest/p/simpleid">SimpleID</p>
+    <c>simpleid.koinic.net</c>
+    <v>0.8.4</v>
+    <st>beta</st>
+    <l>GPL</l>
+    <m>kmo</m>
+    <s>SimpleID is a simple, personal OpenID provider</s>
+    <d>SimpleID is a simple, personal OpenID provider written in PHP.</d>
+    <da>2013-06-09 00:36:32</da>
+    <n>
+See README.txt
+ </n>
+    <f>109868</f>
+    <g>http://simpleid.koinic.net/pear/get/SimpleID-0.8.4</g>
+    <x xlink:href="package.0.8.4.xml"/>
+</r>

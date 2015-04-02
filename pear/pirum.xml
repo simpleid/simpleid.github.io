@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<server>
+  <name>simpleid.koinic.net</name>
+  <summary>SimpleID PEAR channel</summary>
+  <alias>simpleid</alias>
+  <url>http://simpleid.koinic.net/pear</url>
+  <validatepackage>PEAR_Validator_PECL</validatepackage>
+  <validateversion>1.0</validateversion>
+</server>
+
