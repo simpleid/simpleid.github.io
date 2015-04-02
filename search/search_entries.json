@@ -2,7 +2,7 @@
 lunr_exclude: true
 ---
 [
-    {% for page in site.pages %}
+    {% for page in site.html_pages %}
       {% include search_entry.json prefix="page-" index=forloop.index first=forloop.first %}
     {% endfor %}
     {% if site.posts %},{% endif %}
