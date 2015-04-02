@@ -178,3 +178,26 @@
         }
     }
 }
+
+
+/**
+ * Special formatting
+ */
+.release-download {
+    float: right;
+    font-size: $large-font-size;
+    margin: ($spacing-unit / 2) 0 ($spacing-unit / 2) ($spacing-unit / 2);    
+    text-align: center;
+
+    a {
+        color: #ffffff;
+        display: inline-block;
+        padding: $spacing-unit / 2;
+        background: linear-gradient(to bottom, $grey-color-dark 0%, $grey-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+        &:hover {
+            background-color: $grey-color;
+            background-image: none;
+        }
+    }
+}

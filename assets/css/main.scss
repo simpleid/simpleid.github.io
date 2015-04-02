@@ -10,6 +10,7 @@ lunr_exclude: true
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
+$large-font-size: $base-font-size * 1.2;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -18,9 +19,9 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #1144aa;
 
-$grey-color:       #828282;
+$grey-color:       #666666;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark:  #888888;
 
 // Width of the content area
 $content-width:    800px;
