@@ -9,10 +9,10 @@
 {% else %}
     {% assign level = 4 %}
 {% endif %}
-{% assign title_level = level - 1 %}
+{% capture title_level %}{{ level | minus:1 }}{% endcapture %}
 
 {% if include.title %}
-<h{{title_level}}>{{ doctree.title }}</h{{title_level}}>
+<h{{title_level}}>{{ doctree.title }}&nbsp;&nbsp; </h{{title_level}}>
 {% endif %}
 
 <div class="doc-sections">
