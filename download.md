@@ -3,6 +3,7 @@ layout: page
 title: Download
 date: 2009-05-13 22:16:27
 permalink: /download/
+redirect_from: /downloads/
 ---
 
 ## Releases
