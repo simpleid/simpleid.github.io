@@ -1,34 +1,41 @@
 {% if include.doctree %}
-    {% assign docs = site.data[include.doctree] %}
+    {% assign doctree = site.data[include.doctree] %}
 {% else %}
-    {% assign docs = site.data[page.doctree] %}
+    {% assign doctree = site.data[page.doctree] %}
 {% endif %}
 
-{% if include.tag %}
-    {% assign tag = include.tag %}
+{% if include.level %}
+    {% assign level = include.level %}
 {% else %}
-    {% assign tag = "h4" %}
+    {% assign level = 4 %}
+{% endif %}
+{% assign title_level = level - 1 %}
+
+{% if include.title %}
+<h{{title_level}}>{{ doctree.title }}</h{{title_level}}>
 {% endif %}
 
-{% for section in docs %}
-<div class="doc-section">
-    <{{tag}} id="{{ section.title | replace:' ','-' | downcase }}">{{ section.title }}</{{tag}}>
+<div class="doc-sections">
+    {% for section in doctree.sections %}
+    <div class="doc-section">
+        <h{{level}} id="{{ section.title | replace:' ','-' | downcase }}">{{ section.title }}</h{{level}}>
 
-    <ul>
-    {% for item in section.docs %}
-        {% assign item_url = item | prepend:"/docs/" | append:"/" %}
-        {% if item_url == page.url %}
-            {% assign cls = "current" %}
-        {% else %}
-            {% assign cls = "" %}
-        {% endif %}
-        {% for p in site.docs %}
-            {% if p.url == item_url %}
-                <li class="{{ cls }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
-                {% break %}
+        <ul>
+        {% for item in section.docs %}
+            {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+            {% if item_url == page.url %}
+                {% assign cls = "current" %}
+            {% else %}
+                {% assign cls = "" %}
             {% endif %}
+            {% for p in site.docs %}
+                {% if p.url == item_url %}
+                    <li class="{{ cls }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+                    {% break %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
+        </ul>
+    </div>
     {% endfor %}
-    </ul>
 </div>
-{% endfor %}

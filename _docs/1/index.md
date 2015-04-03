@@ -8,5 +8,5 @@ redirect_from: /documentation/getting-started/
 ---
 
 
-{% include doctree.html doctree="doctree1" tag="h2" %}
+{% include doctree.html doctree="doctree1" level=2 %}
 

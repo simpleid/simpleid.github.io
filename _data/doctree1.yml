@@ -1,34 +1,37 @@
-- title: Getting Started
-  docs:
-    - 1/system-requirements
-    - 1/installing
-    - 1/pear
-    - 1/identity
-    - 1/upgrading
+title: SimpleID 1 Documentation
+home: 1/
+sections:
+    - title: Getting Started
+      docs:
+        - 1/system-requirements
+        - 1/installing
+        - 1/pear
+        - 1/identity
+        - 1/upgrading
 
-- title: Your identity
-  docs:
-    - 1/identity-requirements
-    - 1/identity-files
-    - 1/identity-claim
+    - title: Your identity
+      docs:
+        - 1/identity-requirements
+        - 1/identity-files
+        - 1/identity-claim
 
-- title: Using SimpleID
-  docs:
-    - 1/openid
-    - 1/login
-    - 1/login-verification
-    - 1/profile
-    - 1/extensions
-    - 1/extensions-bundled
-    - 1/extensions-third-party
+    - title: Using SimpleID
+      docs:
+        - 1/openid
+        - 1/login
+        - 1/login-verification
+        - 1/profile
+        - 1/extensions
+        - 1/extensions-bundled
+        - 1/extensions-third-party
 
-- title: Troubleshooting
-  docs:
-    - 1/troubleshooting
-    - 1/common-problems
-    - 1/return_to
+    - title: Troubleshooting
+      docs:
+        - 1/troubleshooting
+        - 1/common-problems
+        - 1/return_to
 
-- title: Advanced topics
-  docs:
-    - 1/certauth
-    - 1/https
+    - title: Advanced topics
+      docs:
+        - 1/certauth
+        - 1/https
