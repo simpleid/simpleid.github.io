@@ -8,6 +8,8 @@ sourceforge:
 collections:
     docs:
         output: true
+    api:
+        output: true
 
 permalink: /:categories/:year/:month/:title
 
