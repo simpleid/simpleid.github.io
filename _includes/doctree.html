@@ -12,7 +12,7 @@
 
 {% for section in docs %}
 <div class="doc-section">
-    <{{tag}}>{{ section.title }}</{{tag}}>
+    <{{tag}} id="{{ section.title | replace:' ','-' | downcase }}">{{ section.title }}</{{tag}}>
 
     <ul>
     {% for item in section.docs %}
