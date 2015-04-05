@@ -63,7 +63,7 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul, ol, dd {
     margin-left: $spacing-unit;
 }
 
@@ -73,6 +73,8 @@ li {
          margin-bottom: 0;
     }
 }
+
+dt { font-weight: bold; }
 
 
 
