@@ -11,7 +11,8 @@ SimpleID is free software released under the GNU General Public Licence.  Your d
 
 ## How to donate
 
-The easiest way to donate is via PayPal through the [SourceForge donation page](https://sourceforge.net/project/project_donations.php?group_id=203264).
+The easiest way to donate is through the [Paypal donation page](https://www.paypal.com/cgi-bin/webscr?item_name=Donation+to+SimpleID&cmd=_donations&business=kmo%40users.sourceforge.net).
 
-<a href="https://sourceforge.net/project/project_donations.php?group_id=203264"><input type="image" src="https://www.paypal.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using SourceForge."></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?item_name=Donation+to+SimpleID&amp;cmd=_donations&amp;business=kmo%40users.sourceforge.net"><input type="image" src="https://www.paypal.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using Paypal."></a>
 
+Alternatively, I am happy to accept [Bitcoins](bitcoin:1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF?label=Donation%20to%20SimpleID) at `1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF`.
