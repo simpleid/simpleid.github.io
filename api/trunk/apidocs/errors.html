@@ -1,443 +1,829 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<meta charset="utf-8">
-<title>SimpleID API Documentation (trunk)</title>
-<meta name="author" content="Mike van Riel">
-<meta name="description" content="">
-<link href="css/template.css" rel="stylesheet" media="all">
-<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="js/bootstrap.js" type="text/javascript"></script><script src="js/template.js" type="text/javascript"></script><script src="js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon.ico">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-</head>
-<body>
-<div class="navbar navbar-fixed-top">
-<div class="navbar-inner"><div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="index.html">SimpleID API Documentation (trunk)</a><div class="nav-collapse"><ul class="nav">
-<li class="dropdown">
-<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a>Packages</a></li>
-<li><a href="packages/extensions.html"><i class="icon-folder-open"></i> extensions</a></li>
-<li><a href="packages/simpleid.html"><i class="icon-folder-open"></i> simpleid</a></li>
-<li><a href="packages/simpleweb.html"><i class="icon-folder-open"></i> simpleweb</a></li>
-</ul>
-</li>
-<li class="dropdown" id="charts-menu">
-<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
-</li>
-<li class="dropdown" id="reports-menu">
-<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">52</span></a></li>
-<li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul></ul></a></li>
-<li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">3</span></a></li>
-</ul>
-</li>
-</ul></div>
-</div></div>
-<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
-</div>
-<div id="___" class="container">
-<noscript><div class="alert alert-warning">
-                            Javascript is disabled; several features are only available
-                            if Javascript is enabled.
-                        </div></noscript>
-<div class="row">
-<div class="span4"><ul class="side-nav nav nav-list">
-<li class="nav-header">Filter type</li>
-<li><div class="btn-group type-filter" data-toggle="buttons-checkbox">
-<button class="btn critical">Critical</button><button class="btn error">Error</button><button class="btn notice">Notice</button>
-</div></li>
-<li class="nav-header">Navigation</li>
-<li><a href="#www/extensions/sreg/sreg.extension.php"><i class="icon-file"></i>www/extensions/sreg/sreg.extension.php</a></li>
-<li><a href="#www/extensions/pape/pape.extension.php"><i class="icon-file"></i>www/extensions/pape/pape.extension.php</a></li>
-<li><a href="#www/extensions/ui/ui.extension.php"><i class="icon-file"></i>www/extensions/ui/ui.extension.php</a></li>
-<li><a href="#www/extensions/ax/ax.extension.php"><i class="icon-file"></i>www/extensions/ax/ax.extension.php</a></li>
-<li><a href="#www/common.inc.php"><i class="icon-file"></i>www/common.inc.php</a></li>
-<li><a href="#www/discovery.inc.php"><i class="icon-file"></i>www/discovery.inc.php</a></li>
-</ul></div>
-<div class="span8">
-<ul class="breadcrumb">
-<li>
-<a href=""><i class="icon-remove-sign"></i></a><span class="divider">\</span>
-</li>
-<li>Compilation Errors</li>
-</ul>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents">
-<a name="www/extensions/sreg/sreg.extension.php" id="www/extensions/sreg/sreg.extension.php"></a><h3>
-<i class="icon-file"></i>www/extensions/sreg/sreg.extension.php<small style="float: right;padding-right: 10px;">13</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>42</td>
-<td>No short description for function \sreg_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>42</td>
-<td>Argument $assertion is missing from the Docblock of \sreg_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>42</td>
-<td>Argument $request is missing from the Docblock of \sreg_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>73</td>
-<td>Argument $response is missing from the Docblock of \sreg_signed_fields()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>94</td>
-<td>No short description for function \sreg_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>94</td>
-<td>Argument $request is missing from the Docblock of \sreg_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>94</td>
-<td>Argument $response is missing from the Docblock of \sreg_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>94</td>
-<td>Argument $rp is missing from the Docblock of \sreg_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>141</td>
-<td>No short description for function \sreg_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>141</td>
-<td>Argument $form_request is missing from the Docblock of \sreg_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>141</td>
-<td>Argument $response is missing from the Docblock of \sreg_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>141</td>
-<td>Argument $rp is missing from the Docblock of \sreg_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>167</td>
-<td>No short description for function \sreg_page_profile()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="www/extensions/pape/pape.extension.php" id="www/extensions/pape/pape.extension.php"></a><h3>
-<i class="icon-file"></i>www/extensions/pape/pape.extension.php<small style="float: right;padding-right: 10px;">8</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>57</td>
-<td>No short description for function \pape_checkid_identity()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>57</td>
-<td>Argument $request is missing from the Docblock of \pape_checkid_identity()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>57</td>
-<td>Argument $identity is missing from the Docblock of \pape_checkid_identity()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>57</td>
-<td>Argument $immediate is missing from the Docblock of \pape_checkid_identity()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>89</td>
-<td>No short description for function \pape_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>89</td>
-<td>Argument $assertion is missing from the Docblock of \pape_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>89</td>
-<td>Argument $request is missing from the Docblock of \pape_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>144</td>
-<td>Argument $response is missing from the Docblock of \pape_signed_fields()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents"></div>
-<div class="package-contents">
-<a name="www/extensions/ui/ui.extension.php" id="www/extensions/ui/ui.extension.php"></a><h3>
-<i class="icon-file"></i>www/extensions/ui/ui.extension.php<small style="float: right;padding-right: 10px;">5</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>48</td>
-<td>Argument $assertion is missing from the Docblock of \ui_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>48</td>
-<td>Argument $request is missing from the Docblock of \ui_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>81</td>
-<td>Argument $response is missing from the Docblock of \ui_signed_fields()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>157</td>
-<td>Argument $url is missing from the Docblock of \ui_indirect_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>157</td>
-<td>Argument $response is missing from the Docblock of \ui_indirect_response()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="www/extensions/ax/ax.extension.php" id="www/extensions/ax/ax.extension.php"></a><h3>
-<i class="icon-file"></i>www/extensions/ax/ax.extension.php<small style="float: right;padding-right: 10px;">13</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>75</td>
-<td>No short description for function \ax_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>75</td>
-<td>Argument $assertion is missing from the Docblock of \ax_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>75</td>
-<td>Argument $request is missing from the Docblock of \ax_response()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>129</td>
-<td>Argument $response is missing from the Docblock of \ax_signed_fields()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>150</td>
-<td>No short description for function \ax_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>150</td>
-<td>Argument $request is missing from the Docblock of \ax_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>150</td>
-<td>Argument $response is missing from the Docblock of \ax_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>150</td>
-<td>Argument $rp is missing from the Docblock of \ax_consent_form()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>209</td>
-<td>No short description for function \ax_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>209</td>
-<td>Argument $form_request is missing from the Docblock of \ax_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>209</td>
-<td>Argument $response is missing from the Docblock of \ax_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>209</td>
-<td>Argument $rp is missing from the Docblock of \ax_consent()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>250</td>
-<td>No short description for function \ax_page_profile()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents">
-<a name="www/common.inc.php" id="www/common.inc.php"></a><h3>
-<i class="icon-file"></i>www/common.inc.php<small style="float: right;padding-right: 10px;">6</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>539</td>
-<td>No DocBlock was found for function \_get_form_token()</td>
-</tr>
-<tr class="notice">
-<td>notice</td>
-<td>588</td>
-<td>Parameter $function could not be found in \extension_invoke_all()</td>
-</tr>
-<tr class="notice">
-<td>notice</td>
-<td>588</td>
-<td>Parameter $args could not be found in \extension_invoke_all()</td>
-</tr>
-<tr class="notice">
-<td>notice</td>
-<td>617</td>
-<td>Parameter $extension could not be found in \extension_invoke()</td>
-</tr>
-<tr class="notice">
-<td>notice</td>
-<td>617</td>
-<td>Parameter $function could not be found in \extension_invoke()</td>
-</tr>
-<tr class="notice">
-<td>notice</td>
-<td>617</td>
-<td>Parameter $args could not be found in \extension_invoke()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents"></div>
-<div class="package-contents">
-<a name="www/discovery.inc.php" id="www/discovery.inc.php"></a><h3>
-<i class="icon-file"></i>www/discovery.inc.php<small style="float: right;padding-right: 10px;">7</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>486</td>
-<td>Argument $parser is missing from the Docblock of element_start()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>486</td>
-<td>Argument $qualified is missing from the Docblock of element_start()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>486</td>
-<td>Argument $attribs is missing from the Docblock of element_start()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>528</td>
-<td>Argument $parser is missing from the Docblock of element_end()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>528</td>
-<td>Argument $qualified is missing from the Docblock of element_end()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>575</td>
-<td>Argument $parser is missing from the Docblock of cdata()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>575</td>
-<td>Argument $data is missing from the Docblock of cdata()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
-</div>
-</div>
-<div class="row"><footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2013-05-12T06:51:33Z.<br></footer></div>
-</div>
-</body>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>phpDocumentor Parser Errors and Warnings</title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<a href="#Post-parsing">Post-parsing</a><br>
+<a href="#config.pear.php">config.pear.php</a><br>
+<a href="#discovery.inc">discovery.inc</a><br>
+<a href="#discovery.inc.php">discovery.inc.php</a><br>
+<a href="#gettext.inc.php">gettext.inc.php</a><br>
+<a href="#gettext.php">gettext.php</a><br>
+<a href="#index.php">index.php</a><br>
+<a href="#locale.inc.php">locale.inc.php</a><br>
+<a href="#log.inc">log.inc</a><br>
+<a href="#openid.inc">openid.inc</a><br>
+<a href="#openid.inc.php">openid.inc.php</a><br>
+<a href="#streams.php">streams.php</a><br>
+<a href="#xtemplate-php4.class.php">xtemplate-php4.class.php</a><br>
+<a href="#xtemplate.class.php">xtemplate.class.php</a><br>
+<a name="Post-parsing"></a>
+<h1>Post-parsing</h1>
+<h2>Warnings:</h2><br>
+<b>Warning</b> - 
+duplicate function element "ui_xrds_types" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "define_default" in file /home/kmo/simpleid/git/www/config.default.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_http_parse_headers" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_response" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_signed_fields" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_indirect_response" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_consent_form" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_user_login_form" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_http_make_request_fsock" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_http_make_request_curl" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "simpleweb_run" in file /home/kmo/simpleid/git/www/simpleweb.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_header" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_xrds" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_simpleweb_invoke" in file /home/kmo/simpleid/git/www/simpleweb.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_simpleweb_not_found" in file /home/kmo/simpleid/git/www/simpleweb.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "http_protocols" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "http_make_request" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_routes" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ui_icon" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "pape_response" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "pape_checkid_identity" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "pape_xrds_types" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "pape_signed_fields" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_pape_identifier_select" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "sreg_response" in file /home/kmo/simpleid/git/www/extensions/sreg/sreg.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_pape_ppid" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_ax_get_value" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ax_page_profile" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_ui_icon_token" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_ui_get_icon" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_ui_insert_css_js" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ax_xrds_types" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ax_response" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ax_consent_form" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "ax_signed_fields" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_ppid_page" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_public_page" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_store_is_valid_name" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_del" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_set" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_open" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_close" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_notice" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_info" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_debug" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_get" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_user_save" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_ttl" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_gc" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_delete" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_cache_get_name" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_user_exists" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_get_uid" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "store_user_load" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_warn" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_error" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_login" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_save" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_load_from_identity" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_user_login" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_logout" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_login_form" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_user_logout" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_load" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "user_init" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_log_write" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_array" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "log_fatal" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "discovery_is_xri" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "discovery_is_email" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_discovery_link_rel" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_discovery_meta_httpequiv" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "sreg_signed_fields" in file /home/kmo/simpleid/git/www/extensions/sreg/sreg.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "sreg_consent_form" in file /home/kmo/simpleid/git/www/extensions/sreg/sreg.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_FATAL" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_ERROR" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_WARN" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_VERSION" in file /home/kmo/simpleid/git/www/version.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "XRDS_NS" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "XRDS_SIMPLE_TYPE" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "XRDS_SIMPLE_NS" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "XRD2_NS" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_NOTICE" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_INFO" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_ASSOC_EXPIRES_IN" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_DATE_TIME_FORMAT" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_VERIFY_RETURN_URL_USING_REALM" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_EXTENSIONS" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOGFILE" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOG_DEBUG" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOGLEVEL" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "XRD_OPENID_NS" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "CACHE_DIR" in file /home/kmo/simpleid/git/www/upgrade.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$simpleid_settings" in file /home/kmo/simpleid/git/www/filesystem.store.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$simpleid_extensions" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$openid_ns_to_alias" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$log" in file /home/kmo/simpleid/git/www/log.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$xtpl" in file /home/kmo/simpleid/git/www/upgrade.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$user" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate global variable element "$GETPOST" in file /home/kmo/simpleid/git/www/upgrade.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PAPE_LEVEL_NIST800_63" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PAPE_POLICY_PPID" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEHTTP_USER_AGENT" in file /home/kmo/simpleid/git/www/http.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_USER_AUTOLOGIN_EXPIRES_IN" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_LOGIN_NONCE_EXPIRES_IN" in file /home/kmo/simpleid/git/www/user.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_UI" in file /home/kmo/simpleid/git/www/extensions/ui/ui.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_AX" in file /home/kmo/simpleid/git/www/extensions/ax/ax.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PAPE_POLICY_NONE" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_PAPE" in file /home/kmo/simpleid/git/www/extensions/pape/pape.extension.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_ALLOW_AUTOCOMPLETE" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_STORE_DIR" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_routes" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_consent" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_send" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_user_login_form" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_page_dashboard" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_DH_DEFAULT_MOD" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_page_profile" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_consent_form" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_rp_form" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_checkid" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_xrds_types" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "sreg_page_profile" in file /home/kmo/simpleid/git/www/extensions/sreg/sreg.extension.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_checkid_identity" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_response" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_indirect_response" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "hook_signed_fields" in file /home/kmo/simpleid/git/extensions/hooks.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_DH_DEFAULT_GEN" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_VERSION_2" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_BASE_URL" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_RAND_SOURCE" in file /home/kmo/simpleid/git/www/random.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "BIGNUM_GMP" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_CLEAN_URL" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_IDENTITIES_DIR" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_STORE" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "SIMPLEID_CACHE_DIR" in file /home/kmo/simpleid/git/www/config.inc.dist will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_SHA256_SUPPORTED" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_RESPONSE_FRAGMENT" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_1_1" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_2_0" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_VERSION_1_1" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_NS_1_0" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_IDENTIFIER_SELECT" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_RESPONSE_QUERY" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "OPENID_RETURN_TO" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_get_all" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_get" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_dh_shared_secret" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_dh_generate_key_pair" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_encrypt_mac_key" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_xor" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_dh_consumer_assoc" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_dh_server_assoc" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_nonce" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_association_types" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_session_types" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_dh_rand" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_base64_to_bignum" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_hmac_sha1" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_sha256" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_hmac_sha256" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_sha1" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_signature_base_string" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_bignum_to_base64" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_openid_btwoc" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_sign" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_extension_alias" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_extension_requested" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_indirect_message" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_indirect_response" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_indirect_response_url" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_direct_response" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_direct_message" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "XRDSParser" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "XTemplate" in file /home/kmo/simpleid/git/www/lib/xtemplate-php4.class.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_get_version" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_direct_error" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_indirect_error" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_realm_discovery_url" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_verify_return_to" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_extension_filter_request" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_url_matches_realm" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_parse_request" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_get_realm" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_parse_direct_message" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_parse_query" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "rfc3986_urlencode" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "openid_urlencode_message" in file /home/kmo/simpleid/git/www/openid.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_new" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_val" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_add" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_loaded" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_page_discovery_block" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "page_nav" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "page_render_block" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "_page_welcome_block" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_mul" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_div" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "random_id" in file /home/kmo/simpleid/git/www/random.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "cache_set" in file /home/kmo/simpleid/git/www/cache.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "rfc3986_urlencode" in file /home/kmo/simpleid/git/www/discovery.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "random_secret" in file /home/kmo/simpleid/git/www/random.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "random_bytes" in file /home/kmo/simpleid/git/www/random.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_pow" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_mod" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_cmp" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "page_sites" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "bignum_powmod" in file /home/kmo/simpleid/git/www/bignum.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "negotiate_content_type" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "pickle" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "unpickle" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "is_https" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "indirect_fatal_error" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "rfc3986_urlencode" in file /home/kmo/simpleid/git/www/discovery.inc will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "page_profile" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "set_message" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "get_request_uri" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "header_response_code" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "extension_init" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "extension_invoke_all" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "extension_invoke" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "get_extensions" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "get_base_path" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "validate_form_token" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "page_dashboard" in file /home/kmo/simpleid/git/www/page.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "simpleid_url" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "get_form_token" in file /home/kmo/simpleid/git/www/common.inc.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<a name="config.pear.inc"></a>
+<h1>config.pear.inc</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 29</b> - Page-level DocBlock precedes "include_once 'PEAR/Config.php'", use another DocBlock to document the source element<br>
+<a name="config.pear.php"></a>
+<h1>config.pear.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 29</b> - Page-level DocBlock precedes "include_once 'PEAR/Config.php'", use another DocBlock to document the source element<br>
+<a name="discovery.inc"></a>
+<h1>discovery.inc</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - Page-level DocBlock precedes "include_once "http.inc"", use another DocBlock to document the source element<br>
+<b>Warning on line 439</b> - no @package tag was used in a DocBlock for class XRDSParser<br>
+<a name="discovery.inc.php"></a>
+<h1>discovery.inc.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - Page-level DocBlock precedes "include_once "http.inc.php"", use another DocBlock to document the source element<br>
+<b>Warning on line 387</b> - no @package tag was used in a DocBlock for class XRDSParser<br>
+<a name="gettext.inc.php"></a>
+<h1>gettext.inc.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 54</b> - no @package tag was used in a DocBlock for class domain<br>
+<b>Warning on line 535</b> - File "/home/kmo/simpleid/git/www/lib/gettext/gettext.inc.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="gettext.php"></a>
+<h1>gettext.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for class gettext_reader<br>
+<b>Warning on line 431</b> - File "/home/kmo/simpleid/git/www/lib/gettext/gettext.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="index.php"></a>
+<h1>index.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - Page-level DocBlock precedes "include_once "version.inc.php"", use another DocBlock to document the source element<br>
+<a name="locale.inc.php"></a>
+<h1>locale.inc.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 30</b> - Page-level DocBlock precedes "include_once 'lib/gettext/gettext.inc.php'", use another DocBlock to document the source element<br>
+<a name="log.inc"></a>
+<h1>log.inc</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 196</b> - File "/home/kmo/simpleid/git/www/log.inc" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="openid.inc"></a>
+<h1>openid.inc</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - Page-level DocBlock precedes "include_once "bignum.inc"", use another DocBlock to document the source element<br>
+<b>Warning on line 523</b> - Unknown tag "@url" used<br>
+<a name="openid.inc.php"></a>
+<h1>openid.inc.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - Page-level DocBlock precedes "include_once "bignum.inc.php"", use another DocBlock to document the source element<br>
+<b>Warning on line 455</b> - Unknown tag "@url" used<br>
+<a name="streams.php"></a>
+<h1>streams.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 25</b> - no @package tag was used in a DocBlock for class StreamReader<br>
+<b>Warning on line 47</b> - no @package tag was used in a DocBlock for class StringReader<br>
+<b>Warning on line 83</b> - no @package tag was used in a DocBlock for class FileReader<br>
+<b>Warning on line 144</b> - no @package tag was used in a DocBlock for class CachedFileReader<br>
+<b>Warning on line 166</b> - File "/home/kmo/simpleid/git/www/lib/gettext/streams.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="xtemplate-php4.class.php"></a>
+<h1>xtemplate-php4.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 24</b> - DocBlock would be page-level, but precedes class "XTemplate", use another DocBlock to document the file<br>
+<b>Warning on line 201</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 213</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 225</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 239</b> - example file "<!-- BEGIN: blockname#My Comment -->" does not exist<br>
+<b>Warning on line 239</b> - example file "{tagname #My Comment}" does not exist<br>
+<b>Warning on line 239</b> - example file "{tagname#My Comment}" does not exist<br>
+<b>Warning on line 239</b> - example file "<!-- BEGIN: blockname #My Comment -->" does not exist<br>
+<b>Warning on line 447</b> - example file "Array assign:" does not exist<br>
+<b>Warning on line 447</b> - example file "Value as array assign:" does not exist<br>
+<b>Warning on line 447</b> - example file "{name.key} {name.key2} in template" does not exist<br>
+<b>Warning on line 447</b> - example file "{name} {name2} in template" does not exist<br>
+<b>Warning on line 447</b> - example file "$xtpl->assign(array('name' => 'value', 'name2' => 'value2'));" does not exist<br>
+<b>Warning on line 447</b> - example file "Simplest case:" does not exist<br>
+<b>Warning on line 447</b> - example file "Reset array:" does not exist<br>
+<b>Warning on line 447</b> - example file "$xtpl->assign('name', array('key' => 'value', 'key2' => 'value2'));" does not exist<br>
+<b>Warning on line 447</b> - example file "$xtpl->assign('name', array('key' => 'value', 'key2' => 'value2'));" does not exist<br>
+<b>Warning on line 447</b> - example file "$xtpl->assign('name', 'value');" does not exist<br>
+<b>Warning on line 447</b> - example file "{name.key} {name.key2} {name.key3} in template" does not exist<br>
+<b>Warning on line 447</b> - example file "{name} in template" does not exist<br>
+<b>Warning on line 447</b> - example file "$xtpl->assign('name', array('key3' => 'value3'), false);" does not exist<br>
+<b>Warning on line 447</b> - example file "// Other code then:" does not exist<br>
+<h2>Errors:</h2><br>
+<b>Error on line 947</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+<b>Error on line 1093</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+<b>Error on line 1241</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+<a name="xtemplate.class.php"></a>
+<h1>xtemplate.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 24</b> - DocBlock would be page-level, but precedes class "XTemplate", use another DocBlock to document the file<br>
+<b>Warning on line 201</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 213</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 225</b> - example file " if you use the default syntax." does not exist<br>
+<b>Warning on line 239</b> - example file "{tagname#My Comment}" does not exist<br>
+<b>Warning on line 239</b> - example file "{tagname #My Comment}" does not exist<br>
+<b>Warning on line 239</b> - example file "<!-- BEGIN: blockname #My Comment -->" does not exist<br>
+<b>Warning on line 239</b> - example file "<!-- BEGIN: blockname#My Comment -->" does not exist<br>
+<b>Warning on line 463</b> - example file "Reset array:" does not exist<br>
+<b>Warning on line 463</b> - example file "{name.key} {name.key2} in template" does not exist<br>
+<b>Warning on line 463</b> - example file "$xtpl->assign('name', array('key' => 'value', 'key2' => 'value2'));" does not exist<br>
+<b>Warning on line 463</b> - example file "// Other code then:" does not exist<br>
+<b>Warning on line 463</b> - example file "{name.key} {name.key2} {name.key3} in template" does not exist<br>
+<b>Warning on line 463</b> - example file "$xtpl->assign('name', array('key3' => 'value3'), false);" does not exist<br>
+<b>Warning on line 463</b> - example file "$xtpl->assign('name', array('key' => 'value', 'key2' => 'value2'));" does not exist<br>
+<b>Warning on line 463</b> - example file "Value as array assign:" does not exist<br>
+<b>Warning on line 463</b> - example file "$xtpl->assign('name', 'value');" does not exist<br>
+<b>Warning on line 463</b> - example file "Simplest case:" does not exist<br>
+<b>Warning on line 463</b> - example file "{name} in template" does not exist<br>
+<b>Warning on line 463</b> - example file "Array assign:" does not exist<br>
+<b>Warning on line 463</b> - example file "$xtpl->assign(array('name' => 'value', 'name2' => 'value2'));" does not exist<br>
+<b>Warning on line 463</b> - example file "{name} {name2} in template" does not exist<br>
+<h2>Errors:</h2><br>
+<b>Error on line 963</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+<b>Error on line 1109</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+<b>Error on line 1257</b> - @access was passed neither "public" nor "private."  Was passed: "public - aiming for private"<br>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:09:09 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
 </html>

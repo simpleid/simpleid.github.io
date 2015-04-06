@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page cache.inc</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/cache.inc</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Functions for caching and persistence.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwcache.inc.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functioncache_delete" id="functioncache_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">cache_delete</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a104">104</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes data from the cache.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_delete
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: an identifier</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncache_gc" id="functioncache_gc"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cache_gc</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a116">116</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Garbage collects data stored the cache.  Data is deleted if it was stored  for longer than the specified expiry</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_gc
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$expiry</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$expiry</span><span class="var-description">: the expiry time, in seconds, after which data will be deleted</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncache_get" id="functioncache_get"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">cache_get</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a65">65</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains data from the cache.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the data associated with the type and key, or NULL if the cache  does not contain the requested data.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			cache_get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: an identifier</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncache_get_all" id="functioncache_get_all"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cache_get_all</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a80">80</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains all data of a particular type from the cache.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array of data associated with the type, or NULL if the cache  does not contain the requested data.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			cache_get_all
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncache_set" id="functioncache_set"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">cache_set</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a46">46</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stores data into the cache.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$time</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: an identifier</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: the data to store</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$time</span><span class="var-description">: if present, sets the modification time of the cache file to this  time</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncache_ttl" id="functioncache_ttl"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cache_ttl</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a144">144</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the time remaining, in seconds, before the data associated with the  type and key become subject to garbage collection by <a href="../simpleid/_www---cache.inc.html#functioncache_gc">cache_gc()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the time remaining before expiry, rounded downwards,  or zero if the cache does not contain the requested data</li>
+				<li><span class="field">since:</span> 0.8</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			cache_ttl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$expiry</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: an identifier</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$expiry</span><span class="var-description">: the expiry time, in seconds, which would be passed onto the  <a href="../simpleid/_www---cache.inc.html#functioncache_gc">cache_gc()</a> function</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_cache_get_name" id="function_cache_get_name"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_cache_get_name</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.html#a159">159</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the name of the cache data file, given a type and an identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> a file name</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_cache_get_name
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of data in the cache</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: an identifier</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:08:55 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page config.php.dist</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/config.php.dist</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+											<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleID configuration file.</p>
+		
+			</div>
+</div>
+		
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+									<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineSIMPLEID_ALLOW_AUTOCOMPLETE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_ALLOW_AUTOCOMPLETE</span> = false
+			(line <span class="line-number">136</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows web browsers to save passwords.</p>
+<p class="description"><p>SimpleID prevents web browsers from saving user passwords entered in a user  logs into SimpleID.  Setting this value to true will allow browsers to  ask the user whether the password should be saved in the browser's password  store.</p><p>The default is set to false for security reasons.  You should not change  this value unless you are certain regarding the security of your browser's  password store.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.8</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_ALLOW_PLAINTEXT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_ALLOW_PLAINTEXT</span> = false
+			(line <span class="line-number">120</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows use of unencrypted connections.</p>
+<p class="description"><p>Between versions 0.6 and 0.8 (inclusive), SimpleID uses either HTTPS or  a form of digest authentication for its login system.  This allows passwords  and other secure information not to be sent to the server as plaintext.</p><p>From version 0.9, SimpleID mandates the use of HTTPS for all connections  (other than direct connections between SimpleID and an OpenID relying  party).  However, for debug purposes, it may be necessary to allow  unencrypted connections to SimpleID.</p><p>It is strongly recommended that this is set to false.  Setting this to true  will allow passwords to be sent as plaintext.  You should not change this  value unless it is absolutely necessary.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.9</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_ASSOC_EXPIRES_IN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_ASSOC_EXPIRES_IN</span> = 3600
+			(line <span class="line-number">178</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The number of seconds before associations expire.  This is an advanced  option, for which the default setting should work fine.</p>
+<p class="description"><p>Note that for ICAM compliance, this number must be less than 86400.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_BASE_URL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_BASE_URL</span> = 'http://www.example.com'
+			(line <span class="line-number">32</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base URL.</p>
+<p class="description"><p>This is the URL of the location you want to place your SimpleID  distribution.  It becomes the URL of the SimpleID server.</p><p>It is not allowed to have a trailing slash; SimpleID will add it  for you.</p><p>Examples:  <div class="src-code"><ol><li><div class="src-line">&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'SIMPLEID_BASE_URL'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'http://www.example.com'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'SIMPLEID_BASE_URL'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'http://www.example.com:8888'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'SIMPLEID_BASE_URL'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'http://www.example.com/simpleid'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'SIMPLEID_BASE_URL'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'https://www.example.com:8888/simpleid'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_CACHE_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_CACHE_DIR</span> = '@@CACHE_DIR@@'
+			(line <span class="line-number">73</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory to store cache data.</p>
+<p class="description"><p>This directory must exist and be readable and writable by the  web server.</p><p>For maximum security, it is highly recommended to place this  directory outside your web browser's document root directory, so  that it is not visible to user agents.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_CLEAN_URL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_CLEAN_URL</span> = false
+			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allow clean URLs.</p>
+<p class="description"><p>URLs used in SimpleID are normally in the form  http://www.example.com/index.php?q=foo.  Enabling clean URLs will allow for  SimpleID URLs to be in the form http://www.example.com/foo</p><p>In order to support clean URLs, you must be using Apache with mod_rewrite  enabled.  You will need to rename .htaccess.dist in the SimpleID web directory  to .htaccess</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.8</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_DATE_TIME_FORMAT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_DATE_TIME_FORMAT</span> = '%Y-%m-%d %H:%M:%S %Z'
+			(line <span class="line-number">170</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Date and time format.</p>
+<p class="description"><p>The date and time format specified using the strftime() syntax.</p><p>See http://www.php.net/strftime for details.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_EXTENSIONS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_EXTENSIONS</span> = 'sreg,ui'
+			(line <span class="line-number">187</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleID extensions.</p>
+<p class="description"><p>The SimpleID extensions you wish to load.  You should separate the  extensions you wish to load with a comma.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_IDENTITIES_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_IDENTITIES_DIR</span> = '@@IDENTITIES_DIR@@'
+			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory to store identity information.</p>
+<p class="description"><p>This directory must exist and be readable by the web server.</p><p>For maximum security, it is highly recommended to place this  directory outside your web browser's document root directory, so  that it is not visible to user agents.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOCALE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOCALE</span> = 'en'
+			(line <span class="line-number">160</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The locale for the SimpleID user interface.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.9</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOGFILE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOGFILE</span> = ''
+			(line <span class="line-number">202</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log file.</p>
+<p class="description"><p>You can specify a file into which SimpleID will log various diagnostic  messages.</p><p>The log file's directory must exist and must be writable by the web server.</p><p>To disable logging, set this as an empty string.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOGLEVEL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOGLEVEL</span> = 4
+			(line <span class="line-number">219</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The level of detail for log messages.</p>
+<p class="description"><p>You can determine which messages are captured in the log file by specifying  a number between 0 and 5. The higher the number, the more messages are  logged.</p><p>WARNING: Setting the log level to 5 will result in security sensitive  information also being logged.</p><p>This has effect only if logging is enabled.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEID_STORE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_STORE</span> = 'filesystem'
+			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Persistent data storage mechanism.</p>
+<p class="description"><p>SimpleID provides flexible methods to store and retrieve persistent data.  By default, SimpleID uses the file system to store this data, implemented  in filesystem.store.inc.  Users can implement other methods by creating  a file with extension .store.inc and specifying the file through this  setting.</p><p>Generally you do not need to change this setting.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_STORE_DIR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_STORE_DIR</span> = '@@STORE_DIR@@'
+			(line <span class="line-number">100</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory to store persistent data.</p>
+<p class="description"><p>This directory must exist and be readable and writable by the  web server.</p><p>For maximum security, it is highly recommended to place this  directory outside your web browser's document root directory, so  that it is not visible to user agents.</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEID_VERIFY_RETURN_URL_USING_REALM"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_VERIFY_RETURN_URL_USING_REALM</span> = true
+			(line <span class="line-number">152</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs additional verification of relying party return URLs.</p>
+<p class="description"><p>When authenticating using OpenID version 2, SimpleID version 0.7 or later  can perform additional verification of the relying party's return URLs under  section 9.2.1 of the OpenID specification.</p><p>The default is set to true for security reasons.  However, if your web server  is blocked by your web hosting provider's firewall from accessing outside  servers, then set this to false.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:08:56 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

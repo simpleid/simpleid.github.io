@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page simpleweb.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/simpleweb.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+													</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simpleweb is a minimalist web framework.  It is similar to <a href="http://webpy.org">web.py</a>,  but in PHP.</p>
+<p class="description"><p>The key to Simpleweb is the <em>route array</em>.  The route array is an array that maps  URLs (called <em>patterns</em>) to PHP functions or methods (called <em>routes</em>).</p><p>Patterns are regular expressions, which are tested against the URL one at a time.  Subpatterns (i.e. patterns within parentheses) are then passed on as arguments  to the route.</p><p>Routes are either functions, static methods or object methods.  A function is  denoted by the function name.  A static method is denoted by the class name,  followed by :: then the method name.  An object method is denoted by the class  name, followed by -&amp;gt; then the method name.  An instance of the class will be  created before an object method is called.</p><p>An example of a routes array is given below:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$routes&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'a'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'function1'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'b/(.+)'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'function2'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//&nbsp;arguments</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'c'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'ClassA::method'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//&nbsp;static&nbsp;method</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'d'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'ClassB-&gt;method'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//&nbsp;object&nbsp;method</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></div></p><p>Once the route array is populated, the <a href="../simpleweb/_www---simpleweb.inc.html#functionsimpleweb_run">simpleweb_run()</a> function  is then called to handle the URL.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:09:05 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

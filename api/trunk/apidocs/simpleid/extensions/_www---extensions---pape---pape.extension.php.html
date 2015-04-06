@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page pape.extension.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/extensions/pape/pape.extension.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+											<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Implements the Provider Authentication Policy Extension extension.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+									<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineOPENID_NS_PAPE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_NS_PAPE</span> = 'http://specs.openid.net/extensions/pape/1.0'
+			(line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a34">34</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Namespace for the PAPE extension</p>
+	
+		
+</div>
+<a name="definePAPE_LEVEL_NIST800_63"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">PAPE_LEVEL_NIST800_63</span> = 'http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63V1_0_2.pdf'
+			(line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a41">41</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Namespaces for PAPE levels</p>
+	
+		
+</div>
+<a name="definePAPE_POLICY_NONE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">PAPE_POLICY_NONE</span> = 'http://schemas.openid.net/pape/policies/2007/06/none'
+			(line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a37">37</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Namespaces for PAPE policies</p>
+	
+		
+</div>
+<a name="definePAPE_POLICY_PPID"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">PAPE_POLICY_PPID</span> = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier'
+			(line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a38">38</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionpape_checkid_identity" id="functionpape_checkid_identity"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">pape_checkid_identity</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a60">60</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../extensions/_extensions---hooks.php.html#functionhook_checkid_identity">hook_checkid_identity()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pape_checkid_identity
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$request</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$immediate</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$request</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$identity</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$immediate</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpape_response" id="functionpape_response"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">pape_response</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a92">92</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../extensions/_extensions---hooks.php.html#functionhook_response">hook_response()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pape_response
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$assertion</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assertion</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$request</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpape_signed_fields" id="functionpape_signed_fields"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">pape_signed_fields</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a149">149</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of fields that need signing.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../extensions/_extensions---hooks.php.html#functionhook_signed_fields">hook_signed_fields()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pape_signed_fields
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$response</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$response</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpape_xrds_types" id="functionpape_xrds_types"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">pape_xrds_types</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a49">49</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the support for PAPE in SimpleID XRDS document</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../extensions/_extensions---hooks.php.html#functionhook_xrds_types">hook_xrds_types()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			pape_xrds_types
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="function_pape_identifier_select" id="function_pape_identifier_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_pape_identifier_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a168">168</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets and returns whether the current OpenID request is requesting an identity.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> whether the current OpenID request is requesting an identity</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			_pape_identifier_select
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$identifier_select</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$identifier_select</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_pape_ppid" id="function_pape_ppid"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_pape_ppid</span> (line <span class="line-number"><a href="../../__filesource/fsource_simpleid_extensions_wwwextensionspapepape.extension.php.html#a184">184</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a private personal identifier (PPID).  The PPID is an opaque identifier  for a particular user-RP pair</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the PPID</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_pape_ppid
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$realm</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identity</span><span class="var-description">: the identity of the user</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$realm</span><span class="var-description">: the URL of the relying party</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:09:05 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

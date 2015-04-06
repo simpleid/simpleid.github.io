@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page config.inc.dist</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/config.inc.dist</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+											<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleID configuration file.</p>
+		
+			</div>
+</div>
+		
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+									<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineSIMPLEID_ALLOW_LEGACY_LOGIN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_ALLOW_LEGACY_LOGIN</span> = false
+			(line <span class="line-number">121</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows legacy log-in system.</p>
+<p class="description"><p>Prior to SimpleID 0.6, the login system utilised by SimpleID requires users'  passwords to be sent in plaintext to the web server for verification.  This is  an inherent security risk.</p><p>From version 0.6, SimpleID implemented a form of digest authentication, which  means that passwords are not sent in plaintext.  For backwards compatibility,  and to support browsers that do not have JavaScript installed, the legacy  method is still supported if the following configuration parameter is set  to true.  Otherwise, users must use a browser which supports JavaScript to  log into SimpleID.</p><p>The default is set to false for security reasons.  You should not change  this value unless it is absolutely necessary.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.6</li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:08:56 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

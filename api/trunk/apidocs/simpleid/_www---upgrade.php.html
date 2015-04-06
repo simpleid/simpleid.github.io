@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page upgrade.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/upgrade.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|							<a href="#sec-variables">Variables</a>
+			|							<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleID upgrade script.</p>
+<p class="description"><p>This script performs various upgrades to SimpleID's storage backend, which  are required for different versions of SimpleID.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwupgrade.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|										<a href="#sec-variables">Variables</a>
+				|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_lib/xtemplate_class_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include</span>
+			(<span class="include-name"><a href="../XTemplate/_www---lib---xtemplate.class.php.html">"lib/xtemplate.class.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_version_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---version.inc.php.html">"version.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_config_inc"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"config.inc"</span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_cache_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---cache.inc.php.html">"cache.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_SIMPLEID_STORE__store_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">SIMPLEID_STORE.".store.php"</span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a69">69</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_locale_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---locale.inc.php.html">"locale.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_config_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name">"config.php"</span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_log_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---log.inc.php.html">"log.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_simpleweb_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleweb/_www---simpleweb.inc.php.html">"simpleweb.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_common_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---common.inc.php.html">"common.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a64">64</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_config_default_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---config.default.php.html">"config.default.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_openid_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---openid.inc.php.html">"openid.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a66">66</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_user_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---user.inc.php.html">"user.inc.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|							<a href="#sec-variables">Variables</a>
+				|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="definePRE_0_7_0_VERSION"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">PRE_0_7_0_VERSION</span> = '0.6.0 or earlier'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a74">74</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineUPGRADE_LEGACY_CONFIG_INC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">UPGRADE_LEGACY_CONFIG_INC</span> = TRUE
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a58">58</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-variables"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|						<span class="disabled">Variables</span>
+			|							<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="global$upgrade_access_check" id="global$upgrade_access_check"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$upgrade_access_check</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Access control for this script.</p>
+<p class="description"><p>If you are upgrading your SimpleID installation using the upgrade.php script,  and you are not logged in as an administrator, you will need to modify the access  check statement below.</p><p>Change the TRUE to a FALSE to disable the access  check. After finishing the upgrade, be sure to open this file again  and change the FALSE back to a TRUE.</p></p>
+	
+		
+</div>
+<a name="global$upgrade_functions" id="global$upgrade_functions"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$upgrade_functions</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a81">81</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This variable holds the upgrade functions for each version of SimpleID</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|										<a href="#sec-variables">Variables</a>
+				|						<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionupgrade_access_denied" id="functionupgrade_access_denied"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_access_denied</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a386">386</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays a page notifying the user that he or she does not have permission to  run the upgrade script.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_access_denied
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_apply" id="functionupgrade_apply"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_apply</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a258">258</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the upgrade.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_apply
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_config_inc_to_php" id="functionupgrade_config_inc_to_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_config_inc_to_php</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a452">452</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks that config.inc has been renamed to config.php</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.9</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_config_inc_to_php
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_delete_token" id="functionupgrade_delete_token"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_delete_token</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a463">463</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the site-token setting for a more secure version</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.9</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_delete_token
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_get_functions" id="functionupgrade_get_functions"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_get_functions</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a334">334</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Selects the upgrade functions applicable for this upgrade.</p>
+<p class="description"><p>The upgrade functions are specified by the <a href="../simpleid/_www---upgrade.php.html#global$upgrade_functions">$upgrade_functions</a>  variable.  This variable is an associative array containing version numbers  as keys and an array of upgrade function names as values.  This function  merges all the upgrade function names of the version between the current  installed version and the upgraded version.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array of strings, containing the list of upgrade functions  to call.  The functions should be called in the same order as they appear  in this array</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			upgrade_get_functions
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$version</span><span class="var-description">: the version of SimpleID to upgrade from, calls  <a href="../simpleid/_www---upgrade.php.html#functionupgrade_get_version">upgrade_get_version()</a> if not specified</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupgrade_get_version" id="functionupgrade_get_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_get_version</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a301">301</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the current installed version of SimpleID</p>
+<p class="description"><p>The current installed version of SimpleID is taken from the <a href="../simpleid/_www---filesystem.store.inc.html#functionstore_get">version</a>  application setting.  This setting is only available for versions 0.7 or later, so  if it is absent we can assume it's prior to version 0.7.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the detected version, or the string '0.6.0 or earlier'</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			upgrade_get_version
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_info" id="functionupgrade_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_info</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a180">180</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays the upgrade info page.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_info
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_rp_to_store" id="functionupgrade_rp_to_store"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_rp_to_store</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a413">413</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves the user's site preferences from the cache to the store.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_rp_to_store
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_selection" id="functionupgrade_selection"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_selection</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a205">205</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the current installed version of SimpleID, selects the individual upgrade  functions applicable to this upgrade and displays the upgrade  selection page.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_selection
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_set_version" id="functionupgrade_set_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_set_version</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a313">313</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the current version of SimpleID.</p>
+<p class="description"><p>This function sets the version application setting via <a href="../simpleid/_www---filesystem.store.inc.html#functionstore_get">store_get()</a>.  A specific version can be specified, or it can be taken from <a href="../simpleid/_www---version.inc.php.html#defineSIMPLEID_VERSION">SIMPLEID_VERSION</a>.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_set_version
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$version</span><span class="var-description">: the version to set</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupgrade_start" id="functionupgrade_start"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_start</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a108">108</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Entry point for SimpleID upgrade script.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---user.inc.php.html#functionuser_init">user_init()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_start
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_token_to_store" id="functionupgrade_token_to_store"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">upgrade_token_to_store</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a438">438</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves the site token from the cache to the store.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_token_to_store
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionupgrade_user_init" id="functionupgrade_user_init"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">upgrade_user_init</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a374">374</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines whether the current user has permission to run this script.</p>
+<p class="description"><p>A user has permission to run this script if:</p><p><ul><li>administrator=1 appears in the user's identity file; or</li><li><a href="../simpleid/_www---upgrade.php.html#global$upgrade_access_check">$upgrade_access_check</a> is false</li></ul>  If the user does not have permission, upgade_access_denied() is called</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			upgrade_user_init
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="function_upgrade_version_reverse_sort" id="function_upgrade_version_reverse_sort"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_upgrade_version_reverse_sort</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwupgrade.php.html#a360">360</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Callback function for uksort() to reverse sort version numbers.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_upgrade_version_reverse_sort
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$a</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$b</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$b</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:09:06 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

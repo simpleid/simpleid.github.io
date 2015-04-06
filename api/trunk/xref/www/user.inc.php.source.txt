@@ -619,6 +619,9 @@ function user_otp_page() {
         $xtpl->assign('secret' . ($i + 1), substr($code, $i, 4));
     }
 
+    $url = 'otpauth://totp/SimpleID?secret=' . $code . '&digits=' . $params['digits'] . '&period=' . $params['period'];
+    $xtpl->assign('qr', addslashes($url));
+
     $xtpl->assign('about_otp', t('Login verification adds an extra layer of protection to your account. When enabled, you will need to enter an additional security code whenever you log into SimpleID.'));
     $xtpl->assign('otp_warning', t('<strong>WARNING:</strong> If you enable login verification and lose your authenticator app, you will need to <a href="!url">edit your identity file manually</a> before you can log in again.',
         array('!url' => 'http://simpleid.koinic.net/documentation/troubleshooting/login-verification-recovery')
@@ -626,8 +629,8 @@ function user_otp_page() {
 
     $xtpl->assign('setup_otp', t('To set up login verification, following these steps.'));
     $xtpl->assign('download_app', t('Download an authenticator app that supports TOTP for your smartphone, such as Google Authenticator.'));
-    $xtpl->assign('add_account', t('Add your SimpleID account to authenticator app using this key.  If you are viewing this page on your smartphone you can use <a href="!url">this link</a> to add your account.',
-        array('!url' => 'otpauth://totp/SimpleID?secret=' . $code . '&digits=' . $params['digits'] . '&period=' . $params['period'])
+    $xtpl->assign('add_account', t('Add your SimpleID account to authenticator app using this key.  If you are viewing this page on your smartphone you can use <a href="!url">this link</a> or scan the QR code to add your account.',
+        array('!url' => $url)
     ));
     $xtpl->assign('verify_code', t('To check that your account has been added properly, enter the verification code from your phone into the box below, and click Verify.'));
 
@@ -834,6 +837,8 @@ function user_header($state = NULL) {
  */
 function user_passauth_user_verify_credentials($uid, $credentials) {
     $allowed_algorithms = array('md5', 'sha1');
+    if (function_exists('hash_algos')) $allowed_algorithms = array_merge($allowed_algorithms, hash_algos());
+    if (function_exists('hash_pbkdf2')) $allowed_algorithms[] = 'pbkdf2';
     
     $test_user = user_load($uid);
     
@@ -846,11 +851,21 @@ function user_passauth_user_verify_credentials($uid, $credentials) {
     if (!in_array($function, $allowed_algorithms)) $function = 'md5';
     $salt_suffix = (isset($hash_function_salt[2])) ? ':' . $hash_function_salt[2] : '';
 
-    if (call_user_func($function, $credentials['pass'] . $salt_suffix) != $hash) {
-        return false;
+    switch ($function) {
+        case 'pbkdf2':
+            list ($algo, $iterations, $salt) = explode(':', $hash_function_salt[2]);
+            $length = (function_exists('hash')) ? strlen(hash($algo, '')) : 0;
+            $test_hash = hash_pbkdf2($algo, $credentials['pass'], $salt, $iterations, $length);
+            break;
+        case 'md5':
+        case 'sha1':
+            $test_hash = call_user_func($function, $credentials['pass'] . $salt_suffix);
+            break;
+        default:
+            $test_hash = hash($function, $credentials['pass'] . $salt_suffix);
     }
-    
-    return true;
+
+    return secure_compare($test_hash, $hash);
 }
 
 /**
@@ -1020,6 +1035,30 @@ function user_hotp($secret, $data, $algorithm = 'sha1', $digits = 6) {
         ($hmac[$offset + 2] & 0xFF) << 8 |
         ($hmac[$offset + 3] & 0xFF);
     return $code % pow(10, $digits);
+}
+
+
+if (!function_exists('hash_pbkdf2') && function_exists('hash_hmac')) {
+    function hash_pbkdf2($algo, $password, $salt, $iterations, $length = 0, $raw_output = false) {
+        $result = '';
+        $hLen = strlen(hash($algo, '', true));
+        if ($length == 0) {
+            $length = $hLen;
+            if (!$raw_output) $length *= 2;
+        }
+        $l = ceil($length / $hLen);
+
+        for ($i = 1; $i <= $l; $i++) {
+            $U = hash_hmac($algo, $salt . pack('N', $i), $password, true);
+            $T = $U;
+            for ($j = 1; $j < $iterations; $j++) {
+                $T ^= ($U = hash_hmac($algo, $U, $password, true));
+            }
+            $result .= $T;
+        }
+
+        return substr(($raw_output) ? $result : bin2hex($result), 0, $length);
+    }
 }
 
 

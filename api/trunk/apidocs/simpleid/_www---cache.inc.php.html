@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page cache.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/cache.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Functions for caching and persistence.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwcache.inc.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functioncache_expire" id="functioncache_expire"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cache_expire</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwcache.inc.php.html#a157">157</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Garbage collects data stored the cache.  Data is deleted if it was stored  for longer than the specified expiry.</p>
+<p class="description"><p>The parameter to this function takes either an integer or an array.  If the  parameter is an integer, everything in the cache older than the specified  time (in seconds) will be deleted.  If the parameter is an array,  cache items of the type specified in the key to the array, older than the  corresponding value will be deleted.</p><p>This function is deprecated, use <a href="../simpleid/_www---cache.inc.php.html#functioncache_expire">cache_expire()</a>.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_expire
+		</span>
+					(<span class="var-type">int|array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|array</span>
+				<span class="var-name">$params</span><span class="var-description">: the expiry time, in seconds, after which data will be deleted,  or an array specifiying the expiry time for each type</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:08:55 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

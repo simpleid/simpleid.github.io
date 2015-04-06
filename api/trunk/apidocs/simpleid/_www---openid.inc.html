@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page openid.inc</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/openid.inc</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|							<a href="#sec-variables">Variables</a>
+			|							<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OpenID related functions.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwopenid.inc.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|										<a href="#sec-variables">Variables</a>
+				|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_bignum_inc"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---bignum.inc.html">"bignum.inc"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_random_inc"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../simpleid/_www---random.inc.html">"random.inc"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|							<a href="#sec-variables">Variables</a>
+				|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineOPENID_DH_DEFAULT_GEN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_DH_DEFAULT_GEN</span> = '2'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a54">54</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OpenID default generator for Diffie-Hellman key exchange.</p>
+	
+		
+</div>
+<a name="defineOPENID_DH_DEFAULT_MOD"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_DH_DEFAULT_MOD</span> = '155172898181473697471232257763715539915724801'.'966915404479707795314057629378541917580651227423698188993727816152646631'.'438561595825688188889951272158842675419950341258706556549803580104870537'.'681476726513255747040765857479291291572334510643245094715007229621094194'.'349783925984760375594985848253359305585439638443'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a45">45</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OpenID default modulus for Diffie-Hellman key exchange.</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-1_1.html#pvalue">http://openid.net/specs/openid-authentication-1_1.html#pvalue, http://openid.net/specs/openid-authentication-2_0.html#pvalue</a>,</li>
+			</ul>
+	
+		
+</div>
+<a name="defineOPENID_IDENTIFIER_SELECT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_IDENTIFIER_SELECT</span> = 'http://specs.openid.net/auth/2.0/identifier_select'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a73">73</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for the OP-local identifier which indicates that SimpleID should choose an identifier</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-2_0.html#anchor27">http://openid.net/specs/openid-authentication-2_0.html#anchor27</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineOPENID_NS_1_0"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_NS_1_0</span> = 'http://openid.net/signon/1.0'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a66">66</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for OpenID namespace</p>
+	
+		
+</div>
+<a name="defineOPENID_NS_1_1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_NS_1_1</span> = 'http://openid.net/signon/1.1'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a64">64</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for OpenID namespace</p>
+	
+		
+</div>
+<a name="defineOPENID_NS_2_0"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_NS_2_0</span> = 'http://specs.openid.net/auth/2.0'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a62">62</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for OpenID namespace</p>
+	
+		
+</div>
+<a name="defineOPENID_RESPONSE_FRAGMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_RESPONSE_FRAGMENT</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a80">80</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parameter for <a href="../simpleid/_www---openid.inc.html#functionopenid_indirect_response_url">openid_indirect_response_url()</a></p>
+	
+		
+</div>
+<a name="defineOPENID_RESPONSE_QUERY"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_RESPONSE_QUERY</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a78">78</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parameter for <a href="../simpleid/_www---openid.inc.html#functionopenid_indirect_response_url">openid_indirect_response_url()</a></p>
+	
+		
+</div>
+<a name="defineOPENID_RETURN_TO"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_RETURN_TO</span> = 'http://specs.openid.net/auth/2.0/return_to'
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a75">75</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for the XRDS service type for return_to verification</p>
+	
+		
+</div>
+<a name="defineOPENID_SHA256_SUPPORTED"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_SHA256_SUPPORTED</span> = true
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1078">1078</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Whether the current installation of PHP supports SHA256.  SHA256 is supported  if the hash module is properly compiled and loaded into PHP.</p>
+	
+		
+</div>
+<a name="defineOPENID_VERSION_1_1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_VERSION_1_1</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a59">59</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for the global variable <a href="../simpleid/_www---index.php.html#global$version">$version</a></p>
+	
+		
+</div>
+<a name="defineOPENID_VERSION_2"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">OPENID_VERSION_2</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a57">57</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant for the global variable <a href="../simpleid/_www---index.php.html#global$version">$version</a></p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-variables"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|						<span class="disabled">Variables</span>
+			|							<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="global$openid_ns_to_alias" id="global$openid_ns_to_alias"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$openid_ns_to_alias</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A mapping of Type URIs of OpenID extnesions to aliases provided in an OpenID  request.</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|										<a href="#sec-variables">Variables</a>
+				|						<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionopenid_association_types" id="functionopenid_association_types"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_association_types</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a710">710</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the association types supported by this server.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing the association types supported by this server as keys  and an array containing the key size (mac_size) and HMAC function (hmac_func) as  values</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_association_types
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionopenid_dh_consumer_assoc" id="functionopenid_dh_consumer_assoc"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_dh_consumer_assoc</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a783">783</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Complete association by obtaining the session MAC key from the key obtained  from the Diffie-Hellman key exchange</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the decrypted session MAC key, in Base64 representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_dh_consumer_assoc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$enc_mac_key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dh_server_public</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dh_consumer_private</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_modulus</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$hash_func</span> = <span class="var-default">&#039;_openid_sha1&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$enc_mac_key</span><span class="var-description">: the encrypted session MAC key, in Base64 represnetation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_server_public</span><span class="var-description">: the server's public key, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_consumer_private</span><span class="var-description">: the consumer's private key, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_modulus</span><span class="var-description">: modulus, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hash_func</span><span class="var-description">: the hash function</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_dh_generate_key_pair" id="functionopenid_dh_generate_key_pair"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_dh_generate_key_pair</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a834">834</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a key pair for Diffie-Hellman key exchange.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing: (a) private - the private key, in Base64  and (b) public - the public key, in Base64</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_dh_generate_key_pair
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_modulus</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_gen</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_modulus</span><span class="var-description">: modulus, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_gen</span><span class="var-description">: generator, in Base64 representation</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_dh_server_assoc" id="functionopenid_dh_server_assoc"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_dh_server_assoc</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a758">758</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates the cryptographic values required for responding to association  requests</p>
+<p class="description"><p>This involves generating a key pair for the OpenID provider, then calculating  the shared secret.  The shared secret is then used to encrypt the MAC key.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing (a) dh_server_public - the server's public key (in Base64), and (b)  enc_mac_key encrypted MAC key (in Base64), encrypted using the Diffie-Hellman shared secret</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_dh_server_assoc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mac_key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dh_consumer_public</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_modulus</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_gen</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$hash_func</span> = <span class="var-default">&#039;_openid_sha1&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mac_key</span><span class="var-description">: the MAC key, in binary representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_consumer_public</span><span class="var-description">: the consumer's public key, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_modulus</span><span class="var-description">: modulus - a large prime number</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_gen</span><span class="var-description">: generator - a primitive root modulo</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hash_func</span><span class="var-description">: the hash function</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_dh_shared_secret" id="functionopenid_dh_shared_secret"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_dh_shared_secret</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a809">809</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates the shared secret for Diffie-Hellman key exchange.</p>
+<p class="description"><p>This is the second step in the Diffle-Hellman key exchange process.  The other  party (in OpenID 1.0 terms, the consumer) has already generated the public  key ($dh_consumer_public) and sent it to this party (the server).  The Diffie-Hellman  modulus ($dh_modulus) and generator ($dh_gen) have either been sent or previously agreed.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the shared secret (as a bignum)</li>
+				<li><span class="field">see:</span> <a href="../simpleid/_www---openid.inc.html#functionopenid_dh_generate_key_pair">openid_dh_generate_key_pair()</a></li>
+				<li><span class="field">link:</span> <a href="http://www.ietf.org/rfc/rfc2631.txt">http://www.ietf.org/rfc/rfc2631.txt RFC 2631</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			openid_dh_shared_secret
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$their_public</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$my_private</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dh_modulus</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$their_public</span><span class="var-description">: the other party's public key, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$my_private</span><span class="var-description">: this party's private key, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dh_modulus</span><span class="var-description">: modulus, in Base64 representation</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_direct_error" id="functionopenid_direct_error"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_direct_error</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a293">293</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends a direct message indicating an error.  This is a convenience function  for <a href="../simpleid/_www---openid.inc.html#functionopenid_direct_response">openid_direct_response()</a>.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_direct_error
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$additional</span> = <span class="var-default">array()</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$error</span><span class="var-description">: the error message</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$additional</span><span class="var-description">: any additional data to be sent with the error  message</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the message version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_direct_message" id="functionopenid_direct_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_direct_message</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a117">117</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a OpenID message for direct response.</p>
+<p class="description"><p>The response will be encoded using Key-Value Form Encoding.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the message in key-value form encoding</li>
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-1_1.html#anchor32">http://openid.net/specs/openid-authentication-1_1.html#anchor32, http://openid.net/specs/openid-authentication-2_0.html#kvform</a>,</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_direct_message
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: the data in the response</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the message version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_direct_response" id="functionopenid_direct_response"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_direct_response</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a152">152</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends a direct response.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_direct_response
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$status</span> = <span class="var-default">&#039;200 OK&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: an OpenID message encoded using Key-Value Form</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$status</span><span class="var-description">: the HTTP status to send</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_encrypt_mac_key" id="functionopenid_encrypt_mac_key"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_encrypt_mac_key</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a866">866</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encrypts/decrypts and encodes the MAC key.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the encrypted MAC key in Base64 representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_encrypt_mac_key
+		</span>
+					(<span class="var-type">resource</span>&nbsp;<span class="var-name">$ZZ</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mac_key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$hash_func</span> = <span class="var-default">&#039;_openid_sha1&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$ZZ</span><span class="var-description">: the Diffie-Hellman key exchange shared secret as a bignum</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mac_key</span><span class="var-description">: a byte stream containing the MAC key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hash_func</span><span class="var-description">: the hash function</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_extension_alias" id="functionopenid_extension_alias"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_extension_alias</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a663">663</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the OpenID alias for an extension, given a Type URI, based on the  alias definitions in the current OpenID request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the alias, or NULL if the Type URI does not already  have an alias in the current OpenID request <em>and</em> $create is false</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_extension_alias
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span>, [<span class="var-type">bool|string</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: the Type URI</span>			</li>
+					<li>
+				<span class="var-type">bool|string</span>
+				<span class="var-name">$create</span><span class="var-description">: whether to create an alias if the Type URI does not already  have an alias in the current OpenID request.  If this parameter is a string,  then the string specified is the preferred alias to be created, unless a collision  occurs</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_extension_filter_request" id="functionopenid_extension_filter_request"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_extension_filter_request</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a605">605</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filters an OpenID request to find keys specific to an extension, as specified  by the Type URI.</p>
+<p class="description"><p>For exmaple, if the extension has the Type URI http://example.com/ and the  alias example, this function will return an array of all the keys in the  OpenID request which starts with openid.example</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the filtered request, with the prefix (in the example above,  openid.example.) stripped in the keys.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_extension_filter_request
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: the Type URI of the extension</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$request</span><span class="var-description">: the OpenID request</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_extension_requested" id="functionopenid_extension_requested"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_extension_requested</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a634">634</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines whether an extension is present in an OpenID request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the extension is present in the request</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			openid_extension_requested
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: the Type URI of the extension</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$request</span><span class="var-description">: the OpenID request</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_fix_request" id="functionopenid_fix_request"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_fix_request</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a392">392</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fix PHP's handling of request data.  PHP changes dots in all request parameters  to underscores when creating the $_GET, $_POST and $_REQUEST arrays.</p>
+<p class="description"><p>This function scans the original query string and POST parameters and fixes  them.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_fix_request
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionopenid_get_realm" id="functionopenid_get_realm"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_get_realm</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a323">323</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the realm from the OpenID request.  This is specified differently  depending on the OpenID version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the realm URI</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_get_realm
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$request</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$request</span><span class="var-description">: the OpenID request</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the OpenID version for the message</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_get_version" id="functionopenid_get_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_get_version</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a101">101</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the OpenID version of the current request</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> either OPENID_VERSION_2 or OPENID_VERSION_1_1</li>
+				<li><span class="field">see:</span> <a href="../simpleid/_www---index.php.html#global$version">$version</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			openid_get_version
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">&#039;openid.ns&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$request</span><span class="var-description">: the OpenID request</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: the key to look for to determine the OpenID  version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_indirect_error" id="functionopenid_indirect_error"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_indirect_error</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a310">310</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends an indirect message indicating an error.  This is a convenience function  for <a href="../simpleid/_www---openid.inc.html#functionopenid_indirect_response">openid_indirect_response()</a>.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_indirect_error
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$error</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$additional</span> = <span class="var-default">array()</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$component</span> = <span class="var-default">OPENID_RESPONSE_QUERY</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: the URL to which the error message is to be sent</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$error</span><span class="var-description">: the error message</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$additional</span><span class="var-description">: any additional data to be sent with the error  message</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the message version</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$component</span><span class="var-description">: the component of the URL in which the indirect message is  encoded, either OPENID_RESPONSE_QUERY or OPENID_RESPONSE_FRAGMENT</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_indirect_message" id="functionopenid_indirect_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_indirect_message</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a173">173</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a OpenID message for indirect response.</p>
+<p class="description"><p>The response will be encoded using HTTP Encoding.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the message</li>
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-2_0.html#indirect_comm">http://openid.net/specs/openid-authentication-2_0.html#indirect_comm</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_indirect_message
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: the data in the response</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the message version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_indirect_response" id="functionopenid_indirect_response"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_indirect_response</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a200">200</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends an indirect response to a URL.</p>
+<p class="description"><p>The indirect message is encoded in the URL and returned to the user agent using  a HTTP redirect response.  The message can be encoded in either the query component  or the fragment component of the URL.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_indirect_response
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">array|string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$component</span> = <span class="var-default">OPENID_RESPONSE_QUERY</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: the URL to which the response is to be sent</span>			</li>
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$message</span><span class="var-description">: an OpenID message, which can either be an array of keys  and values, or a URL-encoded query string</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$component</span><span class="var-description">: the component of the URL in which the indirect message is  encoded, either OPENID_RESPONSE_QUERY or OPENID_RESPONSE_FRAGMENT</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_indirect_response_url" id="functionopenid_indirect_response_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_indirect_response_url</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a222">222</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encodes an indirect message into a URL</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the URL to which the response is to be sent, with the  encoded message</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_indirect_response_url
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">array|string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$component</span> = <span class="var-default">OPENID_RESPONSE_QUERY</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: the URL to which the response is to be sent</span>			</li>
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$message</span><span class="var-description">: an OpenID message, which can either be an array of keys  and values, or a URL-encoded query string</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$component</span><span class="var-description">: the component of the URL in which the indirect message is  encoded, either OPENID_RESPONSE_QUERY or OPENID_RESPONSE_FRAGMENT</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_nonce" id="functionopenid_nonce"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_nonce</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a697">697</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a nonce for use in OpenID responses</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an OpenID nonce</li>
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-2_0.html#positive_assertions">http://openid.net/specs/openid-authentication-2_0.html#positive_assertions</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_nonce
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionopenid_parse_direct_message" id="functionopenid_parse_direct_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_parse_direct_message</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a347">347</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses a direct message.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing the parsed key-value pairs</li>
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_parse_direct_message
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the direct message to parse</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_parse_query" id="functionopenid_parse_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_parse_query</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a369">369</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses a query string.</p>
+<p class="description"><p>Query strings can be used to receive OpenID indirect messages.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing the parsed key-value pairs</li>
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_parse_query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: the query string to parse</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_parse_request" id="functionopenid_parse_request"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_parse_request</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a446">446</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses the OpenID request to extract namespace information.</p>
+<p class="description"><p>This function builds a map between namespace aliases and their Type URIs.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_parse_request
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$request</span><span class="var-description">: the OpenID request</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_realm_discovery_url" id="functionopenid_realm_discovery_url"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_realm_discovery_url</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a524">524</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the URL of a relying party endpoint for a specified realm.  This URL  is used to discover services associated with the realm.</p>
+<p class="description"><p>If the realm's domain contains the wild-card characters &quot;*.&quot;, this is substituted  with &quot;www.&quot;.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			openid_realm_discovery_url
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$realm</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$realm</span><span class="var-description">: the realm</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_session_types" id="functionopenid_session_types"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_session_types</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a730">730</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the association types supported by this server and the version of  OpenID.</p>
+<p class="description"><p>OpenID version 1 supports an empty string as the session type.  OpenID version 2  reqires a session type to be sent.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> an array containing the session types supported by this server as keys  and an array containing the hash function (hash_func) as  values</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			openid_session_types
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$is_https</span> = <span class="var-default">FALSE</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$is_https</span><span class="var-description">: whether the transport layer encryption is used for the current  connection</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the OpenID version, either OPENID_VERSION_1_1 and OPENID_VERSION_2</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_sign" id="functionopenid_sign"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_sign</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a986">986</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates a signature of an OpenID message</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the signature encoded in Base64</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_sign
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mac_key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$hmac_func</span> = <span class="var-default">&#039;_openid_hmac_sha1&#039;</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">OPENID_VERSION_2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: the data in the message</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$keys</span><span class="var-description">: a list of keys in the message to be signed (without the  'openid.' prefix)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mac_key</span><span class="var-description">: the MAC key used to sign the message, in Base64 representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hmac_func</span><span class="var-description">: the HMAC function used in the signing process</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the OpenID version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_urlencode_message" id="functionopenid_urlencode_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_urlencode_message</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a274">274</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encodes a message in application/x-www-form-urlencoded format.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the encoded message</li>
+				<li><span class="field">since:</span> 0.8</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			openid_urlencode_message
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$message</span><span class="var-description">: the OpenID message to encode</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_url_matches_realm" id="functionopenid_url_matches_realm"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">openid_url_matches_realm</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a476">476</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines whether a URL matches a realm.</p>
+<p class="description"><p>A URL matches a realm if:</p><p><ol><li>The URL scheme and port of the URL are identical to those in the realm.
+    See RFC 3986, section 3.1 for rules about URI matching.</li><li>The URL's path is equal to or a sub-directory of the realm's path.</li><li>Either:
+    (a) The realm's domain contains the wild-card characters &quot;*.&quot;, and the
+        trailing part of the URL's domain is identical to the part of the
+        realm following the &quot;*.&quot; wildcard, or
+    (b) The URL's domain is identical to the realm's domain</li></ol></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the URL matches the realm</li>
+				<li><span class="field">since:</span> 0.6</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			openid_url_matches_realm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$realm</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: to URL to test</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$realm</span><span class="var-description">: the realm</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionopenid_verify_return_to" id="functionopenid_verify_return_to"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">openid_verify_return_to</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a557">557</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verifies a return_to URL against the actual URL of the HTTP request.</p>
+<p class="description"><p>The return_to URL matches if:</p><p><ul><li>The URL scheme, authority, and path are the same; and</li><li>Any query parameters that are present in the return_to URL are also present
+   with the same values in the actual request.</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the URLs match</li>
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			openid_verify_return_to
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$return_to</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$actual_url</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$return_to</span><span class="var-description">: the URL specified in the openid.return_to parameter</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$actual_url</span><span class="var-description">: the actual URL requested</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionrfc3986_urlencode" id="functionrfc3986_urlencode"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">rfc3986_urlencode</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1120">1120</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encodes a URL using RFC 3986.</p>
+<p class="description"><p>PHP's rfc3986_urlencode function encodes a URL using RFC 1738 for PHP versions  prior to 5.3.  RFC 1738 has been  updated by RFC 3986, which change the list of characters which needs to be  encoded.</p><p>Strictly correct encoding is required for various purposes, such as OAuth  signature base strings.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the encoded URL</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			rfc3986_urlencode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$s</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$s</span><span class="var-description">: the URL to encode</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_base64_to_bignum" id="function_openid_base64_to_bignum"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_openid_base64_to_bignum</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a948">948</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts an arbitary precision integer, encoded in Base64, to a bignum</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the string representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			_openid_base64_to_bignum
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: arbitary precision integer, encoded in Base64</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_bignum_to_base64" id="function_openid_bignum_to_base64"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_openid_bignum_to_base64</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a959">959</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a string representation of an integer to an arbitary precision  integer, then converts it to Base64 encoding.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the Base64 encoded arbitary precision integer</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_bignum_to_base64
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the string representation</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_btwoc" id="function_openid_btwoc"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_openid_btwoc</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a970">970</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode an integer as big-endian signed two's complement binary string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the signed two's complement binary string</li>
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-2_0.html#btwoc">http://openid.net/specs/openid-authentication-2_0.html#btwoc</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_btwoc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$num</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$num</span><span class="var-description">: the binary integer</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_dh_rand" id="function_openid_dh_rand"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_openid_dh_rand</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a904">904</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a random integer, which will be used to derive a private key  for Diffie-Hellman key exchange.  The integer must be less than $stop</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the random integer as a bignum</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			_openid_dh_rand
+		</span>
+					(<span class="var-type">resource</span>&nbsp;<span class="var-name">$stop</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$stop</span><span class="var-description">: a prime number as a bignum</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_hmac_sha1" id="function_openid_hmac_sha1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_openid_hmac_sha1</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1052">1052</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains the keyed hash value using the HMAC method and the SHA1 algorithm</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the hash in binary representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_hmac_sha1
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: the key in binary representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: the text to be hashed</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_hmac_sha256" id="function_openid_hmac_sha256"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_openid_hmac_sha256</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1097">1097</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains the keyed hash value using the HMAC method and the SHA256 algorithm</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the hash in binary representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_hmac_sha256
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: the key in binary representation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: the text to be hashed</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_sha1" id="function_openid_sha1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_openid_sha1</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1035">1035</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains the SHA1 hash of a string in binary representation.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the hash in binary representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_sha1
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: the text to be hashed</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_sha256" id="function_openid_sha256"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_openid_sha256</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1086">1086</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtains the SHA256 hash of a string in binary representation.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the hash in binary representation</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_sha256
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: the text to be hashed</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_signature_base_string" id="function_openid_signature_base_string"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_openid_signature_base_string</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a1015">1015</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates the base string from which an OpenID signature is generated.</p>
+<p class="description"><p>OpenID versions 1 and 2 specify that messages are to be encoded using Key-Value  Encoding when generating signatures.  However, future OpenID version may  specify different ways of encoding the message, such as OAuth.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the signature base string</li>
+				<li><span class="field">link:</span> <a href="http://openid.net/specs/openid-authentication-2_0.html#anchor11">http://openid.net/specs/openid-authentication-2_0.html#anchor11</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_signature_base_string
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: the data to sign</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$version</span><span class="var-description">: the OpenID version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_openid_xor" id="function_openid_xor"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_openid_xor</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwopenid.inc.html#a885">885</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encrypts/decrypts using XOR.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the ciphertext or plaintext</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_openid_xor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$plain_cipher</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$hash_func</span> = <span class="var-default">&#039;_openid_sha1&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: the encryption key as a bignum.  This is usually  the shared secret (ZZ) calculated from the Diffie-Hellman key exchange</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$plain_cipher</span><span class="var-description">: the plaintext or ciphertext</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hash_func</span><span class="var-description">: the hash function</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:09:02 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>
