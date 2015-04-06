@@ -1,7 +1,7 @@
 ---
 layout: docs
 doctree: doctree1
-title: Logging in using client SSL certificates (version 0.9 and later)
+title: Logging in using client SSL certificates
 date: 2011-09-01 22:10:18
 permalink: /docs/1/certauth/
 redirect_from: /documentation/advanced-topics/logging-using-client-ssl-certificates-version-0.9-and-later/

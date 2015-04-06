@@ -1,7 +1,7 @@
 ---
 layout: docs
 doctree: doctree1
-title: Installing SimpleID (version 1.0 and earlier)
+title: Installing SimpleID
 date: 2009-05-15 21:20:18
 permalink: /docs/1/installing/
 redirect_from: /documentation/getting-started/installing-simpleid/
@@ -43,7 +43,7 @@ The URL to this directory becomes the URL of the SimpleID server (or, more preci
 
 ## 3. Set up configuration options {#config}
 
-Make a copy of the file `config.inc.dist` in the web directory and rename it `config.php`.
+Make a copy of the file `config.php.dist` in the web directory and rename it `config.php`.
 
 Open the file with a text editor and edit the configuration options.  The file is formatted as a plain PHP file.
 

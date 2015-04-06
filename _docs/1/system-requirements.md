@@ -24,7 +24,7 @@ To host a SimpleID installation requires:
     - xml;
     - hash.
 4. PHP needs to be configured so that <code>register_globals</code> is switched **off**. See the [PHP manual](http://www.php.net/manual/en/security.globals.php) for further details.
-5. If you are using [PHP Suhosin](http://www.hardened-php.net/suhosin/index.html), or some other query filter, you may need to increase the <code>[suhosin.get.max_value_length](http://www.hardened-php.net/suhosin/configuration.html#suhosin.get.max_value_length)</code> configuration to at least 1024, as SimpleID uses very long query strings.
+5. If you are using [PHP Suhosin](http://www.hardened-php.net/suhosin/index.html), or some other query filter, you may need to increase the [`suhosin.get.max_value_length`](http://www.hardened-php.net/suhosin/configuration.html#suhosin.get.max_value_length) configuration to at least 1024, as SimpleID uses very long query strings.
 
 You can also have the following extension enabled for better performance:
 

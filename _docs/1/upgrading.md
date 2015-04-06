@@ -39,9 +39,9 @@ To upgrade your installation of SimpleID, follow the following steps.
 
 3. Upload the new files to the appropriate locations of your server.
 
-4. Some versions may require you to modify your <code>config.inc</code> file.  Review <code>UPGRADE.txt</code> and the sections below to see if this is required.
+4. Some versions may require you to modify your <code>config.php</code> file.  Review <code>UPGRADE.txt</code> and the sections below to see if this is required.
 
-    The new SimpleID installation package will not overwrite your <code>config.inc</code> file.  Instead, it will have a new version of <code>config.inc.dist</code> file.  You may have a look at the new <code>config.inc.dist</code> to see if there are any additional configuration options which you may put in your <code>config.inc</code> file.  In most cases, the defaults will be sensible.
+    The new SimpleID installation package will not overwrite your <code>config.php</code> file.  Instead, it will have a new version of <code>config.php.dist</code> file.  You may have a look at the new <code>config.php.dist</code> to see if there are any additional configuration options which you may put in your <code>config.php</code> file.  In most cases, the defaults will be sensible.
 
 5. Some versions may require you to [run upgrade.php](#upgrade-php).  Review <code>UPGRADE.txt</code> and the sections below to see if this is required.
 
