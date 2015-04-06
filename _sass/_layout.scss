@@ -387,6 +387,25 @@
     a { font-weight: normal; }
 }
 
+.doc .note, .doc .warning, .doc .error {
+    padding: ($spacing-unit / 4) ($spacing-unit / 2) ($spacing-unit / 4) 40px;
+    margin: ($spacing-unit / 2) 0;
+    background-repeat: no-repeat;
+    background-position: 10px ($spacing-unit / 4);
+}
+.doc .note {
+    background-color: #DDEEFF;
+    background-image: url(../info.png);
+}
+.doc .warning { 
+    background-color: #FFFFDD;
+    background-image: url(../warning.png);
+}
+.doc .error {
+    background-color: #FFDDEE;
+    background-image: url(../error.png);
+}
+
 .edit-docs {
     font-size: $small-font-size;
     margin: ($spacing-unit / 2) 0;

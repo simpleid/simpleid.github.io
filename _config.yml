@@ -16,9 +16,12 @@ permalink: /:categories/:year/:month/:title
 exclude: 
     - .rvmrc
     - .rbenv-version
+    - CNAME
     - README.md
     - Gemfile
     - vendor
+
+markdown: kramdown
 
 highlighter: pygments
 
