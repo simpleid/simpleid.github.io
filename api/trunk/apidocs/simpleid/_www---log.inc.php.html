@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page log.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/log.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+											<a href="#sec-constants">Constants</a>
+			|							<a href="#sec-variables">Variables</a>
+			|							<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Functions for logging.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+									<span class="disabled">Constants</span>
+			|							<a href="#sec-variables">Variables</a>
+				|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineSIMPLEID_LOG_DEBUG"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_DEBUG</span> = 5
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a32">32</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOG_ERROR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_ERROR</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a40">40</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOG_FATAL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_FATAL</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a42">42</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOG_INFO"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_INFO</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a34">34</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOG_NOTICE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_NOTICE</span> = 3
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a36">36</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+<a name="defineSIMPLEID_LOG_WARN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SIMPLEID_LOG_WARN</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a38">38</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log level</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-variables"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-constants">Constants</a>
+				|						<span class="disabled">Variables</span>
+			|							<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="global$log" id="global$log"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="var-title">
+			<span class="var-type">resource</span>
+			<span class="var-name">$log</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This variable holds the pointer to the currently opened log file.  If the  log file is not open, this variable is NULL.</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-constants">Constants</a>
+				|										<a href="#sec-variables">Variables</a>
+				|						<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionlog_array" id="functionlog_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_array</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a152">152</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts an array into a string for logging purposes.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the converted string.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			log_array
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$array</span><span class="var-description">: the array the convert</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$keys</span><span class="var-description">: an array of keys to include in the converted string.  Set  to false if all the keys in the array should be included</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_close" id="functionlog_close"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">log_close</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a76">76</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Closes the log file, if it is open.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_close
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionlog_debug" id="functionlog_debug"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_debug</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a90">90</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a DEBUG message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_debug
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_error" id="functionlog_error"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">log_error</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a130">130</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a ERROR message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_error
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_fatal" id="functionlog_fatal"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_fatal</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a140">140</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a FATAL message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_fatal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_info" id="functionlog_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">log_info</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a100">100</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs an INFO message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_info
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_notice" id="functionlog_notice"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_notice</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a110">110</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a NOTICE message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_notice
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_open" id="functionlog_open"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">log_open</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a60">60</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Opens the log file.</p>
+<p class="description"><p>This function opens a pointed to the log file for later usage.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the log file is opened successfully.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			log_open
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionlog_warn" id="functionlog_warn"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_warn</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a120">120</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a WARN message.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../simpleid/_www---log.inc.php.html#function_log_write">_log_write()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_warn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_log_write" id="function_log_write"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_log_write</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwlog.inc.php.html#a171">171</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a message</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the log has been written successfully</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			_log_write
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the message to log</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$level</span><span class="var-description">: the log level</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:24:42 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

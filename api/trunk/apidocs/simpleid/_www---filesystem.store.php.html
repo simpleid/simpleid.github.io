@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page filesystem.store.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/www/filesystem.store.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-variables">Variables</a>
+			|							<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Functions for persistent storage via the file system.</p>
+<p class="description"><p>In general, there are three different sets of data which SimpleID needs  to store:</p><p><ul><li>transient data (e.g. OpenID associations, sessions, auto-login)</li><li>application data (e.g. salt for form tokens)</li><li>user data (e.g. user names, passwords and settings)</li></ul>  Prior to version 0.7, both transient data and application data are stored  using cache.inc.  From version 0.7, application data are now  stored separately from the cache.</p><p>Prior to version 0.7, user data is only stored in the identity file, to which  SimpleID cannot write.  This means that if the user wishes to change a setting,  he or she will need to edit the identity file manually.  Other user settings  (e.g. RP preferences) are stored using cache.inc</p><p>From version 0.7, user data is stored in two files, one is the identity  file, the other is the user store file, which SimpleID can write.</p></p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	<a name="sec-variables"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Variables</span>
+			|							<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="global$simpleid_settings" id="global$simpleid_settings"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$simpleid_settings</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This variable is a cache of SimpleID's application settings.  It is populated  progressively as <a href="../simpleid/_www---filesystem.store.php.html#functionstore_get">store_get()</a> is called.</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-variables">Variables</a>
+				|						<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionstore_del" id="functionstore_del"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">store_del</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a307">307</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes an application setting.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			store_del
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the name of the setting to delete</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_get" id="functionstore_get"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">store_get</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a260">260</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads an application setting.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the value of the setting</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			store_get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the name of the setting to return</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: the default value to use if this variable has never been set</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_get_uid" id="functionstore_get_uid"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">store_get_uid</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a144">144</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finds the user name from a specified OpenID Identity URI.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the user name for the Identity URI, or NULL if no user has  the specified Identity URI</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			store_get_uid
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identity</span><span class="var-description">: the Identity URI of the user to load</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_get_uid_from_cert" id="functionstore_get_uid_from_cert"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">store_get_uid_from_cert</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a185">185</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finds the user name from a specified client SSL certificate string.</p>
+<p class="description"><p>The client SSL certificate string comprises the certificate's serial number  (in capitals hex notation) and the distinguished name of the certificate's issuer  (with components joined using slashes), joined using a semi-colon.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the user name matching the client SSL certificate string, or NULL if no user has  client SSL certificate string</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			store_get_uid_from_cert
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cert</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cert</span><span class="var-description">: the client SSL certificate string of the user to load</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_set" id="functionstore_set"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">store_set</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a285">285</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Saves an application setting.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			store_set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the name of the setting to save</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: the value of the setting</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_user_exists" id="functionstore_user_exists"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">store_user_exists</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a64">64</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns whether the user name exists in the user store.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> whether the user name exists</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			store_user_exists
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uid</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uid</span><span class="var-description">: the name of the user to check</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_user_load" id="functionstore_user_load"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">store_user_load</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a82">82</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads user data for a specified user name.</p>
+<p class="description"><p>The user name must exist.  You should check whether the user name exists with  the <a href="../simpleid/_www---filesystem.store.php.html#functionstore_user_exists">store_user_exists()</a> function</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> data for the specified user</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			store_user_load
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uid</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uid</span><span class="var-description">: the name of the user to load</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_user_save" id="functionstore_user_save"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">store_user_save</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a236">236</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Saves user data for a specific user name.</p>
+<p class="description"><p>This data is stored in the user store file.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 0.7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			store_user_save
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uid</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$exclude</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uid</span><span class="var-description">: the name of the user</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: the data to save</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$exclude</span><span class="var-description">: an array of keys to exclude from the user store file.  These are generally keys which are stored in the identity file.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstore_user_updated_time" id="functionstore_user_updated_time"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">store_user_updated_time</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a112">112</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the time which a user's data has been updated.</p>
+<p class="description"><p>The user name must exist.  You should check whether the user name exists with  the <a href="../simpleid/_www---filesystem.store.php.html#functionstore_user_exists">store_user_exists()</a> function.</p><p>The time returned can be based on the identity file,  the user store file, or the latter of the two.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the updated time</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			store_user_updated_time
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uid</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uid</span><span class="var-description">: the name of the user to obtain the update time</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: one of: 'identity' (identity file), 'usrstore' (user store  file) or NULL (latter of the two)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_store_is_valid_name" id="function_store_is_valid_name"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_store_is_valid_name</span> (line <span class="line-number"><a href="../__filesource/fsource_simpleid__wwwfilesystem.store.php.html#a331">331</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines whether a name is a valid name for use with this store.</p>
+<p class="description"><p>For file system storage, a name is not valid if it contains either a  directory separator (i.e. / or \).</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> whether the name is valid for use with this store</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_store_is_valid_name
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the name to check</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 06 Apr 2015 15:24:40 +1000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>
