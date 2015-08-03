@@ -23,10 +23,6 @@ SimpleID is available as a package for the following Linux distributions:
 - [Debian](http://packages.debian.org/simpleid)
 - [Ubuntu](https://launchpad.net/ubuntu/+source/simpleid)
 
-### PEAR
-
-There is also an *experimental* PEAR channel at `simpleid.koinic.net`.  For more information on the SimpleID PEAR channel, see the [PEAR installation instructions](/documentation/getting-started/installing-simpleid/pear) or the [channel page](/pear).
-
 ## Development Snapshots
 
 <p>The latest development snapshots can be downloaded from <a href="http://sourceforge.net/p/simpleid/code/ci/master/tarball">SourceForge</a>.</p>
