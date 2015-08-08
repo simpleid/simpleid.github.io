@@ -43,8 +43,8 @@ Note that sensitive security information may be written into the log file.  Only
 
 </div>
 
-To enable logging, open <code>config.php</code>, and edit the <code>[SIMPLEID_LOGFILE](/api/trunk/simpleid/_www---config.php.dist.html#defineSIMPLEID_LOGFILE)</code> and <code>[SIMPLEID_LOGLEVEL](/api/trunk/simpleid/_www---config.php.dist.html#defineSIMPLEID_LOGFILE)</code> options.
+To enable logging, open <code>config.php</code>, and edit the <code>SIMPLEID_LOGFILE</code> and <code>SIMPLEID_LOGLEVEL</code> options.
 
-To disable logging, set <code>[SIMPLEID_LOGFILE](/api/trunk/simpleid/_www---config.php.dist.html#defineSIMPLEID_LOGFILE)</code> to an empty string.
+To disable logging, set <code>SIMPLEID_LOGFILE</code> to an empty string.
 
 Note that these configuration options may not exist in your copy of the <code>config.php</code> file, if you have upgraded from a previous version of SimpleID.  You can safely copy these configuration options from the latest <code>config.php.dist</code> file into your <code>config.php</code> file.
