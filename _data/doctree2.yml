@@ -1,0 +1,33 @@
+title: SimpleID 2 Documentation
+home: 2/
+sections:
+    - title: Getting started
+      docs:
+        - 2/system-requirements
+        - 2/installing
+        - 2/users
+        - 2/clients
+        - 2/migrating
+
+    - title: Identity protocols
+      docs:
+        - 2/openid
+        - 2/openid-connect
+        - 2/webfinger
+
+    - title: Using SimpleID
+      docs:
+        - 2/login
+        - 2/login-verification
+        - 2/profile
+        - 2/modules
+
+    - title: Troubleshooting
+      docs:
+        - 2/troubleshooting
+        - 2/common-problems
+
+    - title: Advanced topics
+      docs:
+        - 2/auth-schemes
+        - 2/stores
