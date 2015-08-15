@@ -19,9 +19,10 @@ lunr_exclude: true
   <% _.each(results, function(result) { 
     if (result.title) { %>
     <li>
-      <h2>
-        <a class="post-link" href="<%= result.url %>"><%= result.title %></a>
-      </h2>
+      <span class="result-title">
+        <a href="<%= result.url %>"><%= result.title %></a>
+      </span>
+      <% if (result.doctree && doctrees[result.doctree]) { %><span class="result-label"><%= doctrees[result.doctree] %></span><% } %>
     </li>
   <% 
     }
@@ -33,6 +34,7 @@ lunr_exclude: true
 (function ($) {
     var index;
     var pages = [];
+    var doctrees;
     var results_tpl;
 
     $(document).ready(function () {
@@ -41,12 +43,16 @@ lunr_exclude: true
             this.field('title', {boost: 10});
             this.field('body');
         });
+        
+        $.getJSON('{{ "/search/doctrees.json" | prepend: site.baseurl }}').done(function(data) {
+            doctrees = data;
+        });
 
         $.getJSON('{{ "/search/search_entries.json" | prepend: site.baseurl }}').done(function(entries) {
             _.each(entries, function(entry) {
                 if (entry.category == '') return;
                 index.add(entry);
-                pages.push({ id: entry.id, title: entry.title, url: entry.url });
+                pages.push({ id: entry.id, title: entry.title, url: entry.url, doctree: entry.doctree });
             });
             $('#search-form').show();
             $(window).trigger("hashchange");
@@ -76,7 +82,7 @@ lunr_exclude: true
                 var results = _.map(matches, function (match) {
                     return _.findWhere(pages, {id: match.ref});
                 });
-                $('#search-results').html(results_tpl({results: results}));
+                $('#search-results').html(results_tpl({results: results, doctrees: doctrees}));
             } else {
                 $('#search-results').html('Nothing found.');
             }
