@@ -9,3 +9,6 @@
 - title: Download
   url: /download
   class: menu-download
+- title: ""
+  url: /search
+  class: fa fa-search
