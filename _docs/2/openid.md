@@ -36,12 +36,9 @@ User configuration for the OpenID protocol is set out under the `openid` object 
 In order to use the OpenID protocol, the user configuration must contain an `identity` value,
 containing the [OpenID identifier](#identifier) for the user.  For example:
 
-{% highlight json %}
-{
-    "openid": {
-        "identity": "http://example.com/"
-    }
-}
+{% highlight yaml %}
+openid: 
+    identity: "http://example.com/"
 {% endhighlight %}
 
 ### Identifier  {#identifier}

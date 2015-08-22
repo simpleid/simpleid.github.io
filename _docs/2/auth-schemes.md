@@ -91,12 +91,8 @@ openssl x509 -noout -issuer -in certificate.crt
 
 These two values are then combined and placed in the `cert` section of your user file as follows:
 
-{% highlight json %}
-{
-    "cert": {
-        "certs": [
-            "02A97C;/C=Example/O=Example CA/OU=Example CA Certificate Signing/CN=Example Client CA"
-        ]
-    }
-}
+{% highlight yaml %}
+- cert:
+    certs: 
+        - "02A97C;/C=Example/O=Example CA/OU=Example CA Certificate Signing/CN=Example Client CA"
 {% endhighlight %}

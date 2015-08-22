@@ -46,12 +46,12 @@ Under the default SimpleID settings, creating a new user involves the following 
    format expected by SimpleID as documented in the sample user file.
 
 4. Tell SimpleID about that identity by creating a user file.  An **user file** (previously an identity file)
-   is a JSON-formatted file containing information about a particular SimpleID user.  They are stored in the
-   [identities directory](/docs/2/installing/#directories) and are named <code>username.user.json</code>,
+   is a YAML-formatted file containing information about a particular SimpleID user.  They are stored in the
+   [identities directory](/docs/2/installing/#directories) and are named <code>username.user.yaml</code>,
    where <var>username</var> is the name of the SimpleID user.
 
-   An example user file is <code>example.user.json.dist</code> in the identities directory.  Make a copy of
-   this file and rename it <code>username.user.json</code>, where <var>username</var> is the user name with
+   An example user file is <code>example.user.yaml.dist</code> in the identities directory.  Make a copy of
+   this file and rename it <code>username.user.yaml</code>, where <var>username</var> is the user name with
    which you want to log into SimpleID.
 
 5. Link the identifier with SimpleID.  Instructions are set out for each identity protcol.  See, for example

@@ -41,9 +41,9 @@ A client can be created using the following steps.
 
 1. Decide on the client ID.  As noted above, this must be able to be used as a valid file name.
 
-2. Create a client file.  A **client file** is a JSON-formatted file
+2. Create a client file.  A **client file** is a YAML-formatted file
    containing information about the client.  They are stored in the
-   [identities directory](/docs/2/installing/#directories) and are named <code>client_id.client.json</code>,
+   [identities directory](/docs/2/installing/#directories) and are named <code>client_id.client.yaml</code>,
    where <var>client_id</var> is the client ID.  The contents of the client file depends on the
    identity protocol being used.  Normally, the identities directory will have an example
    client file for each protocol.

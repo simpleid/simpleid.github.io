@@ -42,13 +42,10 @@ the requesting app or web site.  Therefore the protocol is only useful if you st
 information under the `userinfo` object in the user file.  For example, you can store your
 name and e-mail address as follows:
 
-{% highlight json %}
-{
-    "userinfo": {
-        "name": "Jane Citizen",
-        "email": "jane@example.net"
-    }
-}
+{% highlight yaml %}
+userinfo:
+    name: "Jane Citizen"
+    email: "jane@example.net"
 {% endhighlight %}
 
 ### WebFinger  {#webfinger}

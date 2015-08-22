@@ -31,12 +31,9 @@ SimpleID installation.
 
 For example, if SimpleID is installed at `server.example.net`:
 
-{% highlight json %}
-{
-    "webfinger": {
-        "acct": "bob@server.example.net"
-    }
-}
+{% highlight yaml %}
+webfinger: 
+    acct: "bob@server.example.net"
 {% endhighlight %}
 
 ## Client configuration

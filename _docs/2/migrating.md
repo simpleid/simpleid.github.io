@@ -27,7 +27,7 @@ equivalent in SimpleID 2.
 ## Migrating users
 
 In SimpleID 1, identity files are stored as Windows INI files.  From SimpleID 2,
-user files are stored as JSON files.
+user files are stored as YAML files.
 
 There are a large number of differences between the format between the 2 versions,
 including the following:
