@@ -22,7 +22,9 @@ protocol.  Typically the following types of information are stored:
 
 - A **client ID** unique to the SimpleID installation.  As with user information, SimpleID stores
   client information using the client ID as the file name.  As a result, a client ID must be
-  able to be used as a valid file name under your server's operating system.
+  able to be used as a valid file name under your server's operating system.  In addition, a client
+  ID must *not* begin with an underscore (`_`), as these are reserved for dynamically registered
+  clients.
 
 - Client information that is presented to the user.  This would include the human-readable name
   of the client, its logo, and links to its privacy policy or terms of service.
