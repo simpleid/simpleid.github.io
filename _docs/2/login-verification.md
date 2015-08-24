@@ -18,7 +18,7 @@ You will need a device (such as a smartphone) that supports [RFC 6238](http://to
 ## How to enable
 
 1. Login verification is implemented in an [authentication scheme module](/docs/2/auth-schemes) called OTPAuthSchemeModule.
-   To enable this module, open the `config.php` file and add `SimpleID\Auth\OTPAuthSchemeModule` under `$config['modules']`.
+   To enable this module, open the `config.php` file and add `SimpleID\Auth\OTPAuthSchemeModule` under `modules`.
 2. [Log in to SimpleID](/docs/2/login)
 3. From the **My Profile** page, go to the **Login Verification** box, then click **Enable**.
 4. Enter the key shown on the page into your device.  If your device supports scanning QR codes, you can also scan the QR code shown.

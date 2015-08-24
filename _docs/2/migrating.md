@@ -17,8 +17,9 @@ be required.
 ## Migrating configuration settings
 
 In SimpleID 1, configuration settings are stored as a set of `define` statements
-in `config.php`.  In SimpleID 2, configuration settings are stored as the
-`$config` array in `config.php`.
+in `config.php`.  In SimpleID 2, configuration settings are stored in the
+`$config` array in `config.php` created by parsing the YAML settings in that
+file.
 
 The configuration settings will need to be migrated manually.  There is largely a
 one-to-one correspondence between the SimpleID 1 configuration settings and their

@@ -67,11 +67,11 @@ SSLOCSPEnable on
 #### Enable the `CertAuthSchemeModule` module
 
 Enable the `CertAuthSchemeModule` module by including `SimpleID\Auth\CertAuthSchemeModule` in
-the `$config['modules']` array in the `config.php` file.
+the `modules` setting in the `config.php` file.
 
 To avoid conflicts with other authentication scheme modules, it is recommended that you
 disable `SimpleID\Auth\PasswordAuthSchemeModule` and `SimpleID\Auth\RememberMeAuthSchemeModule`
-by removing them from the `$config['modules']` array.
+by removing them from the `modules` setting.
 
 See [enabling and disabling modules](/docs/2/modules/#enabling) for further details.
 

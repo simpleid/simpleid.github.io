@@ -22,8 +22,8 @@ in the `site` subdirectory of the web directory.
 
 ## Enabling and disabling modules    {#enabling}
 
-Modules that have been installed can be enabled or disabled by editing the `config.php` file.  The `$config['modules']`
-configuration option contains an array of modules to be enabled.  By editing this array you can select which
+Modules that have been installed can be enabled or disabled by editing the `config.php` file.  The `modules`
+setting contains an array of modules to be enabled.  By editing this array you can select which
 modules are to be enabled.
 
 It should be noted that:
