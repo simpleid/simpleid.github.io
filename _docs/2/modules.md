@@ -47,7 +47,7 @@ install or uninstall a module using the `composer` command.
 For example, to install a module called `example-vendor/simpleid-example`, use the following command:
 
 {% highlight bash %}
-composer install example-vendor/simpleid-example
+composer require example-vendor/simpleid-example
 {% endhighlight %}
 
 Once the module has been installed, it can be [enabled](#enabling).
