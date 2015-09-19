@@ -138,7 +138,6 @@ code {
 }
 
 code {
-    border-color: rgba($text-color, 0.2);
     padding: 1px 5px;
 }
 
@@ -148,6 +147,7 @@ pre {
 
     > code {
         border: 0;
+        background-color: transparent;
         padding-right: 0;
         padding-left: 0;
     }
