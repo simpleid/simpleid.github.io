@@ -20,6 +20,7 @@ sections:
         - 2/login
         - 2/login-verification
         - 2/profile
+        - 2/simpleid-tool
         - 2/modules
 
     - title: Troubleshooting

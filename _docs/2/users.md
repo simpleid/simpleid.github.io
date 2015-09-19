@@ -41,9 +41,8 @@ Under the default SimpleID settings, creating a new user involves the following 
    choose a secure password.  You may wish to use the [Diceware method](http://en.wikipedia.org/wiki/Diceware)
    to generate your password.
 
-3. You will need to encrypt your password using PBKDF2.  [Lots of software](https://google.com/search?q=pbkdf2)
-   are available on the internet to help you do this, although you will need to reformat the output to the
-   format expected by SimpleID as documented in the sample user file.
+3. You will need to encrypt your password using PBKDF2.  You can do this
+   using the [simpleid-tool](/docs/2/simpleid-tool/#passwd).
 
 4. Tell SimpleID about that identity by creating a user file.  An **user file** (previously an identity file)
    is a YAML-formatted file containing information about a particular SimpleID user.  They are stored in the

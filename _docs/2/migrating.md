@@ -10,7 +10,7 @@ configuration and identity files have changed between the two versions.  Therefo
 existing configuration and identity files from the previous version of SimpleID
 will need to be converted to the new version.
 
-While there a number of scripts can be used to assist in this process, as a result
+While [simpleid-tool](/docs/2/simpleid-tool/) can be used to assist in this process, as a result
 of more stringent security requirements, manual intervention will still need to
 be required.
 
@@ -21,9 +21,10 @@ in `config.php`.  In SimpleID 2, configuration settings are stored in the
 `$config` array in `config.php` created by parsing the YAML settings in that
 file.
 
-The configuration settings will need to be migrated manually.  There is largely a
-one-to-one correspondence between the SimpleID 1 configuration settings and their
-equivalent in SimpleID 2.
+You can use [simpleid-tool](/docs/2/simpleid-tool/#migrate-config) to help with
+this process, but you will still need to edit the new configuration
+file manually to include all the new required options.
+
 
 ## Migrating users
 
@@ -39,12 +40,19 @@ including the following:
 - the use of the `userinfo` object as the preferred approach of storing
   user registration information
 
-Therefore it is recommended that when migrating to SimpleID 2, user files are
-rewritten from scratch.
+You can use [simpleid-tool](/docs/2/simpleid-tool/#migrate-user) to help with
+this process, but you will still need to edit the new user
+file manually .
+
 
 ## Passwords    {#password}
 
-SimpleID 2 substantially increased password security requirements.  This means that
+SimpleID 2 substantially increased password security requirements.  
+In particular, the only encoding accepted for passwords is PBKDF2.  Password 
+encoding methods from previous versions of SimpleID (e.g. MD5, SHA1 and
+their salted versions) are no longer acceptable.
+
+This means that
 all passwords from SimpleID 1 will need to be re-encrypted to SimpleID 2 standards.
 
 ## Additional protocol requirements
