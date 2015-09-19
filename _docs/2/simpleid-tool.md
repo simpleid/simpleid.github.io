@@ -1,9 +1,11 @@
 ---
 layout: docs
 doctree: doctree2
-title: Using simpleid-tool
-permalink: /docs/2/simpleid-tool/
+title: "Using simpleid-tool"
+permalink: "/docs/2/simpleid-tool/"
+published: true
 ---
+
 
 `simpleid-tool` is a command-line tool that performs various maintenance functions.
 
@@ -13,9 +15,9 @@ The tool is included in the main SimpleID distribution under the `bin` directory
 
 `simpleid-tool` can be used to encode passwords in PBKDF2.  To encode a password, invoke `simpleid-tool` using the following command:
 
-```bash
+{% highlight bash %}
 php simpleid-tool.phar passwd
-```
+{% endhighlight %}
 
 You will be prompted for a password.  If successful, `simpleid-tool` will display the encrypted password (which starts with `$pbkdf2$`).
 
@@ -24,9 +26,9 @@ You will be prompted for a password.  If successful, `simpleid-tool` will displa
 
 `simpleid-tool` can be used to migrate settings from a SimpleID 1 installation.  This can be invoked using the following command:
 
-```bash
+{% highlight bash %}
 php simpleid-tool.phar migrate-config [config.php]
-```
+{% endhighlight %}
 
 `[config.php]` should be replaced with the location of `config.php` in the SimpleID 1 installation.
 
@@ -37,9 +39,9 @@ The tool will then migrate as many settings as it can into a new SimpleID 2 conf
 
 `simpleid-tool` can be used to migrate identity files from a SimpleID 1 installation.  This can be invoked using the following command:
 
-```bash
-php simpleid-tool.phar migrate-config [example.identity]
-```
+{% highlight bash %}
+php simpleid-tool.phar migrate-user [example.identity]
+{% endhighlight %}
 
 `[example.identity]` should be replaced with the location of the identity file in the SimpleID 1 installation which you wish to migrate.
 
