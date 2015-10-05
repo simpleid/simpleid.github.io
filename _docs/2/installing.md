@@ -3,7 +3,9 @@ layout: docs
 doctree: doctree2
 title: Installing SimpleID
 permalink: /docs/2/installing/
+published: true
 ---
+
 
 <div class="note" markdown="span">If you are upgrading from SimpleID 1.0 or earlier, the [migration page](/docs/2/migrating/)
 contains more information on the migration process.</div>
@@ -22,6 +24,8 @@ Note that the SimpleID release package does not contain the additional PHP libra
 SimpleID uses [Composer](https://getcomposer.org/) to manage its dependencies.  As these dependencies are
 not included in the distribution package, you will need to download them manually using Composer.
 
+The Composer file included with the SimpleID package is named `composer.json.dist` instead of `composer.json`.  This is because this file may be altered when you install [modules](/docs/2/modules/), which you want to keep when you upgrade to a later version of SimpleID.  You will need to rename this file back to `composer.json` when installing SimpleID for the first time.
+
 If you have shell access to your server and have Composer installed, you can performed this step on the
 server.  Otherwise, you will need to perform this step on another machine with Composer installed, before
 you upload the entire package onto your server.
@@ -30,6 +34,7 @@ Enter the following commands to download the dependencies:
 
 {% highlight bash %}
 cd www
+cp composer.json.dist composer.json
 composer update --no-dev
 {% endhighlight %}
 
