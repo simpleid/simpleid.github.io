@@ -410,6 +410,11 @@
     background-image: url(../error.png);
 }
 
+.doc .anchorjs-link {
+    color: $grey-color-light;
+    &:hover { text-decoration: none; }
+}
+
 .edit-docs {
     font-size: $small-font-size;
     margin: ($spacing-unit / 2) 0;

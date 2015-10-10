@@ -42,6 +42,15 @@
 })(jQuery);
     </script>
 
+    <script type="text/javascript">
+(function ($) {
+    $(document).ready(function () {
+       anchors.add('.doc h2, .doc h3, .doc h4');
+       anchors.remove('.doc-toc h4');
+    });
+})(jQuery);
+    </script>
+
   </body>
 
 </html>
