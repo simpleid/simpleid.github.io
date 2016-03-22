@@ -23,7 +23,5 @@ exclude:
 
 markdown: kramdown
 
-highlighter: pygments
-
 gems:
     - jekyll-redirect-from
