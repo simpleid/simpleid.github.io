@@ -33,13 +33,13 @@ You will need to configure your web server to request a certificate from your br
 
 Add the following directives to the virtual host within the server configuration:
 
-{% highlight apache %}
+```
 SSLVerifyClient optional
 SSLVerifyDepth 1
 SSLOptions +StdEnvVars
 SSLCACertificateFile /path/to/your/trusted/ca/certificates
 SSLOCSPEnable on
-{% endhighlight %}
+```
 
 ### Enable the `certauth` extension
 
