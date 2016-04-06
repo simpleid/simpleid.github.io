@@ -15,7 +15,7 @@ The main purpose of SimpleID extensions is to provide a way in which to implemen
 
 Extensions are named <code>name.extension.php</code>, where *name* is the name of the extension.  Each extension resides in its own directory underneath the <code>extensions</code> subdirectory of the SimpleID web directory (<code>www</code>).
 
-If you want to write your own extensions, see the [developer web site](http://simpleid.koinic.net/trac/wiki/Extensions).
+If you want to write your own extensions, see the [developer web site](https://trac.simpleid.koinic.net/wiki/Extensions).
 
 ## Installing and uninstalling extensions    {#installing}
 
