@@ -31,4 +31,4 @@ SimpleID is available as a package for the following Linux distributions:
 
 SimpleID's source code is stored in SourceForge's Git repository. Information on how to access the repository can be obtained from <a href="http://sourceforge.net/p/simpleid/code">SourceForge</a>.
 
-The Git repository can be browsed from SimpleID's [development site](https://trac.simpleid.koinic.net/).
+The Git repository can be browsed from SimpleID's [development site](https://trac.simpleid.koinic.net/browser/git).
