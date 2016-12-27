@@ -11,7 +11,7 @@ collections:
     api:
         output: true
 
-permalink: /:categories/:year/:month/:title
+permalink: /:categories/:year/:month/:title/
 
 exclude: 
     - .rvmrc
