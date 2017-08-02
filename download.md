@@ -8,7 +8,7 @@ redirect_from: /downloads/
 
 ## Releases
 
-The latest SimpleID releases can be downloaded in the <a href="/releases/simpleid">releases page</a>.
+The latest SimpleID releases can be downloaded in the <a href="/releases">releases page</a>.
 
 Please note that SimpleID releases are currently in beta. This means that while the software may work, it may also have gaping security holes and other nasty bugs. Use at your own risk.
 
