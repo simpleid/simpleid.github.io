@@ -69,5 +69,4 @@ When you log into an OpenID site, and the site asks for your registration inform
 
 ## User Interface Extension   {#ui}
 
-This extension, <code>ui.extension.php/code>, implements the draft [OpenID User Interface Extension](http://svn.openid.net/repos/specifications/user_interface/1.0/trunk/openid-user-interface-extension-1_0.html).  It allows relying parties to alter SimpleID's user interface presented to users when they log into the relying party.
-
+This extension, <code>ui.extension.php</code>, implements the draft [OpenID User Interface Extension](http://svn.openid.net/repos/specifications/user_interface/1.0/trunk/openid-user-interface-extension-1_0.html).  It allows relying parties to alter SimpleID's user interface presented to users when they log into the relying party.
