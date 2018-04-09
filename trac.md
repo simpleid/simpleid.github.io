@@ -1,4 +1,4 @@
 ---
 layout: redirect
-redirect: http://trac.simpleid.koinic.net/
+redirect: https://github.com/simpleid/simpleid/wiki
 ---

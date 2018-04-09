@@ -15,4 +15,4 @@ The following user documentation is available.
 
 ## Developer Documentation
 
-The developer documentation can be accessed on the [developer's site](http://trac.simpleid.koinic.net).
+The developer documentation can be accessed on the [developer's site](https://github.com/simpleid/simpleid/wiki).

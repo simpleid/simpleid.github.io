@@ -19,9 +19,9 @@ Here are some tips on troubleshooting.
 
 - **Enable logging.**  You can temporarily [enable logging](#logging) so that you or the developers can see what is going on. *Note that sensitive security information may be written into the log file. Only enable logging when performing troubleshooting, and disable it when you are done.*
 
-- **See if other users are experiencing the same problems.**  The [knowledge base](http://trac.simpleid.koinic.net/report/11) contains commonly encountered problems and their solutions.  Searching through [SimpleID's bug/support database](http://trac.simpleid.koinic.net/search?q=&noquickjump=1&ticket=on) may reveal useful information.
+- **See if other users are experiencing the same problems.**  The [knowledge base](https://github.com/simpleid/simpleid/issues?q=label%3Aknowledgebase) contains commonly encountered problems and their solutions.  Searching through [SimpleID's bug/support database](https://github.com/simpleid/simpleid/issues?utf8=%E2%9C%93&q=) may reveal useful information.
 
-If all else fails, you may consider [raising a ticket](http://trac.simpleid.koinic.net/wiki/ReportingBugs).
+If all else fails, you may consider [raising a ticket](https://github.com/simpleid/simpleid/wiki/Reporting-bugs).
 
 ## Logging    {#logging}
 
