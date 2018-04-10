@@ -15,7 +15,7 @@ This will create a new directory `simpleid` containing all SimpleID files and di
 
 ## 2. Move the directories to the web server {#directories}
 
-You should move the following three directories to the web server.  (The other directories are for developers only and can be safely ignored.)
+You should move the following four directories to the web server.  (The other directories are for developers only and can be safely ignored.)
 
 ### `cache`
 
