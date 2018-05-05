@@ -1,4 +1,3 @@
-{% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
 {% unless include.first %},{% endunless %}{
     "id": "{{ include.prefix }}{{ include.index }}",
     "url": {{ page.url | jsonify }},
@@ -9,4 +8,3 @@
     "body": {{ page.content | jsonify }},
     "doctree": {{ page.doctree | jsonify }}
 }
-{% endunless %}

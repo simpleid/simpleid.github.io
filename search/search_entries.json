@@ -2,15 +2,28 @@
 lunr_exclude: true
 ---
 [
+    {% assign page_first = true %}
     {% for page in site.html_pages %}
-      {% include search_entry.json prefix="page-" index=forloop.index first=forloop.first %}
+      {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
+        {% include search_entry.json prefix="page-" index=forloop.index first=page_first %}
+        {% assign page_first = false %}
+      {% endunless %}
     {% endfor %}
-    {% if site.posts %},{% endif %}
+    {% if page_first == false %},{% endif %}
+    {% assign post_first = true %}
     {% for page in site.posts %}
-      {% include search_entry.json prefix="post-" index=forloop.index first=forloop.first %}
+      {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
+        {% include search_entry.json prefix="post-" index=forloop.index first=post_first %}
+        {% assign post_first = false %}
+      {% endunless %}
     {% endfor %}
-    {% if site.documents %},{% endif %}
+    {% if page_first == false or post_first == false %}{% assign has_previous_content = true %}{% else %}{% assign has_previous_content = false %}{% endif %}
+    {% if has_previous_content and site.documents.size > 0 %},{% endif %}
+    {% assign doc_first = true %}
     {% for page in site.documents %}
-      {% include search_entry.json prefix="doc-" index=forloop.index first=forloop.first %}
+      {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
+        {% include search_entry.json prefix="doc-" index=forloop.index first=doc_first %}
+        {% assign doc_first = false %}
+      {% endunless %}
     {% endfor %}
 ]
