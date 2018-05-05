@@ -1,7 +1,7 @@
 ---
 lunr_exclude: true
 ---
-[
+{% capture page_entries %}
     {% assign page_first = true %}
     {% for page in site.html_pages %}
       {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
@@ -9,7 +9,10 @@ lunr_exclude: true
         {% assign page_first = false %}
       {% endunless %}
     {% endfor %}
-    {% if page_first == false %},{% endif %}
+{% endcapture %}
+{% capture has_page_entries %}{{ page_entries | strip }}{% endcapture %}
+
+{% capture post_entries %}
     {% assign post_first = true %}
     {% for page in site.posts %}
       {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
@@ -17,8 +20,10 @@ lunr_exclude: true
         {% assign post_first = false %}
       {% endunless %}
     {% endfor %}
-    {% if page_first == false or post_first == false %}{% assign has_previous_content = true %}{% else %}{% assign has_previous_content = false %}{% endif %}
-    {% if has_previous_content and site.documents.size > 0 %},{% endif %}
+{% endcapture %}
+{% capture has_post_entries %}{{ post_entries | strip }}{% endcapture %}
+
+{% capture doc_entries %}
     {% assign doc_first = true %}
     {% for page in site.documents %}
       {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
@@ -26,4 +31,16 @@ lunr_exclude: true
         {% assign doc_first = false %}
       {% endunless %}
     {% endfor %}
+{% endcapture %}
+{% capture has_doc_entries %}{{ doc_entries | strip }}{% endcapture %}
+[
+      {{ page_entries | strip }}
+    {% if has_post_entries %}
+      {% if has_page_entries %},{% endif %}
+      {{ post_entries | strip }}
+    {% endif %}
+    {% if has_doc_entries %}
+      {% if has_page_entries or has_post_entries %},{% endif %}
+      {{ doc_entries | strip }}
+    {% endif has_doc_entries %}
 ]
