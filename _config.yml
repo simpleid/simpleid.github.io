@@ -25,5 +25,5 @@ markdown: kramdown
 
 highlighter: rouge
 
-gems:
+plugins:
     - jekyll-redirect-from
