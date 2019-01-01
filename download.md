@@ -25,10 +25,9 @@ SimpleID is available as a package for the following Linux distributions:
 
 ## Development Snapshots
 
-<p>The latest development snapshots can be downloaded from <a href="http://sourceforge.net/p/simpleid/code/ci/master/tarball">SourceForge</a>.</p>
+<p>The latest development snapshots can be downloaded from <a href="https://github.com/simpleid/simpleid/archive/master.zip">Github</a>.</p>
 
 ## Source code
 
-SimpleID's source code is stored in SourceForge's Git repository. Information on how to access the repository can be obtained from <a href="http://sourceforge.net/p/simpleid/code">SourceForge</a>.
-
-The Git repository can be browsed at [Sourceforge](https://sourceforge.net/p/simpleid/code/ci/master/tree/) or [Github](https://github.com/simpleid/simpleid).
+SimpleID's source code is stored on [Github](https://github.com/simpleid/simpleid),
+with a mirror on [Sourceforge](https://sourceforge.net/p/simpleid/code/ci/master/tree/).
