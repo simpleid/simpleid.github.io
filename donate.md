@@ -15,4 +15,4 @@ The easiest way to donate is through the [Paypal donation page](https://www.payp
 
 <a href="https://www.paypal.com/cgi-bin/webscr?item_name=Donation+to+SimpleID&amp;cmd=_donations&amp;business=kmo%40users.sourceforge.net"><input type="image" src="https://www.paypal.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using Paypal."></a>
 
-Alternatively, I am happy to accept [Bitcoins](bitcoin:1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF?label=Donation%20to%20SimpleID) at `1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF`.
+Alternatively, I am happy to accept [Bitcoins](bitcoin:1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF?label=Donation%20to%20SimpleID) at `1GAS7YkGiwMS7f3iGvjJ79eDhGhojp3mKF`.  Or buy something from [my Amazon.com wish list](http://a.co/56v78h2).
