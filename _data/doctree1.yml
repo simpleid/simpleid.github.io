@@ -5,7 +5,6 @@ sections:
       docs:
         - 1/system-requirements
         - 1/installing
-        - 1/pear
         - 1/identity
         - 1/upgrading
 
