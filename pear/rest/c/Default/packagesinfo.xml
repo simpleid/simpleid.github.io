@@ -3,7 +3,7 @@
     <pi>
         <p>
             <n>SimpleID</n>
-            <c>simpleid.koinic.net</c>
+            <c>simpleid.org</c>
             <ca xlink:href="/pear/rest/c/Default">Default</ca>
             <l>GPL</l>
             <s>SimpleID is a simple, personal OpenID provider</s>

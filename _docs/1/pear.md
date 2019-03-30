@@ -7,7 +7,7 @@ permalink: /docs/1/pear/
 redirect_from: /documentation/getting-started/installing-simpleid/pear/
 ---
 
-There is also an *experimental* PEAR channel at `simpleid.koinic.net`.  You can install SimpleID from this PEAR channel by following the instructions below.
+There is also an *experimental* PEAR channel at `simpleid.org`.  You can install SimpleID from this PEAR channel by following the instructions below.
 
 For more information on the SimpleID PEAR channel, see the [channel page](/pear).
 
@@ -16,7 +16,7 @@ For more information on the SimpleID PEAR channel, see the [channel page](/pear)
 From a shell, run the following command to add the SimpleID PEAR channel.
 
 {% highlight bash %}
-pear channel-discover simpleid.koinic.net
+pear channel-discover simpleid.org
 {% endhighlight %}
 
 ## 2. Install SimpleID using PEAR
