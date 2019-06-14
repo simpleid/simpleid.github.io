@@ -4,8 +4,6 @@
   url: /news
 - title: Documentation
   url: /docs
-- title: Donate
-  url: /donate
 - title: Download
   url: /download
   class: menu-download
