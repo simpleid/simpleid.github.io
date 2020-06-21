@@ -6,4 +6,4 @@ permalink: /ns/
 lunr_exclude: true
 ---
 
-@http://simpleid.sourceforge.net/ns/@ is the namespace URI for various XML elements used by SimpleID.  It serves no other purpose.
+`http://simpleid.sourceforge.net/ns/` is the namespace URI for various XML elements used by SimpleID.  It serves no other purpose.
