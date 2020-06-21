@@ -42,7 +42,7 @@ This will download all of SimpleID's dependencies into the `www/vendor` director
 
 ## 3. Move the directories to the web server {#directories}
 
-You should move the following three directories to the web server.  (The other directories are for developers only and can be safely ignored.)
+You should move the following four directories to the web server.  (The other directories are for developers only and can be safely ignored.)
 
 ### `cache`
 
