@@ -12,17 +12,6 @@ lunr_exclude: true
 {% endcapture %}
 {% capture has_page_entries %}{{ page_entries | strip }}{% endcapture %}
 
-{% capture post_entries %}
-    {% assign post_first = true %}
-    {% for page in site.posts %}
-      {% unless page.lunr_exclude or page.layout == null or page.layout == "redirect" or page.layout == "none" or page.title == null %}
-        {% include search_entry.json prefix="post-" index=forloop.index first=post_first %}
-        {% assign post_first = false %}
-      {% endunless %}
-    {% endfor %}
-{% endcapture %}
-{% capture has_post_entries %}{{ post_entries | strip }}{% endcapture %}
-
 {% capture doc_entries %}
     {% assign doc_first = true %}
     {% for page in site.documents %}
@@ -35,12 +24,8 @@ lunr_exclude: true
 {% capture has_doc_entries %}{{ doc_entries | strip }}{% endcapture %}
 [
       {{ page_entries | strip }}
-    {% if has_post_entries %}
-      {% if has_page_entries %},{% endif %}
-      {{ post_entries | strip }}
-    {% endif %}
     {% if has_doc_entries %}
-      {% if has_page_entries or has_post_entries %},{% endif %}
+      {% if has_page_entries %},{% endif %}
       {{ doc_entries | strip }}
     {% endif has_doc_entries %}
 ]
