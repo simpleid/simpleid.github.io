@@ -6,7 +6,7 @@ permalink: /search/
 ---
 
 <div class="search-app" x-data="searchApp()" x-init="initIndex()">
-    <form x-on:submit.prevent x-show="!isLoading">
+    <form x-on:submit.prevent x-show="!isLoading" x-cloak>
         <input type="text" placeholder="Search for..." x-model="q">
         <button x-on:click="search()">Search</button>
     </form>
