@@ -5,89 +5,93 @@ lunr_exclude: true
 permalink: /search/
 ---
 
-<div id="search-form" style="display: none">
-    <input type="text" name="q" id="q">
-    <button id="search-button">Search</button>
+<div class="search-app" x-data="searchApp()" x-init="initIndex()">
+    <form x-on:submit.prevent x-show="!isLoading">
+        <input type="text" x-model="q">
+        <button x-on:click="search()">Search</button>
+    </form>
+
+    <div class="results">
+        <template x-if="results">
+            <ul class="post-list">
+                <template x-for="result in Object.values(results)">
+                    <li>
+                        <span class="result-title">
+                            <a x-bind:href="result.url" x-text="result.title"></a>
+                        </span>
+                        <template x-if="result.doctree && doctrees[result.doctree]">
+                            <span class="result-label" x-text="doctrees[result.doctree]"></span>
+                        </template>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template x-if="(results != null) && (results.length == 0)">
+            <div>Nothing found.</div>
+        </template>
+    </div>
 </div>
 
-<div id="search-results">
-</div>
-
-<script src="{{ "/assets/js/underscore-min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CArray.prototype.forEach%2CArray.prototype.map"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 <script src="{{ "/search/lunr.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-<script type="text/template" id="results-tpl">
-  <ul class="post-list">
-  <% _.each(results, function(result) { 
-    if (result.title) { %>
-    <li>
-      <span class="result-title">
-        <a href="<%= result.url %>"><%= result.title %></a>
-      </span>
-      <% if (result.doctree && doctrees[result.doctree]) { %><span class="result-label"><%= doctrees[result.doctree] %></span><% } %>
-    </li>
-  <% 
-    }
-  }); %>
-  </ul>
-</script>
 
 <script type="text/javascript">
-(function ($) {
-    var index;
-    var pages = [];
-    var doctrees;
-    var results_tpl;
+    function searchApp() {
+        return {
+            q: '',
+            results: null,
+            doctrees: null,
+            pages: [],
+            index: null,
+            isLoading: false,
 
-    $(document).ready(function () {
-        results_tpl = _.template($('#results-tpl').html());
-        index = lunr(function () {
-            this.field('title', {boost: 10});
-            this.field('body');
-        });
-        
-        $.getJSON('{{ "/search/doctrees.json" | prepend: site.baseurl }}').done(function(data) {
-            doctrees = data;
-        });
+            initIndex: function() {
+                this.isLoading = true;
 
-        $.getJSON('{{ "/search/search_entries.json" | prepend: site.baseurl }}').done(function(entries) {
-            _.each(entries, function(entry) {
-                if (entry.category == '') return;
-                index.add(entry);
-                pages.push({ id: entry.id, title: entry.title, url: entry.url, doctree: entry.doctree });
-            });
-            $('#search-form').show();
-            $(window).trigger("hashchange");
-        });        
-    });
-
-    $('#search-button').click(function() {
-        var q = $('#q').val();
-        if (q) {
-            window.location.hash = '#q=' + encodeURIComponent(q);
-        }
-    });
-
-    $(window).bind("hashchange", function() {
-        var pairs = window.location.hash.substring(1).split('&');
-
-        var params = {};
-        _.each(pairs, function(pair) {
-            pair = pair.split('=');
-            params[pair[0]] = decodeURIComponent(pair[1] || '');
-        });
-
-        if (params.q) {
-            $('#q').val(params.q);
-            var matches = index.search(params.q);
-            if (matches && matches.length > 0) {
-                var results = _.map(matches, function (match) {
-                    return _.findWhere(pages, {id: match.ref});
+                let pairs = window.location.hash.substring(1).split('&');
+                let params = {};
+                pairs.forEach((pair) => {
+                    pair = pair.split('=');
+                    params[pair[0]] = decodeURIComponent(pair[1] || '');
                 });
-                $('#search-results').html(results_tpl({results: results, doctrees: doctrees}));
-            } else {
-                $('#search-results').html('Nothing found.');
+                if (params.q) this.q = params.q;
+
+
+                this.index = lunr(function () {
+                    this.field('title', {boost: 10});
+                    this.field('body');
+                });
+
+                fetch('{{ "/search/doctrees.json" | prepend: site.baseurl }}')
+                    .then((results) => results.json())
+                    .then((data) => this.doctrees = data);
+
+                fetch('{{ "/search/search_entries.json" | prepend: site.baseurl }}')
+                    .then((results) => results.json())
+                    .then((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.category == '') return;
+                            this.index.add(entry);
+                            this.pages.push({ id: entry.id, title: entry.title, url: entry.url, doctree: entry.doctree });
+                        });
+                        this.isLoading = false;
+
+                        if (this.q) this.search();
+                    });
+            },
+
+            search: function() {
+                if (this.q) window.location.hash = '#q=' + encodeURIComponent(this.q);
+                let matches = this.index.search(this.q);
+                if (matches && matches.length > 0) {
+                    this.results = matches.map((match) => {
+                        return this.pages.find((item) => item.id == match.ref);
+                    });
+                } else {
+                    this.results = [];
+                }
             }
         }
-    })
-})(jQuery);
+    }
 </script>
