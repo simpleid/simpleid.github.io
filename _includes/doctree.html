@@ -12,10 +12,10 @@
 {% capture title_level %}{{ level | minus:1 }}{% endcapture %}
 
 {% if include.title %}
-<h{{title_level}}>{{ doctree.title }}&nbsp;&nbsp; </h{{title_level}}>
+<h{{title_level}} {% if include.alpinejs %}x-spread="title"{% endif %}>{{ doctree.title }}&nbsp;&nbsp; </h{{title_level}}>
 {% endif %}
 
-<div class="doc-sections">
+<div class="doc-sections" {% if include.alpinejs %}x-spread="sections" x-cloak {% endif %}>
     {% for section in doctree.sections %}
     <div class="doc-section">
         <h{{level}} id="{{ section.title | replace:' ','-' | downcase }}">{{ section.title }}</h{{level}}>
