@@ -40,7 +40,16 @@ permalink: /search/
         return {
             q: '',
             results: null,
-            doctrees: null,
+            doctrees: {
+    {% assign first = true %}
+    {% for dataset in site.data %}
+        {% if dataset[1].title %}
+            {% unless first %},{% endunless %}
+            {% assign first = false %}
+            {{ dataset[0] | jsonify }}: {{ dataset[1].title | jsonify }}
+        {% endif %}
+    {% endfor %}
+            },
             pages: [],
             index: null,
             isLoading: false,
@@ -61,10 +70,6 @@ permalink: /search/
                     this.field('title', {boost: 10});
                     this.field('body');
                 });
-
-                fetch('{{ "/search/doctrees.json" | prepend: site.baseurl }}')
-                    .then((results) => results.json())
-                    .then((data) => this.doctrees = data);
 
                 fetch('{{ "/search/search_entries.json" | prepend: site.baseurl }}')
                     .then((results) => results.json())
