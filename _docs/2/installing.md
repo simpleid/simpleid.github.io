@@ -33,8 +33,6 @@ you upload the entire package onto your server.
 Enter the following commands to download the dependencies:
 
 {% highlight bash %}
-cd www
-cp composer.json.dist composer.json
 composer update --no-dev
 {% endhighlight %}
 
