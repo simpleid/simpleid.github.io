@@ -9,7 +9,13 @@ published: true
 
 `simpleid-tool` is a command-line tool that performs various maintenance functions.
 
-The tool is included in the main SimpleID distribution under the `bin` directory.  It is packaged as a PHAR file and can be run independently from the SimpleID web application.
+## Installing     {#installing}
+
+The tool can be installed using Composer:
+
+{% highlight bash %}
+composer require simpleid/simpleid-tool
+{% endhighlight %}
 
 ## Encoding passwords    {#passwd}
 
