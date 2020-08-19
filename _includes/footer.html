@@ -4,7 +4,7 @@
 
     <div class="footer-message">
       <p class="text">
-        &copy; Kelvin Mo.
+        &copy; Kelvin Mo <span x-data="{ year: (new Date()).getFullYear() }" x-text="year"></span>.
         <a href="{{ site.github.owner_url }}">Github</a>.
         <a href="{{ site.sourceforge.project_url }}">SourceForge</a>.
       </p>
