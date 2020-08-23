@@ -69,9 +69,11 @@ dt { font-weight: bold; }
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+  font-weight: 300;
 }
-
+h2 { font-size: $font-xxlarge; }
+h3 { font-size: $font-xlarge; }
+h4, h5, h6 { font-size: $font-large; }
 
 
 /**
