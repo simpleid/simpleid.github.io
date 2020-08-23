@@ -5,7 +5,7 @@ lunr_exclude: true
 @charset "utf-8";
 
 
-// Typography
+// Typography (used in utils/typography)
 $base-font-family: Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
 $monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
 
@@ -56,7 +56,7 @@ $on-laptop:        800px;
 @import
   "vendor/sanitize.css/sanitize",
   "vendor/sanitize.css/forms",
-  "typography";
+  "util/typography";
 
 @import
         "base",
