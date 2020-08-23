@@ -5,8 +5,10 @@ lunr_exclude: true
 @charset "utf-8";
 
 
+// Typography
+$base-font-family: Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
+$monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
 
-$base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $super-small-font-size:  $base-font-size * 0.7;
@@ -52,8 +54,9 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "vendor/sanitize.css/sanitize",
-    "vendor/sanitize.css/forms";
+  "vendor/sanitize.css/sanitize",
+  "vendor/sanitize.css/forms",
+  "typography";
 
 @import
         "base",

@@ -1,0 +1,9 @@
+$emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+html {
+  font-family: $base-font-family, $emoji-font-family;
+}
+
+code, kbd, samp, pre {
+  font-family: $monospace-font-family, $emoji-font-family;
+}

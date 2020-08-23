@@ -14,7 +14,6 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
@@ -133,7 +132,6 @@ blockquote {
  */
 pre,
 code {
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
