@@ -1,4 +1,14 @@
+// Emoji fonts
 $emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Font sizes
+$font-xsmall: 0.75rem;
+$font-small: 0.875rem;
+$font-base: 1rem;
+$font-large: 1.125rem;
+$font-xlarge: 1.25rem;
+$font-xxlarge: 1.5rem;
+$font-3xlarge: 1.875rem;
 
 html {
   font-family: $base-font-family, $emoji-font-family;

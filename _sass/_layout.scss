@@ -12,7 +12,7 @@
 
 .site-title {
     color: #ffffff;
-    font-size: $large-font-size;
+    font-size: $font-xlarge;
     text-transform: uppercase;
     line-height: 56px;
     margin-bottom: 0;
@@ -118,7 +118,7 @@
 
     h2 {        
         font-weight: bold;
-        font-size: $base-font-size;
+        font-size: $font-base;
         margin-bottom: 0;
         cursor: pointer;
         padding-right: 10px;
@@ -135,7 +135,7 @@
 
     h3 {        
         font-weight: bold;
-        font-size: $base-font-size;
+        font-size: $font-base;
         margin-bottom: 5px;
     }
 
@@ -214,7 +214,7 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $font-small;
     color: $grey-color;
 }
 
@@ -282,12 +282,12 @@
 
         .hero-content {
             color: $grey-color-dark;
-            font-size: $large-font-size ;
+            font-size: $font-xlarge ;
         }
 
         .hero-title {
             color: #000000;
-            font-size: $large-font-size * 2;
+            font-size: $font-xlarge * 2;
             font-weight: bold;
         }
     }
@@ -347,7 +347,7 @@
         }
     }
 
-    .hero-panel a.front-link { font-size: $large-font-size; }
+    .hero-panel a.front-link { font-size: $font-xlarge; }
 }
 
 
@@ -356,7 +356,7 @@
  */
 .release-download {
     float: right;
-    font-size: $large-font-size;
+    font-size: $font-xlarge;
     margin: ($spacing-unit / 2) 0 ($spacing-unit / 2) ($spacing-unit / 2);    
     text-align: center;
 
@@ -381,12 +381,12 @@
     padding: ($spacing-unit / 4) ($spacing-unit / 2);
 
     h4 {
-        font-size: $base-font-size; 
+        font-size: $font-base; 
         font-weight: bold;
     }
 
     ul { margin-bottom: 0; }
-    li { font-size: $small-font-size; }
+    li { font-size: $font-small; }
     a { font-weight: normal; }
 }
 
@@ -415,7 +415,7 @@
 }
 
 .edit-docs {
-    font-size: $small-font-size;
+    font-size: $font-small;
     margin: ($spacing-unit / 2) 0;
 
     a, a:visited { 
@@ -452,7 +452,7 @@
             display: inline-block;
             padding: 2px 5px;
             border-radius: 3px;
-            font-size: $super-small-font-size;
+            font-size: $super-font-small;
             font-weight: bold;
             text-transform: uppercase;
             background-color: $grey-color-dark;
