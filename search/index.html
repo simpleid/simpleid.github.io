@@ -16,12 +16,14 @@ permalink: /search/
             <ul class="post-list">
                 <template x-for="result in Object.values(results)">
                     <li>
-                        <span class="result-title">
-                            <a x-bind:href="result.url" x-text="result.title"></a>
-                        </span>
-                        <template x-if="result.doctree && doctrees[result.doctree]">
-                            <span class="result-label" x-text="doctrees[result.doctree]"></span>
-                        </template>
+                        <div class="result-caption">
+                            <span class="result-title">
+                                <a x-bind:href="result.url" x-text="result.title"></a>
+                            </span>
+                            <template x-if="result.doctree && doctrees[result.doctree]">
+                                <span class="result-label" x-text="doctrees[result.doctree]"></span>
+                            </template>
+                        </div>
                     </li>
                 </template>
             </ul>
