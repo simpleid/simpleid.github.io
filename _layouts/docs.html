@@ -6,10 +6,20 @@
   <body>
 
     {% include header.html %}
-    {% include doc_header.html %}
+    
+    {% unless page.hide_doc_header %}
+    <nav class="doc-header" x-data="docHeader()" @click.away="open = false">
+        <div class="wrapper">
+            {% include doctree.html section_headings=3 title=true alpinejs=true %}
+        </div>
+    </nav>
+    {% endunless %}
 
     <div class="page-content">
-      <div class="wrapper">
+      <div class="wrapper">        
+        <div class="sidebar">
+          {% comment %} Sidebar here {% endcomment %}
+        </div>
         <div class="post doc">
 
           <header class="post-header">
@@ -33,6 +43,26 @@
     {% include footer.html %}
 
     <script type="text/javascript">
+        function docHeader() {
+            return {
+                open: false,
+
+                title: {
+                    ['@click']() {
+                        this.open = !this.open;
+                    }
+                },
+
+                sections: {
+                    ['x-show']() {
+                        return this.open;
+                    }
+
+                    // use transition: height .3s linear and height:0!important instread of display: none
+                }
+            }
+        }
+
         anchors.add('.doc h2, .doc h3, .doc h4');
         anchors.remove('.doc-toc h4');
     </script>

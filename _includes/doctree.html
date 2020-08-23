@@ -4,21 +4,32 @@
     {% assign doctree = site.data[page.doctree] %}
 {% endif %}
 
-{% if include.level %}
-    {% assign level = include.level %}
+{% if include.section_headings %}
+  {% assign section_tag = 'div' %}
+  {% capture section_title_tag %}h{{ include.section_headings }}{% endcapture %}  
+  {% if include.title %}
+    {% capture title_tag %}h{{ include.section_headings | minus: 1 }}{% endcapture %}
+  {% endif %}
 {% else %}
-    {% assign level = 4 %}
+  {% assign section_tag = 'li' %}
+  {% assign section_title_tag = 'div' %}
+  {% if include.title %}
+    {% capture title_tag %}{{ include.title }}{% endcapture %}
+  {% endif %}
 {% endif %}
-{% capture title_level %}{{ level | minus:1 }}{% endcapture %}
+
 
 {% if include.title %}
-<h{{title_level}} {% if include.alpinejs %}x-spread="title"{% endif %}>{{ doctree.title }}&nbsp;&nbsp; </h{{title_level}}>
+  <{{ title_tag }} class="doc-title" {% if include.alpinejs %}x-spread="title"{% endif %}>{{ doctree.title }}&nbsp;&nbsp; </{{ title_tag }}>
 {% endif %}
 
 <div class="doc-sections" {% if include.alpinejs %}x-spread="sections" x-cloak {% endif %}>
+  {% unless include.section_headings %}
+  <ul>
+  {% endunless %}
     {% for section in doctree.sections %}
-    <div class="doc-section">
-        <h{{level}} id="{{ section.title | replace:' ','-' | downcase }}">{{ section.title }}</h{{level}}>
+    <{{ section_tag }} class="doc-section">
+        <{{ section_title_tag }} class="doc-section-title" {% if include.section_headings %}id="{{ section.title | replace:' ','-' | downcase }}"{% endif %}>{{ section.title }}</{{ section_title_tag }}>
 
         <ul>
         {% for item in section.docs %}
@@ -36,6 +47,10 @@
             {% endfor %}
         {% endfor %}
         </ul>
-    </div>
+    </{{ section_tag }}>
     {% endfor %}
+
+  {% unless include.section_headings %}
+  </ul>
+  {% endunless %}
 </div>
