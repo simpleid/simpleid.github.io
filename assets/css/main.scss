@@ -6,7 +6,6 @@ lunr_exclude: true
 
 
 
-// Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -52,6 +51,10 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "vendor/sanitize.css/sanitize",
+    "vendor/sanitize.css/forms";
+
 @import
         "base",
         "flexbox",
