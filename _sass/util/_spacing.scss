@@ -1,45 +1,54 @@
 $base-unit: 0.25rem;
+$text-unit: 0.25em;
 
-@mixin margin($dir, $units) {
-  @if $units == auto {
+@mixin margin($dir, $value) {
+  @if $value == auto {
     margin-#{$dir}: auto;
   } @else {
-    margin-#{$dir}: $units * $base-unit;
+    margin-#{$dir}: $value * $base-unit;
   }
 }
 
-@mixin margin-all($units) {
-  @if $units == auto {
+@mixin margin-text($dir, $value) {
+  margin-#{$dir}: $value * $text-unit;
+}
+
+@mixin margin-all($value) {
+  @if $value == auto {
     margin: auto;
   } @else {
-    margin: $units * $base-unit;
+    margin: $value * $base-unit;
   }
 }
 
-@mixin margin-x($units) {
-  @include margin(left, $units);
-  @include margin(right, $units);
+@mixin margin-x($value) {
+  @include margin(left, $value);
+  @include margin(right, $value);
 }
 
-@mixin margin-y($units) {
-  @include margin(top, $units);
-  @include margin(bottom, $units);
+@mixin margin-y($value) {
+  @include margin(top, $value);
+  @include margin(bottom, $value);
 }
 
-@mixin padding($dir, $units) {
-  padding-#{$dir}: $units * $base-unit;
+@mixin padding($dir, $value) {
+  padding-#{$dir}: $value * $base-unit;
 }
 
-@mixin padding-all($units) {
-  padding: $units * $base-unit;
+@mixin padding-text($dir, $value) {
+  padding-#{$dir}: $value * $text-unit;
 }
 
-@mixin padding-x($units) {
-  @include padding(left, $units);
-  @include padding(right, $units);
+@mixin padding-all($value) {
+  padding: $value * $base-unit;
 }
 
-@mixin padding-y($units) {
-  @include padding(top, $units);
-  @include padding(bottom, $units);
+@mixin padding-x($value) {
+  @include padding(left, $value);
+  @include padding(right, $value);
+}
+
+@mixin padding-y($value) {
+  @include padding(top, $value);
+  @include padding(bottom, $value);
 }

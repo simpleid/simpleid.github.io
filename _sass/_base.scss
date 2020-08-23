@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  @include margin(bottom, 2);
+  @include margin-text(bottom, 2);
 }
 
 
@@ -46,7 +46,7 @@ figcaption {
  * Lists
  */
 ul, ol, dd {
-  @include padding(left, 6);
+  @include padding-text(left, 6);
 }
 
 dt { font-weight: bold; }
