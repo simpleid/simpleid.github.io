@@ -12,10 +12,6 @@ The latest SimpleID releases can be downloaded in the <a href="/releases">releas
 
 Please note that SimpleID releases are currently in beta. This means that while the software may work, it may also have gaping security holes and other nasty bugs. Use at your own risk.
 
-**If you enjoy using SimpleID, please consider making a donation to support the
-ongoing development work.  To find out more on how to donate, visit
-<a href="/donate">the donation page</a>.**
-
 ### Linux distributions
 
 SimpleID is available as a package for the following Linux distributions:
