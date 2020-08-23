@@ -50,7 +50,8 @@ $on-laptop:        800px;
 @import
   "vendor/sanitize.css/sanitize",
   "vendor/sanitize.css/forms",
-  "util/typography";
+  "util/typography",
+  "util/media";
 
 @import
         "base",
@@ -58,3 +59,4 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
