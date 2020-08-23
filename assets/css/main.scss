@@ -9,9 +9,7 @@ lunr_exclude: true
 $base-font-family: Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
 $monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
 
-
-
-
+// Colours
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #1144aa;
@@ -22,10 +20,6 @@ $grey-color-light: #cccccc;
 $grey-color-dark:  #666666;
 $grey-color-super-light: #eeeeee;
 
-
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "vendor/sanitize.css/sanitize",
@@ -34,12 +28,10 @@ $grey-color-super-light: #eeeeee;
   "util/spacing",
   "util/media";
 
-@import "legacy";
+@import "legacy", "flexbox";
 
 @import
-        "base",
-        "flexbox",
-        "components",
-        "syntax-highlighting"
-;
-
+  "base",
+  "layout",
+  "components",
+  "syntax-highlighting";

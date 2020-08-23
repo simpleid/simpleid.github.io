@@ -1,0 +1,18 @@
+/**
+ * Wrappers
+ */
+.wrapper {
+  width: 100%;
+  @include margin-x(auto);
+  @include padding-x(4);
+
+  @include breakpoint($bp-small) { max-width: $bp-small }
+  @include breakpoint($bp-medium) { max-width: $bp-medium }
+  @include breakpoint($bp-large) { max-width: $bp-large }
+  @include breakpoint($bp-xlarge) { max-width: $bp-xlarge }
+}
+
+
+.post {
+  max-width: 0.75 * $bp-xlarge;
+}

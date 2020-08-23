@@ -1,14 +1,10 @@
-
-
-
 /**
  * Basic styling
  */
-body {
+html {
     font-weight: 300;
     color: $text-color;
     background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -50,15 +46,7 @@ figcaption {
  * Lists
  */
 ul, ol, dd {
-    margin-left: $spacing-unit;
-  padding: 0;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  @include padding(left, 6);
 }
 
 dt { font-weight: bold; }
@@ -205,27 +193,6 @@ table {
 .table-banded tr.even td {
     background-color: $grey-color-super-light;
 }
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
 
 
 /**
