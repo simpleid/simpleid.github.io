@@ -9,9 +9,8 @@ lunr_exclude: true
 $base-font-family: Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
 $monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
 
-$spacing-unit:     30px;
+$base-unit: 0.25rem;
 
-$table-padding:    0.3em;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -23,26 +22,7 @@ $grey-color-light: #cccccc;
 $grey-color-dark:  #666666;
 $grey-color-super-light: #eeeeee;
 
-// Width of the content area
-$content-width:    980px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
 
 
 
@@ -52,6 +32,8 @@ $on-laptop:        800px;
   "vendor/sanitize.css/forms",
   "util/typography",
   "util/media";
+
+@import "legacy";
 
 @import
         "base",
