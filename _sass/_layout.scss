@@ -13,6 +13,28 @@
 }
 
 
-.post {
+main {
   max-width: 0.75 * $bp-xlarge;
+}
+
+@include breakpoint($bp-large) {
+  .sidebar-container {
+    display: flex;
+  }
+
+  main {
+    flex: 1 1 auto;
+    @include padding(left, 4);
+  }
+}
+
+.sidebar {
+  display: none;
+
+  @include breakpoint($bp-large) { 
+    display: block; 
+    width: $bp-xlarge / 4;
+    flex-shrink: 0;
+    @include padding(right, 4);
+  }
 }

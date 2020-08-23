@@ -197,7 +197,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    //padding: $spacing-unit 0;
 }
 
 .page-heading {
@@ -344,6 +344,13 @@
             background-image: none;
         }
     }
+}
+
+
+@include breakpoint($bp-large) { 
+  .sidebar {
+    border-right: 1px solid $grey-color-light;
+  }
 }
 
 .doc-toc {

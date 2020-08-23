@@ -6,36 +6,34 @@
   <body>
 
     {% include header.html %}
-    
-    {% unless page.hide_doc_header %}
-    <nav class="doc-header" x-data="docHeader()" @click.away="open = false">
-        <div class="wrapper">
-            {% include doctree.html section_headings=3 title=true alpinejs=true %}
-        </div>
-    </nav>
-    {% endunless %}
 
     <div class="page-content">
-      <div class="wrapper">        
-        <div class="sidebar">
-          {% comment %} Sidebar here {% endcomment %}
-        </div>
-        <div class="post doc">
-
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-          </header>
-
-          {% if site.github.repository_url %}
-          <div class="edit-docs">
-          <a href="{% github_edit_link %}" title="Help improve our documentation!">Edit this page in GitHub</a>
+      <div class="wrapper">
+        <div class="sidebar-container">
+          <div class="sidebar">
+            {% unless page.hide_doc_header %}
+              <nav class="doc-doctree">
+              {% include doctree.html title='div'  %}
+              </nav>
+            {% endunless %}
           </div>
-          {% endif %}
+          <main class="post doc">
 
-          <article class="post-content">
-            {{ content }}
-          </article>
+            <header class="post-header">
+              <h1 class="post-title">{{ page.title }}</h1>
+            </header>
 
+            {% if site.github.repository_url %}
+            <div class="edit-docs">
+            <a href="{% github_edit_link %}" title="Help improve our documentation!">Edit this page in GitHub</a>
+            </div>
+            {% endif %}
+
+            <article class="post-content">
+              {{ content }}
+            </article>
+
+          </main>
         </div>
       </div>
     </div>
