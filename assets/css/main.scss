@@ -9,7 +9,7 @@ lunr_exclude: true
 $base-font-family: Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
 $monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
 
-$base-unit: 0.25rem;
+
 
 
 $text-color:       #111;
@@ -31,6 +31,7 @@ $grey-color-super-light: #eeeeee;
   "vendor/sanitize.css/sanitize",
   "vendor/sanitize.css/forms",
   "util/typography",
+  "util/spacing",
   "util/media";
 
 @import "legacy";

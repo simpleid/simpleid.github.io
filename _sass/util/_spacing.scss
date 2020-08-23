@@ -1,0 +1,45 @@
+$base-unit: 0.25rem;
+
+@mixin margin($dir, $units) {
+  @if $units == auto {
+    margin-#{$dir}: auto;
+  } @else {
+    margin-#{$dir}: $units * $base-unit;
+  }
+}
+
+@mixin margin-all($units) {
+  @if $units == auto {
+    margin: auto;
+  } @else {
+    margin: $units * $base-unit;
+  }
+}
+
+@mixin margin-x($units) {
+  @include margin(left, $units);
+  @include margin(right, $units);
+}
+
+@mixin margin-y($units) {
+  @include margin(top, $units);
+  @include margin(bottom, $units);
+}
+
+@mixin padding($dir, $units) {
+  padding-#{$dir}: $units * $base-unit;
+}
+
+@mixin padding-all($units) {
+  padding: $units * $base-unit;
+}
+
+@mixin padding-x($units) {
+  @include padding(left, $units);
+  @include padding(right, $units);
+}
+
+@mixin padding-y($units) {
+  @include padding(top, $units);
+  @include padding(bottom, $units);
+}
