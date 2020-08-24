@@ -1,53 +1,69 @@
-{% if include.doctree %}
-    {% assign doctree = site.data[include.doctree] %}
-{% else %}
-    {% assign doctree = site.data[page.doctree] %}
-{% endif %}
+{%- if include.doctree -%}
+    {%- assign doctree = site.data[include.doctree] -%}
+{%- else -%}
+    {%- assign doctree = site.data[page.doctree] -%}
+{%- endif -%}
 
-{% if include.section_headings %}
-  {% assign section_tag = 'div' %}
-  {% capture section_title_tag %}h{{ include.section_headings }}{% endcapture %}  
-  {% if include.title %}
-    {% capture title_tag %}h{{ include.section_headings | minus: 1 }}{% endcapture %}
-  {% endif %}
-{% else %}
-  {% assign section_tag = 'li' %}
-  {% assign section_title_tag = 'div' %}
-  {% if include.title %}
-    {% capture title_tag %}{{ include.title }}{% endcapture %}
-  {% endif %}
-{% endif %}
+{%- if include.section_headings -%}
+  {%- assign section_tag = 'div' -%}
+  {%- capture section_title_tag -%}h{{ include.section_headings }}{%- endcapture -%}  
+  {%- if include.title -%}
+    {%- capture title_tag -%}h{{ include.section_headings | minus: 1 }}{%- endcapture -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign section_tag = 'li' -%}
+  {%- assign section_title_tag = 'div' -%}
+  {%- if include.title -%}
+    {%- capture title_tag -%}{{ include.title }}{%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
 
 
 {% if include.title %}
-  <{{ title_tag }} class="doc-title" {% if include.alpinejs %}x-spread="title"{% endif %}>{{ doctree.title }}&nbsp;&nbsp; </{{ title_tag }}>
+  <{{ title_tag }} class="doc-title" {% if include.title_widget %}x-on:click="open = !open"{% endif %}>
+    <span>{{ doctree.title }}</span>
+  </{{ title_tag }}>
 {% endif %}
 
-<div class="doc-sections" {% if include.alpinejs %}x-spread="sections" x-cloak {% endif %}>
+<div class="doc-sections" {% if include.title_widget %}x-bind:class="{ 'doc-sections-open': open }"{% endif %}>
   {% unless include.section_headings %}
   <ul>
   {% endunless %}
     {% for section in doctree.sections %}
-    <{{ section_tag }} class="doc-section">
-        <{{ section_title_tag }} class="doc-section-title" {% if include.section_headings %}id="{{ section.title | replace:' ','-' | downcase }}"{% endif %}>{{ section.title }}</{{ section_title_tag }}>
+      {%- assign section_current = false -%}
+      {%- for item in section.docs -%}
+        {%- assign item_url = item | prepend:"/docs/" | append:"/" -%}
+        {%- if item_url == page.url -%}
+          {%- assign section_current = true -%}
+          {% break %}
+        {%- endif -%}
+      {%- endfor -%}
+      <{{ section_tag }} class="doc-section" {% if include.section_widget %}x-data="{ open: {{section_current}} }" x-bind:class="{ 'doc-section-current': open }"{% endif %}>
+        {% comment %}Do expander here {% endcomment %}
+        <{{ section_title_tag }} class="doc-section-title"
+          {% if include.section_headings %}id="{{ section.title | replace:' ','-' | downcase }}"{% endif %}
+          {% if include.section_widget %}x-on:click="open = !open"{% endif %}
+        >
+          {{ section.title }}
+        </{{ section_title_tag }}>
 
         <ul>
         {% for item in section.docs %}
-            {% assign item_url = item | prepend:"/docs/" | append:"/" %}
-            {% if item_url == page.url %}
-                {% assign cls = "current" %}
-            {% else %}
-                {% assign cls = "" %}
-            {% endif %}
+            {%- assign item_url = item | prepend:"/docs/" | append:"/" -%}
+            {%- if item_url == page.url -%}
+                {%- assign item_class = "current" -%}
+            {%- else -%}
+                {%- assign item_class = "" -%}
+            {%- endif -%}
             {% for p in site.docs %}
-                {% if p.url == item_url %}
-                    <li class="{{ cls }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+                {%- if p.url == item_url -%}
+                    <li class="doc-item {{ item_class }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
                     {% break %}
-                {% endif %}
+                {%- endif -%}
             {% endfor %}
         {% endfor %}
         </ul>
-    </{{ section_tag }}>
+      </{{ section_tag }}>
     {% endfor %}
 
   {% unless include.section_headings %}

@@ -111,6 +111,72 @@
 /**
  * Documentation header
  */
+.sidebar {
+  border: 1px solid $grey-color-dark;
+
+  @include breakpoint($bp-large) { 
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 1px solid $grey-color-light;
+  
+  }
+}
+
+%sidebar-nav-item {
+  @include padding-y(1);
+  min-height: 4 * $base-unit;
+}
+
+.doc-sections {
+  display: none;
+
+  @include breakpoint($bp-large) {
+    display: block;
+    font-size: $font-small;
+  }
+
+  a {
+    display: block;
+    font-weight: normal;
+  }
+  .current a { font-weight: bold; }
+}
+.doc-sections-open { display: block; }
+
+.doc-title {
+  cursor: pointer;
+  color: $grey-color-dark;
+  @include margin-y(0);
+  font-size: $font-base;
+  font-weight: bold;
+
+  @include breakpoint($bp-large) { 
+    cursor: auto;
+    color: $text-color;
+    font-size: $font-xlarge;
+    font-weight: normal;
+    @include margin-text(top, 2);
+    padding-top: $font-3xlarge - $font-xlarge;
+  }
+}
+
+.doc-section::before, .doc-item::before { content: ""; }
+.doc-section > ul { display: none; }
+.doc-section-current > ul { display: block; }
+.doc-section-title {
+  @extend %sidebar-nav-item;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover { text-decoration: underline; }
+}
+
+.doc-item {
+  @include padding(left, 4);
+  @extend %sidebar-nav-item; 
+}
+
 .doc-header {
     background-color: $grey-color;
     color: #ffffff;
@@ -234,6 +300,7 @@
 }
 
 .post-title {
+    @include margin-text(top, 2);
     font-size: $font-3xlarge;
     letter-spacing: -1px;
     line-height: 1;
@@ -344,13 +411,6 @@
             background-image: none;
         }
     }
-}
-
-
-@include breakpoint($bp-large) { 
-  .sidebar {
-    border-right: 1px solid $grey-color-light;
-  }
 }
 
 .doc-toc {

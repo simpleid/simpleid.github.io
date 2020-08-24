@@ -10,10 +10,10 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="sidebar-container">
-          <div class="sidebar">
+          <div class="sidebar" x-data="{ open: false }">
             {% unless page.hide_doc_header %}
               <nav class="doc-doctree">
-              {% include doctree.html title='div'  %}
+              {% include doctree.html title='h2' title_widget=true section_widget=true %}
               </nav>
             {% endunless %}
           </div>
@@ -41,26 +41,6 @@
     {% include footer.html %}
 
     <script type="text/javascript">
-        function docHeader() {
-            return {
-                open: false,
-
-                title: {
-                    ['@click']() {
-                        this.open = !this.open;
-                    }
-                },
-
-                sections: {
-                    ['x-show']() {
-                        return this.open;
-                    }
-
-                    // use transition: height .3s linear and height:0!important instread of display: none
-                }
-            }
-        }
-
         anchors.add('.doc h2, .doc h3, .doc h4');
         anchors.remove('.doc-toc h4');
     </script>

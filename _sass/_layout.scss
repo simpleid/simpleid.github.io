@@ -15,26 +15,33 @@
 
 main {
   max-width: 0.75 * $bp-xlarge;
+  @include padding-y(4);
 }
 
 @include breakpoint($bp-large) {
   .sidebar-container {
     display: flex;
+    width: 100%;
   }
 
   main {
     flex: 1 1 auto;
-    @include padding(left, 4);
+    @include padding(left, 6);
   }
 }
 
 .sidebar {
-  display: none;
+  @include margin-y(2);
+  @include padding-y(1);
+  @include padding-x(1);
 
   @include breakpoint($bp-large) { 
     display: block; 
     width: $bp-xlarge / 4;
     flex-shrink: 0;
-    @include padding(right, 4);
+    @include margin-y(0);
+    @include padding-y(4);
+    @include padding(left, 0);
+    @include padding(right, 6);
   }
 }
