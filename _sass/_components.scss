@@ -111,6 +111,11 @@
 /**
  * Documentation header
  */
+%sidebar-nav-item {
+  @include padding-y(1);
+  min-height: 4 * $base-unit;
+}
+
 .sidebar {
   border: 1px solid $grey-color-dark;
 
@@ -121,28 +126,40 @@
     border-right: 1px solid $grey-color-light;
   
   }
-}
 
-%sidebar-nav-item {
-  @include padding-y(1);
-  min-height: 4 * $base-unit;
-}
+  .doc-sections {
+    display: none;
 
-.doc-sections {
-  display: none;
+    @include breakpoint($bp-large) {
+      display: block;
+      font-size: $font-small;
+    }
 
-  @include breakpoint($bp-large) {
-    display: block;
-    font-size: $font-small;
+    a {
+      display: block;
+      font-weight: normal;
+    }
+    .current a { font-weight: bold; }
   }
 
-  a {
-    display: block;
-    font-weight: normal;
+  .doc-sections-open { display: block; }
+
+  .doc-section::before, .doc-item::before { content: ""; }
+  .doc-section > ul { display: none; }
+  .doc-section-current > ul { display: block; }
+  .doc-section-title {
+    @extend %sidebar-nav-item;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover { text-decoration: underline; }
   }
-  .current a { font-weight: bold; }
+
+  .doc-item {
+    @include padding(left, 4);
+    @extend %sidebar-nav-item; 
+  }
 }
-.doc-sections-open { display: block; }
 
 .doc-title {
   cursor: pointer;
@@ -161,21 +178,6 @@
   }
 }
 
-.doc-section::before, .doc-item::before { content: ""; }
-.doc-section > ul { display: none; }
-.doc-section-current > ul { display: block; }
-.doc-section-title {
-  @extend %sidebar-nav-item;
-  cursor: pointer;
-  font-weight: bold;
-
-  &:hover { text-decoration: underline; }
-}
-
-.doc-item {
-  @include padding(left, 4);
-  @extend %sidebar-nav-item; 
-}
 
 .doc-header {
     background-color: $grey-color;

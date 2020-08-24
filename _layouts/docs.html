@@ -9,14 +9,15 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="sidebar-container">
-          <div class="sidebar" x-data="{ open: false }">
-            {% unless page.hide_doc_header %}
+        {% unless page.hide_doc_header %}
+          <div class="sidebar-container">          
+            <div class="sidebar" x-data="{ open: false }">
+            
               <nav class="doc-doctree">
               {% include doctree.html title='h2' title_widget=true section_widget=true %}
               </nav>
-            {% endunless %}
-          </div>
+            </div>
+          {% endunless %}
           <main class="post doc">
 
             <header class="post-header">
@@ -34,7 +35,7 @@
             </article>
 
           </main>
-        </div>
+        {% unless page.hide_doc_header %}</div>{% endunless %}
       </div>
     </div>
 
