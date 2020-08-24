@@ -473,7 +473,7 @@
 
 .search-app {
     form {
-        @include flexbox();
+        display: flex;
         flex-flow: row no-wrap;
         justify-content: space-between;
     }
