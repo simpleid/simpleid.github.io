@@ -147,13 +147,27 @@
   .doc-section::before, .doc-item::before { content: ""; }
   .doc-section > ul { display: none; }
   .doc-section-current > ul { display: block; }
+  .doc-section-current .doc-section-expander { transform: rotate(180deg); }
   .doc-section-title {
     @extend %sidebar-nav-item;
+    position: relative;
     cursor: pointer;
     font-weight: bold;
 
-    &:hover { text-decoration: underline; }
+    &:hover { 
+      text-decoration: underline; 
+      .doc-section-expander { color: $grey-color-dark; }
+    }
   }
+  .doc-section-expander {
+    position: absolute;
+    right: 0;
+    @include padding-x(2);
+    width: 8 * $base-unit;
+    height: $font-small * 1.5;  // 1.5 = line-height
+    color: $grey-color;
+  }
+  .doc-section-title-text { @include margin(right, 8); }
 
   .doc-item {
     @include padding(left, 4);
