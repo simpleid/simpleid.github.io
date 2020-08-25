@@ -24,7 +24,7 @@ To do this, edit the web page returned by the identifier URL.  Copy and paste th
 
 Replace the URL http://www.example.com/simpleid/ with one which points to where you have moved the <code>www</code> directory of the SimpleID installation.
 
-<div class="note warning">
+<div class="warning">
 The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>SIMPLEID_BASE_URL</code> configuration option in your <code>config.inc</code>. Otherwise, your installation may not work for certain web sites.
 </div>
 
@@ -40,7 +40,7 @@ The YADIS protocol specifies three ways in which you can modify the web page ret
 
 2. If the web page returned by the identifier URL is generated programmatically, you can also return the following HTTP header in your response:
 
-    <blockcode>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</blockcode>
+    <code>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</code>
 
 3. Otherwise, you can include the following section between the &lt;head&gt; and &lt;/head&gt; tags.
 

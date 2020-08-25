@@ -45,7 +45,7 @@ openid:
 
 Under the OpenID specifications, an identifier can be a [URI](http://en.wikipedia.org/wiki/URI) or an [XRI](http://en.wikipedia.org/wiki/XRI).  In most cases, an identifier will be a [URL](http://en.wikipedia.org/wiki/URI), a form of a URI.  This section assumes that you will choose an identifier in the form of a URL.
 
-<div class="note warning">
+<div class="warning">
 It is very important that you follow the requirements in this section carefully.  A substantial number of problems encountered when using SimpleID is caused by not having the identifier specified correctly.
 </div>
 
@@ -86,8 +86,8 @@ To do this, edit the web page returned by the identifier URL.  Copy and paste th
 
 Replace the URL http://www.example.com/simpleid/ with one which points to where you have moved the <code>www</code> directory of the SimpleID installation.
 
-<div class="note warning">
-The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>SIMPLEID_BASE_URL</code> configuration option in your <code>config.inc</code>. Otherwise, your installation may not work for certain web sites.
+<div class="warning">
+The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>canonical_base_path</code> configuration option in your <code>config.php</code>. Otherwise, your installation may not work for certain web sites.
 </div>
 
 #### Use the YADIS Protocol
@@ -102,7 +102,7 @@ The YADIS protocol specifies three ways in which you can modify the web page ret
 
 2. If the web page returned by the identifier URL is generated programmatically, you can also return the following HTTP header in your response:
 
-    <blockcode>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</blockcode>
+    <code>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</block>
 
 3. Otherwise, you can include the following section between the &lt;head&gt; and &lt;/head&gt; tags.
 
@@ -140,4 +140,4 @@ Some sites require you to log into SimpleID *before* logging into the site.
 
 </div>
 
-<div class="note warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>
+<div class="warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>

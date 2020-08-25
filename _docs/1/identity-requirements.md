@@ -22,7 +22,7 @@ SimpleID does not store your password directly.  Instead, it stores a hash of th
 
 Under the OpenID specifications, an identifier can be a [URI](http://en.wikipedia.org/wiki/URI) or an [XRI](http://en.wikipedia.org/wiki/XRI).  In most cases, an identifier will be a [URL](http://en.wikipedia.org/wiki/URI), a form of a URI.  This section assumes that you will choose an identifier in the form of a URL.
 
-<div class="note warning">
+<div class="warning">
 It is very important that you follow the requirements in this section carefully.  A substantial number of problems encountered when using SimpleID is caused by not having the identifier specified correctly.
 </div>
 

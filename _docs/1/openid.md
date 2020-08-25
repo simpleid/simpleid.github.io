@@ -32,4 +32,4 @@ Some sites require you to log into SimpleID *before* logging into the site.
 
 </div>
 
-<div class="note warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>
+<div class="warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>
