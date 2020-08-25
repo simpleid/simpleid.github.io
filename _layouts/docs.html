@@ -79,7 +79,7 @@
             notes.forEach((note) => {
                 if (note.hasAttribute('data-note')) return;
                 note.innerHTML = '<div class="note-icon"><svg viewBox="0 0 24 24"><use xlink:href="#svg-' + cls + '"></use></svg></div>'
-                    + '<div class="note-contents">' + note.innerHTML + '</div>';
+                    + '<div class="note-content">' + note.innerHTML + '</div>';
                 note.setAttribute('data-note', '');
             })
         });

@@ -387,34 +387,27 @@
 }
 
 .doc .note, .doc .warning, .doc .error {
-    padding: ($spacing-unit / 4) ($spacing-unit / 2) /*($spacing-unit / 4) 40px*/;
-    margin: ($spacing-unit / 2) 0;
-    /*background-repeat: no-repeat;
-    background-position: 10px ($spacing-unit / 4);*/
-    border-left: 4px solid $grey-color;
-    display: flex;
-    align-items: center;
+  @include margin-y(2);
+  @include padding-all(4);
+
+  border-left: 4px solid $grey-color;
+  display: flex;
+  align-items: center;
 }
 .doc .note-icon {
-  width: 16 * $base-unit;
-  @include margin(right, 2);
+  flex: 0 0 auto;
+  width: 8 * $base-unit;
+  @include margin(right, 4);
 }
-.doc .note-content { flex: 1 1 auto; }
-
-@function svg-link($viewBox, $url, $id: '') {
-  $href: '';
-  @if $id == '' {
-    $href: $url;
-  } @else {
-    $href: '#{$url}%23#{$id}';
-  }
-  @return url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='#{$viewBox}'%3E%3Cuse href='#{$href}'%3E%3C/use%3E%3C/svg%3E");
+.doc .note-content { 
+  flex: 1 1 auto;
+  @include lead(snug); 
 }
 
 .doc .note {
-    background-color: $blue-color-light;
-    border-left-color: $blue-color;
-    .note-icon { color: $blue-color; }
+  background-color: $blue-color-light;
+  border-left-color: $blue-color;
+  .note-icon { color: $blue-color; }
 }
 .doc .warning { 
   background-color: $yellow-color-light;
