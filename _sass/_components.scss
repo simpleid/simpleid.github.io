@@ -109,7 +109,7 @@
 
 
 /**
- * Documentation header
+ * Sidebar (for documentation navigation)
  */
 %sidebar-nav-item {
   @include padding-y(1);
@@ -178,70 +178,6 @@
   }
 }
 
-
-.doc-header {
-    background-color: $grey-color;
-    color: #ffffff;
-    padding: ($spacing-unit / 4) 0;
-
-    h2 {        
-        font-weight: bold;
-        font-size: $font-base;
-        margin-bottom: 0;
-        cursor: pointer;
-        padding-right: 10px;
-    }
-    h2:after {
-        content: '';
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 5px 0 5px 8.7px;
-        border-color: transparent transparent transparent #ffffff;
-    }
-
-    h3 {        
-        font-weight: bold;
-        font-size: $font-base;
-        margin-bottom: 5px;
-    }
-
-    .doc-sections { 
-        margin-left: -$spacing-unit / 2;
-        margin-top: $spacing-unit / 2;
-        @extend %clearfix;
-    }
-
-    .doc-section {
-        float: left;
-        margin-bottom: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-        width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-        width:         calc(25% - (#{$spacing-unit} / 2));
-    }
-
-    .doc-section ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .doc-section li {
-        line-height: 1.1;
-        margin-bottom: 5px;
-    }
-
-    .doc-section a {
-        color: #ffffff !important;
-        font-weight: normal;
-    }
-}
-@include media-query($on-palm) {
-    .doc-header {
-        display: none;
-    }
-}
 
 /**
  * Site footer
@@ -416,20 +352,24 @@
 }
 
 .doc-toc {
-    display: inline-block;
-    border: 1px solid $grey-color-light;
-    background: $grey-color-super-light;
-    margin: ($spacing-unit / 2) 0;
-    padding: ($spacing-unit / 4) ($spacing-unit / 2);
+  display: inline-block;
+  min-width: 33%;
+  border: 1px solid $grey-color-light;
+  background: $grey-color-super-light;
+  @include margin-y(2);
+  @include padding-y(2);
+  @include padding-x(3);
 
-    h4 {
-        font-size: $font-base; 
-        font-weight: bold;
-    }
+  h4 {
+    @include margin-text(top, 2);
+    @include margin-text(bottom, 2);
+    font-size: $font-base; 
+    font-weight: bold;
+  }
 
-    ul { margin-bottom: 0; }
-    li { font-size: $font-small; }
-    a { font-weight: normal; }
+  ul { margin: 0; }
+  li { font-size: $font-small; }
+  a { font-weight: normal; }
 }
 
 .doc .note, .doc .warning, .doc .error {
@@ -514,7 +454,7 @@
         }
         .result-label {
             display: inline-block;
-            padding: 2px 5px;
+            padding: 0.2em 0.4em;
             border-radius: 3px;
             font-size: $font-xsmall;
             font-weight: bold;

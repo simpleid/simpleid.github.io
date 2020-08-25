@@ -2,9 +2,9 @@
  * Basic styling
  */
 html {
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
 }
 
 
@@ -68,18 +68,18 @@ h4, h5, h6 { font-size: $font-large; }
  * Links
  */
 a {
-    color: $brand-color;
-    font-weight: bold;
-    text-decoration: none;
+  color: $brand-color;
+  font-weight: bold;
+  text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
 
 
@@ -91,8 +91,7 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
+    font-size: $font-large;
     font-style: italic;
 
     > :last-child {
@@ -105,28 +104,27 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: rgba($text-color, 0.1);
+pre, code {
+  font-size: $font-small;
+  border-radius: 3px;
+  background-color: rgba($text-color, 0.1);
 }
 
-code {
-    padding: 1px 5px;
-}
+// Don't reduce font size in headings
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; }
 
+code { padding: 0.2em 0.4em; }
+
+pre.highlight { background-color: rgba($text-color, 0.1); }
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        background-color: transparent;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 

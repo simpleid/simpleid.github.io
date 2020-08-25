@@ -12,12 +12,17 @@
   @include breakpoint($bp-xlarge) { max-width: $bp-xlarge }
 }
 
-
+/**
+ * Main content
+ */
 main {
   max-width: 0.75 * $bp-xlarge;
   @include padding-y(4);
 }
 
+/**
+ * Sidebars
+ */
 @include breakpoint($bp-large) {
   .sidebar-container {
     display: flex;
