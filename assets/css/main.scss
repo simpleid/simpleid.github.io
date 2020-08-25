@@ -20,6 +20,15 @@ $grey-color-light: #cccccc;
 $grey-color-dark:  #666666;
 $grey-color-super-light: #eeeeee;
 
+$blue-color-light: #ddeeff;
+$blue-color: darken($blue-color-light, 50%);
+
+$yellow-color-light: #ffffdd;
+$yellow-color: darken($yellow-color-light, 50%);
+
+$red-color-light: #ffddee;
+$red-color: darken($red-color-light, 50%);
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "vendor/sanitize.css/sanitize",
