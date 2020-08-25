@@ -51,15 +51,15 @@
               <h1 class="post-title">{{ page.title }}</h1>
             </header>
 
-            {% if site.github.repository_url %}
-            <div class="edit-docs">
-            <a href="{% github_edit_link %}" title="Help improve our documentation!">Edit this page in GitHub</a>
-            </div>
-            {% endif %}
-
             <article class="post-content">
               {{ content }}
             </article>
+
+            {% if site.github.repository_url %}
+            <footer class="edit-docs">
+            <a href="{% github_edit_link %}" title="">Edit this page in GitHub</a>
+            </footer>
+            {% endif %}
 
           </main>
         {% unless page.hide_doc_header %}</div>{% endunless %}
