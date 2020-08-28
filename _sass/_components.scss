@@ -167,7 +167,10 @@
     height: $font-small * 1.5;  // 1.5 = line-height
     color: $grey-color;
   }
-  .doc-section-title-text { @include margin(right, 8); }
+  .doc-section-title-text {
+    display: block;
+    @include margin(right, 8); 
+  }
 
   .doc-item {
     @include padding(left, 4);
@@ -176,11 +179,21 @@
 }
 
 .doc-title {
+  position: relative;
   cursor: pointer;
   color: $grey-color-dark;
   @include margin-y(0);
   font-size: $font-base;
   font-weight: bold;
+
+  .doc-title-expander {
+    position: absolute;
+    right: 0;
+    width: $font-base * 1.5 + 4 * $base-unit;
+    height: $font-base * 1.5; // 1.5 = line-height
+    @include padding-x(2);
+  }
+  .doc-title-expander-open { transform: rotate(180deg); }
 
   @include breakpoint($bp-large) { 
     cursor: auto;
@@ -189,6 +202,8 @@
     font-weight: normal;
     @include margin-text(top, 2);
     padding-top: $font-3xlarge - $font-xlarge;
+
+    .doc-title-expander { display: none; }
   }
 }
 
@@ -364,6 +379,12 @@
         }
     }
 }
+
+
+/**
+ * Documentation
+ */
+.doc-section-title-text { display: inline; }  // Overridden in sidebar
 
 .doc-toc {
   display: inline-block;

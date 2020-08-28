@@ -21,8 +21,12 @@
 
 {% if include.title %}
   <{{ title_tag }} class="doc-title" {% if include.title_widget %}x-on:click="open = !open"{% endif %}>
+    {%- if include.section_widget -%}
+      <div class="doc-title-expander" x-bind:class="{ 'doc-title-expander-open': open }">
+        <svg viewBox="0 0 24 24"><use xlink:href="#svg-expander"></use></svg>
+      </div>
+    {%- endif -%}
     <span>{{ doctree.title }}</span>
-    {% if include.section_widget %}<!--div class="doc-title-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-expander"></use></svg></div-->{% endif %}
   </{{ title_tag }}>
 {% endif %}
 
