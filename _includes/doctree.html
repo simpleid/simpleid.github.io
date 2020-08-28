@@ -31,21 +31,19 @@
 {% endif %}
 
 <div class="doc-sections" {% if include.title_widget %}x-bind:class="{ 'doc-sections-open': open }"{% endif %}>
-  {% unless include.section_headings %}
+  {%- unless include.section_headings -%}
   <ul>
-  {% endunless %}
+  {%- endunless -%}
     {% for section in doctree.sections %}
       {%- assign section_current = false -%}
-      {%- for item in section.docs -%}
-        {%- assign item_url = item | prepend:"/docs/" | append:"/" -%}
-        {%- if item_url == page.url -%}
-          {%- assign section_current = true -%}
-          {% break %}
-        {%- endif -%}
-      {%- endfor -%}
+      {%- assign page_id_size = page.url | size | minus: 1 -%}
+      {%- assign page_id = page.url | slice: 0, page_id_size | remove_first: "/docs/" -%}
+      {%- if section.docs contains page_id -%}
+        {%- assign section_current = true -%}
+      {%- endif -%}
       <{{ section_tag }} class="doc-section" {% if include.section_widget %}x-data="{ open: {{section_current}} }" x-bind:class="{ 'doc-section-current': open }"{% endif %}>
         <{{ section_title_tag }} class="doc-section-title"
-          {% if include.section_headings %}id="{{ section.title | replace:' ','-' | downcase }}"{% endif %}
+          {% if include.section_headings %}id="{{ section.title | slugify }}"{% endif %}
           {% if include.section_widget %}x-on:click="open = !open"{% endif %}
         >
           {% if include.section_widget %}<div class="doc-section-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-expander"></use></svg></div>{% endif %}
@@ -53,25 +51,21 @@
         </{{ section_title_tag }}>
 
         <ul>
-        {% for item in section.docs %}
+          {% for item in section.docs %}
             {%- assign item_url = item | prepend:"/docs/" | append:"/" -%}
             {%- if item_url == page.url -%}
-                {%- assign item_class = "current" -%}
+              {%- assign item_class = "current" -%}
             {%- else -%}
-                {%- assign item_class = "" -%}
+              {%- assign item_class = "" -%}
             {%- endif -%}
-            {% for p in site.docs %}
-                {%- if p.url == item_url -%}
-                    <li class="doc-item {{ item_class }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
-                    {% break %}
-                {%- endif -%}
-            {% endfor %}
-        {% endfor %}
+            {%- assign p = site.docs | where: "url", item_url | first -%}
+            <li class="doc-item {{ item_class }}"><a href="{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
         </ul>
       </{{ section_tag }}>
     {% endfor %}
 
-  {% unless include.section_headings %}
+  {%- unless include.section_headings -%}
   </ul>
-  {% endunless %}
+  {%- endunless -%}
 </div>
