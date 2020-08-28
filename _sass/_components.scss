@@ -275,6 +275,11 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+
+  table {
+    // .table is from _base.scss
+    @extend .table;
+  }
 }
 
 

@@ -131,65 +131,51 @@ pre {
 /**
  * Tables
  */
-/* =============================================================
-
-    Tables v1.0
-    Simple table styling by Chris Ferdinandi.
-    http://gomakethings.com
-
-    Adapted from Twitter Bootstrap.
-    http://twitter.github.com/bootstrap/
-
-    Licensed under the Apache License v2.0
-    http://www.apache.org/licenses/LICENSE-2.0
-
- * ============================================================= */
 //  Removes default browser settings and evens out inconsistencies.
 table {
-    max-width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+  max-width: 100%;
+  border-spacing: 0;
 }
 
 //  Sets table width to 100%. Adds bottom-margin.
 .table {
-    width: 100%;
-    margin-bottom: $spacing-unit / 2;
+  width: 100%;
+  @include margin(bottom, 2);
 }
 
 //  Adds table cell padding, and adds a top border to each cell.
 .table th, .table td {
-    padding: $table-padding;
-    border-top: 1px solid $grey-color-light;
+  @include padding-all(1);
+  border-top: 1px solid $grey-color-light;
 }
 
 //  Sets table header font-weight to bold.  Aligns table header text to the bottom of each cell.
 .table th {
-    font-weight: bold;
-    color: #ffffff;
-    background-color: $grey-color;
-    text-align: left;
-    vertical-align: bottom;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: $grey-color;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 //  Aligns cell text to the top of each cell.
 .table td {
-   vertical-align: top;
+  vertical-align: top;
 }
 
 //  Removes the border-top from the first row.
 .table thead:first-child tr th,
 .table thead:first-child tr td {
-    border-top: 0;
+  border-top: 0;
 }
 
 //  Adds border-top between two table-body sections.
 .table tbody + tbody {
-    border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $grey-color-light;
 }
 
 .table-banded tr.even td {
-    background-color: $grey-color-super-light;
+  background-color: $grey-color-super-light;
 }
 
 
