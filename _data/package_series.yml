@@ -1,8 +1,0 @@
-- package_series: 1.x
-  repo_url: https://github.com/simpleid/simpleid/tree/simpleid1
-  status: release
-  first_release: 2007-08-18
-
-- package_series: 2.x
-  repo_url: https://github.com/simpleid/simpleid/tree/master
-  status: dev

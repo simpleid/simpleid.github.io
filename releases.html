@@ -7,27 +7,99 @@ redirect_from:
     - /releases/simpleid/
 ---
 
+<div class="releases-app" x-data="releasesApp()" x-init="initReleases()">
+    <div x-show="!isLoading" x-cloak>
 
+        <p>
+            Series:
+            <select x-model="filter" x-on:change="filterReleases()">
+                <option value="" x-bind:selected="filter == ''">(All)</option>
+                <template x-for="(package, index) in packages" :key="index">
+                    <optgroup x-bind:label="package['id']">
+                        <template x-for="package_series in package['series']">
+                            <option x-bind:value="package['id'] + ' ' + package_series.package_series" x-bind:selected="filter == package['id'] + ' ' + package_series.package_series" x-text="package_series.title"></option>
+                        </template>
+                    </optgroup>
+                </template>
+            </select>
+        </p>
 
-<table class="table table-banded releases-table">
-    <thead>
-        <tr>
-            <th>Package</th>
-            <th>Version</th>
-            <th>Download</th>
-            <th>Date</th>
-            <th>Release Announcement</th>
-        </tr>
-  </thead>
-  <tbody>
-{% for post in site.categories.release %}
-        <tr class="{% cycle 'odd', 'even' %}">
-            <td>{{ post.release_package }}</td>
-            <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.release_version }}</a></td>
-            <td><a href="{{ post.download_url }}">Download</a></td>
-            <td>{{ post.date | date: "%F" }}</td>
-            <td><a href="{{ post.url | prepend: site.baseurl }}">Announcement</a></td>
-        </tr>
-{% endfor %}
-    </tbody>
-</table>
+        <table class="table table-banded releases-table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Version</th>
+                    <th>Download</th>
+                    <th>Date</th>
+                    <th>Release Announcement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="(release, index) in releases" :key="index">
+                    <tr x-bind:class="{ odd: ((index + 1) % 2 != 0), even: ((index + 1) % 2 == 0) }">
+                        <td x-text="release.release_package"></td>
+                        <td><a x-bind:href="release.announce_url" x-text="release.release_version"></a></td>
+                        <td><a x-bind:href="release.download_url">Download</a></td>
+                        <td x-text="new Date(release.release_date * 1000).toISOString().substring(0, 10)"></td>
+                        <td><a x-bind:href="release.announce_url">Announcement</a></td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+        <template x-if="seriesInfo">
+            <p>The source code for this series can be found at 
+                <a x-bind:href="seriesInfo.repo_url" x-text="seriesInfo.repo_url"></a>.
+            </p>
+        </template>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function releasesApp() {
+        return {
+            isLoading: false,
+            filter: '',
+            seriesInfo: {},
+            packages: [],
+            releases: [],
+            db: {},
+
+            initReleases: function() {
+                this.isLoading = true;
+
+                let pairs = window.location.hash.substring(1).split('&');
+                let params = {};
+                pairs.forEach((pair) => {
+                    pair = pair.split('=');
+                    params[pair[0]] = decodeURIComponent(pair[1] || '');
+                });
+                if (params.filter) this.filter = params.filter;
+
+                fetch('{{ "/api/releases.json" | prepend: site.baseurl }}')
+                    .then((results) => results.json())
+                    .then((data) => {
+                        this.packages = data.packages;
+                        this.db = data;
+                        this.isLoading = false;
+                        this.filterReleases();
+                    });
+            },
+
+            filterReleases: function() {
+                if (this.filter == '') {
+                    window.location.hash = '';
+                    this.releases = this.db.releases;
+                    this.seriesInfo = {};
+                    return;
+                }
+
+                window.location.hash = '#filter=' + encodeURIComponent(this.filter);
+                let pairs = this.filter.split(' ', 2);
+
+                this.releases = this.db.releases.filter((release) => ((release.release_package == pairs[0]) && (release.package_series == pairs[1])));
+                this.seriesInfo = this.packages.find((pkg) => pkg.id == pairs[0]).series.find((series) => series.package_series == pairs[1]);
+            }
+        }
+    }
+</script>

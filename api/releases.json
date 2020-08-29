@@ -14,15 +14,23 @@
         } {% unless forloop.last == true %},{% endunless %}
         {% endfor %}
     ],
-    "repos": [
-        {% for branch in site.data.package_series %}
+    "packages": [
+        {% for release_package in site.data.release_packages %}
         {
-            "package_series": {{ branch.package_series | jsonify }},
-            "repo_url": {{ branch.repo_url | jsonify }},
-            "status": {{ branch.status | jsonify }}
-            {% if branch.first_release %}
-            , "first_release": {{ branch.first_release | date: '%s' }}
-            {% endif %}
+            "id": {{ release_package[0] | jsonify }},
+            "series": [
+            {% for branch in release_package[1].series %}
+            {
+                "package_series": {{ branch.package_series | jsonify }},
+                "title": {{ branch.title | jsonify }},
+                "repo_url": {{ branch.repo_url | jsonify }},
+                "status": {{ branch.status | jsonify }}
+                {% if branch.first_release %}
+                , "first_release": {{ branch.first_release | date: '%s' }}
+                {% endif %}
+            } {% unless forloop.last == true %},{% endunless %}
+            {% endfor %}
+            ]
         } {% unless forloop.last == true %},{% endunless %}
         {% endfor %}
     ]
