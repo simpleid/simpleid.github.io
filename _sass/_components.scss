@@ -1,110 +1,109 @@
+@mixin vertical-gradient($from-color, $to-color) {
+  background: linear-gradient(to bottom, $from-color 0%, $to-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
 /**
  * Site header
  */
 .site-header {
-    background-color: $grey-color-dark;
-    color: $grey-color-light;
-    min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
-
-.site-title {
-    color: #ffffff;
-    font-size: $font-xlarge;
-    text-transform: uppercase;
-    line-height: 56px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: #ffffff;
-    }
+  @include padding-y(4);
+  background-color: $grey-color-dark;
+  color: $grey-color-light;
 }
 
 .site-nav {
-    float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    .menu-icon {
-        display: none;
-    }
+  .site-title {
+    flex-shrink: 0;
+    @include margin(right, 4);
+    color: #ffffff;
+    font-size: $font-xlarge;
+    text-transform: uppercase;
 
-    .page-link {
+    a,
+    a:visited {
         color: #ffffff;
-        line-height: 56px;
-        display: inline-block;
-        padding: 0 10px;
     }
-    
-    .page-link.fa:hover {
-        text-decoration: none;
-    }
+  }
+  
+  .menu-icon {
+    display: block;
 
-    .current {
-        background-color: $background-color;
-        color: $grey-color-dark;
-    }
-
-    .menu-download {
-        background: linear-gradient(to bottom, $brand-color-light 0%, $brand-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        color: #ffffff !important;
+    a, button {
+      display: flex;
+      align-items: center;
+      @include padding-x(3);
+      @include padding-y(2);
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
     }
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $grey-color-dark;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+    svg {
+      @include width(3);
+      @include height(3);
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-light;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            //line-height: $base-line-height;
-            display: block;
-            padding: 5px 10px;
-        }
-
-        .current {
-            background-color: $grey-color-dark;
-            color: #ffffff;
-        }
-
-        .menu-download {
-            background-image: none;
-        }
+      color: $grey-color-light;
     }
+
+    @include breakpoint($bp-large) { display: none; }
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+
+    @include breakpoint($bp-large) {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+  }
+  .nav-links-open { display: block; }
+
+  .nav-link {
+    display:block;
+    @include margin-y(1);
+    @include padding-y(2);
+    color: #ffffff;
+
+    @include breakpoint($bp-large) {
+      display: inline-block;
+      @include margin-y(0);
+      @include margin(right, 4);
+
+      &:last-child { margin-right: 0; }
+    }
+  }
+
+  .nav-link-search {
+    width: $font-base * 1.5;
+    height: $font-base * 1.5 + 4 * $base-unit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .current {
+    @include padding-x(2);
+    background-color: $background-color;
+    color: $grey-color-dark;
+  }
+
+  .menu-download {
+    @include vertical-gradient($brand-color-light, $brand-color);
+    @include padding-x(2);
+    color: #ffffff !important;
+    text-align: center;
+
+    @include breakpoint($bp-large) {
+
+    }
+  }
 }
 
 
