@@ -35,11 +35,8 @@ $red-color: darken($red-color-light, 50%);
   "vendor/sanitize.css/forms",
   "util/typography",
   "util/spacing",
-  "util/media";
-
-@import "legacy";
-
-@import
+  "util/media",
+  "util/grid",
   "base",
   "layout",
   "components",

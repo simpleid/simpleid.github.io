@@ -43,8 +43,8 @@
     }
 
     svg {
-      @include width(3);
-      @include height(3);
+      width: 3 * $base-unit;
+      height: 3 * $base-unit;
 
       color: $grey-color-light;
     }
@@ -89,14 +89,14 @@
   }
   
   .current {
-    @include padding-x(2);
+    @include padding-x(4);
     background-color: $background-color;
     color: $grey-color-dark;
   }
 
   .menu-download {
     @include vertical-gradient($brand-color-light, $brand-color);
-    @include padding-x(2);
+    @include padding-x(4);
     color: #ffffff !important;
     text-align: center;
 
@@ -304,79 +304,85 @@
  * Home page
  */
 .home {
-    .hero-panel {
-        background: linear-gradient(to bottom, $grey-color-super-light 0%, $grey-color-light 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        padding: $spacing-unit / 2;
-        margin-bottom: $spacing-unit;
+  .hero-panel {
+    @include vertical-gradient($grey-color-super-light, $grey-color-light);
+    @include padding-y(16);
+    @include margin(bottom, 8);
 
-        .hero-content {
-            color: $grey-color-dark;
-            font-size: $font-xlarge ;
-        }
+    .hero-content {
+      max-width: $bp-medium;
 
-        .hero-title {
-            color: #000000;
-            font-size: $font-xlarge * 2;
-            font-weight: bold;
-        }
+      h1 {
+        margin: 0;
+        color: $grey-color-dark;
+        @include lead(tight);
+        font-size: $font-3xlarge !important;
+        font-weight: normal;
+      }
+
+      p { 
+        @include margin(top, 6); 
+        margin-bottom: 0;
+      }
     }
 
-    .panels-wrapper {
-        margin-left: -$spacing-unit / 2;
-        @extend %clearfix;
+    .hero-title {
+      color: #000000;
+      font-size: $font-3xlarge * 1.5;
+      font-weight: bold;
+    }
+  }
+
+  .panels-wrapper-3 {
+    @include breakpoint($bp-medium) {
+      display: grid;
+      @include grid-columns(2);
+      gap: 4 * $base-unit;
+      @include margin(bottom, 8);
     }
 
-    .panel {
-        float: left;
-        margin-bottom: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+    @include breakpoint($bp-large) {
+      @include grid-columns(3);
     }
+  }
 
-    .panel-col-1 {
-        width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-        width:         calc(33% - (#{$spacing-unit} / 2));
+  .panel {
+    @include margin(bottom, 8);
+    @include padding(bottom, 8);
+    border-bottom: 1px solid $grey-color-light;
+
+    &:last-child { border-bottom: 0; }
+
+    @include breakpoint($bp-medium) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
+  }
 
-    .panel-col-2 {
-        width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-        width:         calc(33% - (#{$spacing-unit} / 2));
+  a.front-link {
+    color: #ffffff;
+    display: inline-block;
+    margin: 0;
+    @include padding-y(3);
+    @include padding-x(4);
+    @include vertical-gradient($grey-color, $grey-color-dark);
+    @include lead(tight);
+
+    &:hover {
+      background-color: $grey-color-dark;
+      background-image: none;
     }
+  }
 
-    .panel-col-3 {
-        width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-        width:         calc(33% - (#{$spacing-unit} / 2));
+  .hero-panel a.front-link, .downloads-panel a.front-link {
+    @include vertical-gradient($brand-color-light, $brand-color);
+        
+    &:hover {
+      background-color: $brand-color-light;
+      background-image: none;
     }
-
-    @include media-query($on-palm) {
-        .panel {
-            float: none;
-            width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-            width:         calc(100% - (#{$spacing-unit} / 2));
-        }
-    }
-
-    a.front-link {
-        color: #ffffff;
-        display: inline-block;
-        margin: ($spacing-unit / 2) 0;
-        padding: ($spacing-unit / 4) ($spacing-unit / 2);
-        background: linear-gradient(to bottom, $grey-color 0%, $grey-color-dark 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-
-        &:hover {
-            background-color: $grey-color-dark;
-            background-image: none;
-        }
-    }
-
-    .hero-panel a.front-link, .downloads-panel a.front-link {
-        background: linear-gradient(to bottom, $brand-color-light 0%, $brand-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        &:hover {
-            background-color: $brand-color-light;
-            background-image: none;
-        }
-    }
-
-    .hero-panel a.front-link { font-size: $font-xlarge; }
+  }
 }
 
 

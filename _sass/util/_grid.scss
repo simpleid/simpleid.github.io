@@ -1,0 +1,7 @@
+@mixin grid-columns($n) {
+  grid-template-columns: repeat($n, minmax(0, 1fr));
+}
+
+@mixin grid-rows($n) {
+  grid-template-rows: repeat($n, minmax(0, 1fr));
+}
