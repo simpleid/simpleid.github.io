@@ -1,30 +1,10 @@
 /**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/**
  * Basic styling
  */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-}
-
-strong {
-    font-weight: bold;
+html {
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
 }
 
 
@@ -35,17 +15,16 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  @include margin-text(bottom, 2);
 }
-
 
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 
@@ -54,11 +33,11 @@ img {
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+  font-size: $font-small;
 }
 
 
@@ -67,14 +46,7 @@ figcaption {
  * Lists
  */
 ul, ol, dd {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  @include padding-text(left, 6);
 }
 
 dt { font-weight: bold; }
@@ -85,27 +57,29 @@ dt { font-weight: bold; }
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+  font-weight: 300;
 }
-
+h2 { font-size: $font-xxlarge; }
+h3 { font-size: $font-xlarge; }
+h4, h5, h6 { font-size: $font-large; }
 
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
-    font-weight: bold;
-    text-decoration: none;
+  color: $brand-color;
+  font-weight: bold;
+  text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
 
 
@@ -114,16 +88,14 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  @include padding(left, 4);
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -131,151 +103,89 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: rgba($text-color, 0.1);
+pre, code {
+  font-size: $font-small;
+  border-radius: 3px;
+  background-color: rgba($text-color, 0.1);
 }
 
-code {
-    padding: 1px 5px;
-}
+// Don't reduce font size in headings
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; }
 
+code { padding: 0.2em 0.4em; }
+
+pre.highlight { background-color: rgba($text-color, 0.1); }
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        background-color: transparent;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 
 /**
  * Tables
  */
-/* =============================================================
-
-    Tables v1.0
-    Simple table styling by Chris Ferdinandi.
-    http://gomakethings.com
-
-    Adapted from Twitter Bootstrap.
-    http://twitter.github.com/bootstrap/
-
-    Licensed under the Apache License v2.0
-    http://www.apache.org/licenses/LICENSE-2.0
-
- * ============================================================= */
 //  Removes default browser settings and evens out inconsistencies.
 table {
-    max-width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+  max-width: 100%;
+  border-spacing: 0;
 }
 
 //  Sets table width to 100%. Adds bottom-margin.
 .table {
-    width: 100%;
-    margin-bottom: $spacing-unit / 2;
+  width: 100%;
+  @include margin(bottom, 2);
 }
 
 //  Adds table cell padding, and adds a top border to each cell.
 .table th, .table td {
-    padding: $table-padding;
-    border-top: 1px solid $grey-color-light;
+  @include padding-all(1);
+  border-top: 1px solid $grey-color-light;
 }
 
 //  Sets table header font-weight to bold.  Aligns table header text to the bottom of each cell.
 .table th {
-    font-weight: bold;
-    color: #ffffff;
-    background-color: $grey-color;
-    text-align: left;
-    vertical-align: bottom;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: $grey-color;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 //  Aligns cell text to the top of each cell.
 .table td {
-   vertical-align: top;
+  vertical-align: top;
 }
 
 //  Removes the border-top from the first row.
 .table thead:first-child tr th,
 .table thead:first-child tr td {
-    border-top: 0;
+  border-top: 0;
 }
 
 //  Adds border-top between two table-body sections.
 .table tbody + tbody {
-    border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $grey-color-light;
 }
 
 .table-banded tr.even td {
-    background-color: $grey-color-super-light;
+  background-color: $grey-color-super-light;
 }
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
 
 
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}
-
-
-/**
- * AlpineJS
- */
-[x-cloak] { display: none; }

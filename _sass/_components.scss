@@ -1,0 +1,546 @@
+@mixin vertical-gradient($from-color, $to-color) {
+  background: linear-gradient(to bottom, $from-color 0%, $to-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  @include padding-y(4);
+  background-color: $grey-color-dark;
+  color: $grey-color-light;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .site-title {
+    flex-shrink: 0;
+    @include margin(right, 4);
+    color: #ffffff;
+    font-size: $font-xlarge;
+    text-transform: uppercase;
+
+    a,
+    a:visited {
+        color: #ffffff;
+    }
+  }
+  
+  .menu-icon {
+    display: block;
+
+    a, button {
+      display: flex;
+      align-items: center;
+      @include padding-x(3);
+      @include padding-y(2);
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+    }
+
+    svg {
+      width: 3 * $base-unit;
+      height: 3 * $base-unit;
+
+      color: $grey-color-light;
+    }
+
+    @include breakpoint($bp-large) { display: none; }
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+
+    @include breakpoint($bp-large) {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+  }
+  .nav-links-open { display: block; }
+
+  .nav-link {
+    display:block;
+    @include margin-y(1);
+    @include padding-y(2);
+    color: #ffffff;
+
+    @include breakpoint($bp-large) {
+      display: inline-block;
+      @include margin-y(0);
+      @include margin(right, 4);
+
+      &:last-child { margin-right: 0; }
+    }
+  }
+
+  .nav-link-search {
+    width: $font-base * 1.5;
+    height: $font-base * 1.5 + 4 * $base-unit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .current {
+    @include padding-x(4);
+    background-color: $background-color;
+    color: $grey-color-dark;
+  }
+
+  .menu-download {
+    @include vertical-gradient($brand-color-light, $brand-color);
+    @include padding-x(4);
+    color: #ffffff !important;
+    text-align: center;
+
+    @include breakpoint($bp-large) {
+
+    }
+  }
+}
+
+
+/**
+ * Sidebar (for documentation navigation)
+ */
+%sidebar-nav-item {
+  @include padding-y(1);
+  min-height: 4 * $base-unit;
+}
+
+.sidebar {
+  border: 1px solid $grey-color-dark;
+  @include padding(left, 2);
+
+  @include breakpoint($bp-large) { 
+    padding-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 1px solid $grey-color-light;
+  }
+
+  .doc-sections {
+    display: none;
+
+    @include breakpoint($bp-large) {
+      display: block;
+      font-size: $font-small;
+    }
+
+    a {
+      display: block;
+      font-weight: normal;
+    }
+    .current a { font-weight: bold; }
+  }
+
+  .doc-sections-open { display: block; }
+
+  .doc-section::before, .doc-item::before { content: ""; }
+  .doc-section > ul { display: none; }
+  .doc-section-current > ul { display: block; }
+  .doc-section-current .doc-section-expander { transform: rotate(180deg); }
+  .doc-section-title {
+    @extend %sidebar-nav-item;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover { 
+      text-decoration: underline; 
+      .doc-section-expander { color: $grey-color-dark; }
+    }
+  }
+  .doc-section-expander {
+    position: absolute;
+    right: 0;
+    @include padding-x(2);
+    width: 8 * $base-unit;
+    height: $font-small * 1.5;  // 1.5 = line-height
+    color: $grey-color;
+  }
+  .doc-section-title-text {
+    display: block;
+    @include margin(right, 8); 
+  }
+
+  .doc-item {
+    @include padding(left, 4);
+    @extend %sidebar-nav-item; 
+  }
+}
+
+.doc-title {
+  position: relative;
+  cursor: pointer;
+  color: $grey-color-dark;
+  @include margin-y(0);
+  font-size: $font-base;
+  font-weight: bold;
+
+  .doc-title-expander {
+    position: absolute;
+    right: 0;
+    width: $font-base * 1.5 + 4 * $base-unit;
+    height: $font-base * 1.5; // 1.5 = line-height
+    @include padding-x(2);
+  }
+  .doc-title-expander-open { transform: rotate(180deg); }
+
+  @include breakpoint($bp-large) { 
+    cursor: auto;
+    color: $text-color;
+    font-size: $font-xlarge;
+    font-weight: normal;
+    @include margin-text(top, 2);
+    padding-top: $font-3xlarge - $font-xlarge;
+
+    .doc-title-expander { display: none; }
+  }
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  @include padding-y(4);
+}
+
+.footer-message {
+  font-size: $font-base;
+  color: $grey-color;
+  text-align: right;
+
+  p { @include margin-y(2); }
+  a { font-weight: normal; }
+}
+
+/**
+ * Page content
+ */
+.page-content {
+
+}
+
+.page-heading {
+
+}
+
+.post-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+  > li { @include margin(bottom, 4); }
+  h2 { 
+    margin-top: 0 !important;
+    @include margin-text(bottom, 4); 
+    @include lead(snug);
+  }
+}
+
+.post-meta {
+  font-size: $font-small;
+  color: $grey-color;
+  // h1.post-title has a margin-bottom of 2
+  h1.post-title + & { @include margin-text(top, -2); }
+}
+
+.post-link {
+  display: block;
+  font-size: $font-xxlarge;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+  @include margin(bottom, 4);
+}
+
+.post-title {
+  @include margin-text(top, 2);
+  @include lead(snug);
+  font-size: $font-3xlarge;
+}
+
+.post-content {
+  @include margin-y(6);
+
+  h1, h2, h3, h4, h5, h6 {
+    @include margin-text(top, 6);
+  }
+  h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+    margin-top: 0;
+  }
+
+  hr {
+    @include margin-y(12);
+  }
+  hr + * {
+    margin-top: 0;
+  }
+
+  table {
+    // .table is from _base.scss
+    @extend .table;
+  }
+}
+
+
+/**
+ * Home page
+ */
+.home {
+  .hero-panel {
+    @include vertical-gradient($grey-color-super-light, $grey-color-light);
+    @include padding-y(16);
+    @include margin(bottom, 8);
+
+    .hero-content {
+      max-width: $bp-medium;
+
+      h1 {
+        margin: 0;
+        color: $grey-color-dark;
+        @include lead(tight);
+        font-size: $font-3xlarge !important;
+        font-weight: normal;
+      }
+
+      p { 
+        @include margin(top, 6); 
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-title {
+      color: #000000;
+      font-size: $font-3xlarge * 1.5;
+      font-weight: bold;
+    }
+  }
+
+  .panels-wrapper-3 {
+    @include breakpoint($bp-medium) {
+      display: grid;
+      @include grid-columns(2);
+      gap: 4 * $base-unit;
+      @include margin(bottom, 8);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-columns(3);
+    }
+  }
+
+  .panel {
+    @include margin(bottom, 8);
+    @include padding(bottom, 8);
+    border-bottom: 1px solid $grey-color-light;
+
+    &:last-child { border-bottom: 0; }
+
+    @include breakpoint($bp-medium) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  a.front-link {
+    color: #ffffff;
+    display: inline-block;
+    margin: 0;
+    @include padding-y(3);
+    @include padding-x(4);
+    @include vertical-gradient($grey-color, $grey-color-dark);
+    @include lead(tight);
+
+    &:hover {
+      background-color: $grey-color-dark;
+      background-image: none;
+    }
+  }
+
+  .hero-panel a.front-link, .downloads-panel a.front-link {
+    @include vertical-gradient($brand-color-light, $brand-color);
+        
+    &:hover {
+      background-color: $brand-color-light;
+      background-image: none;
+    }
+  }
+}
+
+
+/**
+ * Releases
+ */
+.release-download {
+  float: right;
+  font-size: $font-xlarge;
+  @include margin(bottom, 4);
+  @include margin(left, 4);
+  @include lead(tight);
+  text-align: center;
+
+  a {
+    color: #ffffff;
+    display: inline-block;
+    @include padding-y(3);
+    @include padding-x(4);
+    @include vertical-gradient($grey-color, $grey-color-dark);
+        
+    &:hover {
+      background-color: $grey-color-dark;
+      background-image: none;
+    }
+  }
+}
+
+
+/**
+ * Documentation
+ */
+.doc-section-title-text { display: inline; }  // Overridden in sidebar
+
+.doc-toc {
+  display: inline-block;
+  min-width: 33%;
+  border: 1px solid $grey-color-light;
+  background: $grey-color-super-light;
+  @include margin-y(2);
+  @include padding-all(2);
+
+  h4 {
+    @include margin-text(top, 2);
+    @include margin-text(bottom, 2);
+    font-size: $font-base; 
+    font-weight: bold;
+  }
+
+  ul { margin: 0; }
+  li { font-size: $font-small; }
+  a { font-weight: normal; }
+}
+
+.doc .note, .doc .warning, .doc .error {
+  @include margin-y(2);
+  @include padding-all(4);
+
+  border-left: 4px solid $grey-color;
+  display: flex;
+  align-items: center;
+}
+.doc .note-icon {
+  flex: 0 0 auto;
+  width: 8 * $base-unit;
+  @include margin(right, 4);
+}
+.doc .note-content { 
+  flex: 1 1 auto;
+  @include lead(snug); 
+}
+
+.doc .note {
+  background-color: $blue-color-light;
+  border-left-color: $blue-color;
+  .note-icon { color: $blue-color; }
+}
+.doc .warning { 
+  background-color: $yellow-color-light;
+  border-left-color: $yellow-color;
+  .note-icon { color: $yellow-color; }
+}
+.doc .error {
+  background-color: $red-color-light;
+  border-left-color: $red-color;
+  .note-icon { color: $red-color; }
+}
+
+.doc .anchorjs-link {
+  color: $grey-color-light;
+  &:hover { text-decoration: none; }
+}
+
+.edit-docs {
+  @include margin-y(8);
+  @include padding-y(8);
+  border-top: 1px solid $grey-color-light;
+  font-size: $font-small;
+
+  a, a:visited { 
+    color: $grey-color;
+    border-bottom: 1px dotted $grey-color;
+  }
+  a:hover {
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 1px solid $text-color;
+  }
+}
+
+/**
+ * Search
+ */
+.search-app {
+  form {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-between;
+  }
+
+  input[type="text"] { flex-grow: 1; }
+
+  button { 
+    @include margin-x(2);
+    @include padding-x(2);
+    @include vertical-gradient($grey-color, $grey-color-dark);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey-color-dark;
+      background-image: none;
+    }
+  }
+
+  .results {
+    @include padding-y(4);
+        
+    ul { list-style: none; }
+    li { @include margin-text(bottom, 2); }
+    .result-title { font-weight: bold; }
+    .result-label {
+      display: inline-block;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: $font-xsmall;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: $grey-color-dark;
+      color: $grey-color-super-light;
+    }
+  }
+}
+
+/**
+ * AlpineJS
+ */
+[x-cloak] { display: none; }
+
