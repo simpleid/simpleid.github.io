@@ -117,13 +117,14 @@
 
 .sidebar {
   border: 1px solid $grey-color-dark;
+  @include padding(left, 2);
 
   @include breakpoint($bp-large) { 
+    padding-left: 0;
     border-top: 0;
     border-bottom: 0;
     border-left: 0;
     border-right: 1px solid $grey-color-light;
-  
   }
 
   .doc-sections {
@@ -211,49 +212,53 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+  border-top: 1px solid $grey-color-light;
+  @include padding-y(4);
 }
 
 .footer-message {
-    font-size: 15px;
-    color: $grey-color;
-    text-align: right;
+  font-size: $font-base;
+  color: $grey-color;
+  text-align: right;
 
-    a {
-        font-weight: normal;
-    }
+  p { @include margin-y(2); }
+  a { font-weight: normal; }
 }
 
 /**
  * Page content
  */
 .page-content {
-    //padding: $spacing-unit 0;
+
 }
 
 .page-heading {
-    font-size: 20px;
+
 }
 
 .post-list {
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+  > li { @include margin(bottom, 4); }
+  h2 { 
+    margin-top: 0 !important;
+    @include margin-text(bottom, 4); 
+    @include lead(snug);
+  }
 }
 
 .post-meta {
-    font-size: $font-small;
-    color: $grey-color;
+  font-size: $font-small;
+  color: $grey-color;
+  // h1.post-title has a margin-bottom of 2
+  h1.post-title + & { @include margin-text(top, -2); }
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+  display: block;
+  font-size: $font-xxlarge;
 }
 
 
@@ -262,18 +267,31 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+  @include margin(bottom, 4);
 }
 
 .post-title {
-    @include margin-text(top, 2);
-    font-size: $font-3xlarge;
-    letter-spacing: -1px;
-    line-height: 1;
+  @include margin-text(top, 2);
+  @include lead(snug);
+  font-size: $font-3xlarge;
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+  @include margin-y(6);
+
+  h1, h2, h3, h4, h5, h6 {
+    @include margin-text(top, 6);
+  }
+  h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+    margin-top: 0;
+  }
+
+  hr {
+    @include margin-y(12);
+  }
+  hr + * {
+    margin-top: 0;
+  }
 
   table {
     // .table is from _base.scss
@@ -363,7 +381,7 @@
 
 
 /**
- * Special formatting
+ * Releases
  */
 .release-download {
     float: right;
@@ -396,8 +414,7 @@
   border: 1px solid $grey-color-light;
   background: $grey-color-super-light;
   @include margin-y(2);
-  @include padding-y(2);
-  @include padding-x(3);
+  @include padding-all(2);
 
   h4 {
     @include margin-text(top, 2);
@@ -446,8 +463,8 @@
 }
 
 .doc .anchorjs-link {
-    color: $grey-color-light;
-    &:hover { text-decoration: none; }
+  color: $grey-color-light;
+  &:hover { text-decoration: none; }
 }
 
 .edit-docs {

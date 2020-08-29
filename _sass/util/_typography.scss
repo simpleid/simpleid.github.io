@@ -13,6 +13,9 @@ $font-3xlarge: 1.875rem;
 // Leading
 $lead-unit: 0.25rem;
 
+// Width for comfortable reading
+$reading-width: 65ch;
+
 @mixin lead($value) {
   @if $value == none {
     line-height: 1;
