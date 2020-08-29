@@ -384,22 +384,25 @@
  * Releases
  */
 .release-download {
-    float: right;
-    font-size: $font-xlarge;
-    margin: ($spacing-unit / 2) 0 ($spacing-unit / 2) ($spacing-unit / 2);    
-    text-align: center;
+  float: right;
+  font-size: $font-xlarge;
+  @include margin(bottom, 4);
+  @include margin(left, 4);
+  @include lead(tight);
+  text-align: center;
 
-    a {
-        color: #ffffff;
-        display: inline-block;
-        padding: $spacing-unit / 2;
-        background: linear-gradient(to bottom, $grey-color 0%, $grey-color-dark 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-
-        &:hover {
-            background-color: $grey-color-dark;
-            background-image: none;
-        }
+  a {
+    color: #ffffff;
+    display: inline-block;
+    @include padding-y(3);
+    @include padding-x(4);
+    @include vertical-gradient($grey-color, $grey-color-dark);
+        
+    &:hover {
+      background-color: $grey-color-dark;
+      background-image: none;
     }
+  }
 }
 
 
