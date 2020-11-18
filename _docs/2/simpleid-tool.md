@@ -14,7 +14,7 @@ published: true
 The tool can be installed using Composer:
 
 {% highlight bash %}
-composer require simpleid/simpleid-tool
+composer require simpleid/simpleid-tool:dev-master
 {% endhighlight %}
 
 ## Encoding passwords    {#passwd}
