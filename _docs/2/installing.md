@@ -57,8 +57,8 @@ This directory must be readable and writeable by the web server.
 
 ### `www`
 
-This is the web directory.  This must be configured so that it is below the
-document root (e.g. via a symlink, a virtual host, or via a path
+This is the web directory.  This must be configured so that it is the
+document root or below (e.g. via a symlink, a virtual host, or via a path
 match rule in the web server configuration).
 
 The URL to this directory becomes the URL of the SimpleID server.
