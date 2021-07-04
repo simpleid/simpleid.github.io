@@ -19,4 +19,5 @@ jobs:
       - name: Run Jekyll build
         uses: helaili/jekyll-action@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           build_only: true
