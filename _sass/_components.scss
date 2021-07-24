@@ -426,9 +426,10 @@
   @include padding-all(2);
 
   h4 {
-    @include margin-text(top, 2);
+    // @include margin-text(top, 2);
     @include margin-text(bottom, 2);
-    font-size: $font-base; 
+    text-align: center;
+    font-size: $font-small; 
     font-weight: bold;
   }
 
