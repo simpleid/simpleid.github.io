@@ -11,9 +11,9 @@ sections:
 
     - title: Identity protocols
       docs:
-        - 2/openid
         - 2/openid-connect
         - 2/webfinger
+        - 2/openid
 
     - title: Using SimpleID
       docs:
