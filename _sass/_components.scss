@@ -426,7 +426,7 @@
   @include padding-all(2);
 
   h4 {
-    // @include margin-text(top, 2);
+    @include margin-text(top, 0);
     @include margin-text(bottom, 2);
     text-align: center;
     font-size: $font-small; 
