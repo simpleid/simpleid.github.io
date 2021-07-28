@@ -134,6 +134,8 @@ To log in into an OpenID-enabled site:
 
     If you select the **Automatically send my information to this site for any future requests** check box, this page won't appear again the next time you log in to this site.
 
-<div class="note" markdown="1">Some sites require you to log into SimpleID *before* logging into the site.</div>
+<div class="note" markdown="1">
+Some sites require you to log into SimpleID *before* logging into the site.
+</div>
 
 <div class="warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>
