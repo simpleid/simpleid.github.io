@@ -26,7 +26,6 @@ To host a SimpleID installation requires:
     - session;
     - xml;
     - xmlreader;
-    - mcrypt;
     - openssl;
     - hash.
 5. PHP needs to be configured so that <code>register_globals</code> and <code>short_open_tag</code> are switched **off**. See the [PHP manual](http://www.php.net/manual/en/security.globals.php) for further details.
