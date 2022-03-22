@@ -1,5 +1,6 @@
 title: SimpleID
 description: 'SimpleID is a simple, personal OpenID provider written in PHP.'
+url: https://simpleid.org
 
 github:
     owner_url: https://github.com/simpleid/simpleid

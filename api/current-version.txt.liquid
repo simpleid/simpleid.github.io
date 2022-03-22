@@ -1,5 +1,6 @@
 ---
 permalink: api/current-version.txt
+eleventyExcludeFromCollections: true
 ---
 {%- assign releases = collections.release | reverse -%}
 {% for post in releases limit:1 %}{{ post.data.release_version }}{% endfor %}
