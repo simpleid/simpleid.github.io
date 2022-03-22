@@ -9,5 +9,5 @@ redirect_from: /documentation/getting-started/
 ---
 
 
-{% include doctree.html doctree="doctree1" section_headings=2 %}
+{% include "doctree.html" doctree="doctree1" section_headings=2 %}
 

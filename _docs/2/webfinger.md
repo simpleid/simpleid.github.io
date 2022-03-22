@@ -5,7 +5,7 @@ title: WebFinger
 permalink: /docs/2/webfinger/
 ---
 
-{% include doc_toc.md %}
+{% include "doc_toc.md" %}
 
 ## Introduction
 

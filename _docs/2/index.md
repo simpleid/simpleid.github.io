@@ -7,5 +7,5 @@ permalink: /docs/2/
 ---
 
 
-{% include doctree.html doctree="doctree2" section_headings=2 %}
+{% include "doctree.html" doctree="doctree2" section_headings=2 %}
 

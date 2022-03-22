@@ -5,7 +5,7 @@ title: Authentication schemes
 permalink: /docs/2/auth-schemes/
 ---
 
-{% include doc_toc.md %}
+{% include "doc_toc.md" %}
 
 ## What is an authentication scheme?
 

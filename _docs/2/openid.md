@@ -6,7 +6,7 @@ permalink: /docs/2/openid/
 toc: true
 ---
 
-{% include doc_toc.md %}
+{% include "doc_toc.md" %}
 
 ## Introduction
 

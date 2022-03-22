@@ -5,7 +5,7 @@ title: OpenID Connect
 permalink: /docs/2/openid-connect/
 ---
 
-{% include doc_toc.md %}
+{% include "doc_toc.md" %}
 
 ## Introduction
 
