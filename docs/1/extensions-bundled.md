@@ -3,7 +3,6 @@ layout: docs
 doctree: doctree1
 title: Extensions bundled with SimpleID
 date: 2011-07-21 20:58:06
-redirect_from: /docs/1/extensions-bundled/
 ---
 
 A number of extensions are bundled with the default SimpleID distribution.  These are described below.
