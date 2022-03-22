@@ -1,0 +1,24 @@
+{
+  "name": "simpleid.github.io",
+  "version": "3.0.0",
+  "description": "SimpleID web site",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simpleid/simpleid.github.io.git"
+  },
+  "author": "Kelvin Mo",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/simpleid/simpleid.github.io/issues"
+  },
+  "homepage": "https://github.com/simpleid/simpleid.github.io#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
