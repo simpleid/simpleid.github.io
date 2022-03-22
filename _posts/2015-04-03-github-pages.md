@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SimpleID web site moved to Github Pages
-categories:
+tags:
 - news
 ---
 
