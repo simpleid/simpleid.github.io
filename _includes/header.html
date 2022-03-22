@@ -30,7 +30,9 @@
       </div>
 
       <div class="nav-links" x-bind:class="{ 'nav-links-open': open }" x-on:click.away="open = false">
-        {% for link in site.data.nav %}
+        {% assign navPages = collections.all | eleventyNavigation %}
+
+        {% for link in navPages %}
 
           {%- assign link_url = link.url | append:"/" -%}
           {%- if link_url == page.url -%}
@@ -39,7 +41,7 @@
           {%- assign current_class = "" -%}
           {%- endif -%}
 
-          <a class="nav-link {{ current_class }} {% if link.class %}{{ link.class }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
+          <a class="nav-link {{ current_class }} {% if link.menuClass %}{{ link.menuClass }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
         {% endfor %}
 
         <a class="nav-link nav-link-search" href="{{ '/search' | prepend: site.baseurl }}">

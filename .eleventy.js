@@ -4,7 +4,8 @@ const sass = require('sass');
 const yaml = require('js-yaml');
 
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginNavigation = require('@11ty/eleventy-navigation');
 
 module.exports = function(conf) {
     conf.addDataExtension('yml', function(contents) {
@@ -33,6 +34,7 @@ module.exports = function(conf) {
     });
 
     conf.addPlugin(pluginSyntaxHighlight);
+    conf.addPlugin(pluginNavigation);
 
     conf.setLiquidOptions({
         dynamicPartials: true

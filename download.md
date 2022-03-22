@@ -4,6 +4,10 @@ title: Download
 date: 2009-05-13 22:16:27
 permalink: /download/
 redirect_from: /downloads/
+eleventyNavigation:
+    key: Download
+    order: 3
+    menuClass: menu-download
 ---
 
 ## Releases
