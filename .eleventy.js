@@ -33,6 +33,14 @@ module.exports = function(conf) {
         }
     });
 
+    let md = require('markdown-it');
+    let mdAttrs = require('markdown-it-attrs');
+    let mdOptions = {
+        html: true
+    };
+  
+    conf.setLibrary('md', md(mdOptions).use(mdAttrs));
+
     conf.addPlugin(pluginSyntaxHighlight);
     conf.addPlugin(pluginXml);
     conf.addPlugin(pluginNavigation);
