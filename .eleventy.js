@@ -1,11 +1,16 @@
 const path = require('path');
 const escape = require('lodash.escape');
 const sass = require('sass');
+const yaml = require('js-yaml');
 
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(conf) {
+    conf.addDataExtension('yml', function(contents) {
+        return yaml.load(contents);
+    });
+
     conf.addPassthroughCopy('assets/files');
     conf.addPassthroughCopy('assets/*.ico');
     conf.addPassthroughCopy('assets/*.png');

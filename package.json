@@ -22,6 +22,7 @@
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "lodash.escape": "^4.0.1",
     "sass": "^1.49.9"
   }
