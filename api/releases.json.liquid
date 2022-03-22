@@ -3,20 +3,20 @@ permalink: api/releases.json
 ---
 {
     "releases": [
-        {% for post in site.categories.release %}
+        {% for post in collections.release reversed %}
         {
-            "id": {{ post.release_version | prepend: '-' | prepend: post.release_package | jsonify }},
-            "release_package": {{ post.release_package | jsonify }},
-            "package_series": {{ post.package_series | jsonify }},
-            "release_version": {{ post.release_version | jsonify }},
+            "id": {{ post.data.release_version | prepend: '-' | prepend: post.data.release_package | jsonify }},
+            "release_package": {{ post.data.release_package | jsonify }},
+            "package_series": {{ post.data.package_series | jsonify }},
+            "release_version": {{ post.data.release_version | jsonify }},
             "release_date": {{ post.date | date: '%s' }},
-            "download_url": "{{ post.download_url }}",
+            "download_url": "{{ post.data.download_url }}",
             "announce_url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}"
         } {% unless forloop.last == true %},{% endunless %}
         {% endfor %}
     ],
     "packages": [
-        {% for release_package in site.data.release_packages %}
+        {% for release_package in release_packages %}
         {
             "id": {{ release_package[0] | jsonify }},
             "series": [
