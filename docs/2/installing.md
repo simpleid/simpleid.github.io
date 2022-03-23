@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Installing SimpleID
 permalink: /docs/2/installing/
 published: true
+eleventyNavigation:
+    key: 2/installing
+    title: Installing SimpleID
+    parent: 2/_getting-started
+    order: 20
 ---
 
 

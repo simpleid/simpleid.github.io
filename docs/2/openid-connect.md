@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: OpenID Connect
 permalink: /docs/2/openid-connect/
 toc: true
+eleventyNavigation:
+    key: 2/openid-connect
+    title: OpenID Connect
+    parent: 2/_identity-protocols
+    order: 10
 ---
 
 ## Introduction

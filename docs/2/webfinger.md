@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: WebFinger
 permalink: /docs/2/webfinger/
 toc: true
+eleventyNavigation:
+    key: 2/webfinger
+    title: WebFinger
+    parent: 2/_identity-protocols
+    order: 20
 ---
 
 ## Introduction

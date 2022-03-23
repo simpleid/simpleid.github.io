@@ -1,6 +1,6 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Extensions bundled with SimpleID
 ---
 

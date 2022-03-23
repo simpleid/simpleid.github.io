@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Setting up clients
 permalink: /docs/2/clients/
+eleventyNavigation:
+    key: 2/clients
+    title: Setting up clients
+    parent: 2/_getting-started
+    order: 40
 ---
 
 ## What is a client?

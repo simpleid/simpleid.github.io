@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Modules
 permalink: /docs/2/modules/
+eleventyNavigation:
+    key: 2/modules
+    title: Modules
+    parent: 2/_using-simpleid
+    order: 50
 ---
 
 SimpleID 2.0 is made up of a set of components called **modules**.  Each module implements one major feature

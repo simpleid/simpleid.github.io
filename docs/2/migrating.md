@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Migrating from SimpleID 1.x
 permalink: /docs/2/migrating/
+eleventyNavigation:
+    key: 2/migrating
+    title: Migrating from SimpleID 1.x
+    parent: 2/_getting-started
+    order: 50
 ---
 
 SimpleID version 2.0 is an almost complete rewrite of SimpleID.  The format of the

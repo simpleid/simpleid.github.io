@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Setting up users
 permalink: /docs/2/users/
+eleventyNavigation:
+    key: 2/users
+    title: Setting up users
+    parent: 2/_getting-started
+    order: 30
 ---
 
 ## What is a user?

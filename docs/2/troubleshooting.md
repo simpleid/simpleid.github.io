@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: How to troubleshoot
 permalink: /docs/2/troubleshooting/
+eleventyNavigation:
+    key: 2/troubleshooting
+    title: How to troubleshoot
+    parent: 2/_troubleshooting
+    order: 10
 ---
 
 OpenID issues are painfully difficult to diagnose.  This is because a lot of the process occurs behind the scenes, and that a lot of relying parties and OpenID providers (including SimpleID) do not implement the specification properly.

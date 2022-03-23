@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Data stores
 permalink: /docs/2/stores/
+eleventyNavigation:
+    key: 2/stores
+    title: Data stores
+    parent: 2/_advanced-topics
+    order: 20
 ---
 
 ## What is a data store?

@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Authentication schemes
 permalink: /docs/2/auth-schemes/
 toc: true
+eleventyNavigation:
+    key: 2/auth-schemes
+    title: Authentication schemes
+    parent: 2/_advanced-topics
+    order: 10
 ---
 
 ## What is an authentication scheme?

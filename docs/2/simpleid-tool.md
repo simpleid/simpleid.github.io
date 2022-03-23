@@ -1,9 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: "Using simpleid-tool"
 permalink: "/docs/2/simpleid-tool/"
-published: true
+eleventyNavigation:
+    key: 2/simpleid-tool
+    title: Using simpleid-tool
+    parent: 2/_using-simpleid
+    order: 40
 ---
 
 

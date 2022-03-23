@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Managing your SimpleID profile
 permalink: /docs/2/profile/
+eleventyNavigation:
+    key: 2/profile
+    title: Managing your SimpleID profile
+    parent: 2/_using-simpleid
+    order: 30
 ---
 
 You can manage your SimpleID profile by going directly to your SimpleID server's URL.

@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree2
+doctree: SimpleID 2 Documentation
 title: Common problems
 permalink: /docs/2/common-problems/
+eleventyNavigation:
+    key: 2/common-problems
+    title: Common problems
+    parent: 2/_troubleshooting
+    order: 20
 ---
 
 Here are some common problems and how to fix them.
