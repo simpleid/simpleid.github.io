@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Logging into SimpleID
 date: 2009-07-11 18:25:28
 permalink: /docs/1/login/
+eleventyNavigation:
+    key: 1/Logging into SimpleID
+    title: Logging into SimpleID
+    parent: 1/Using SimpleID
+    order: 2
 ---
 
 You generally don't need to log into SimpleID first before you can use it to access OpenID-enabled web sites.  When you log into these web sites, SimpleID automatically checks whether you have logged in using the identity you have supplied.  If you haven't logged into SimpleID, SimpleID will present the log in page for you to supply your login details.

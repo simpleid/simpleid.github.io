@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Using HTTPS (version 0.8 and earlier)
 date: 2013-02-07 20:12:02
 permalink: /docs/1/https/
+eleventyNavigation:
+    key: 1/Using HTTPS (version 0.8 and earlier)
+    title: Using HTTPS (version 0.8 and earlier)
+    parent: 1/Advanced topics
+    order: 2
 ---
 
 <div class="warning">

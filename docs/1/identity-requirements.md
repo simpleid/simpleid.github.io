@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Requirements for an identity
 date: 2009-05-28 08:48:37
 permalink: /docs/1/identity-requirements/
+eleventyNavigation:
+    key: 1/Requirements for an identity
+    title: Requirements for an identity
+    parent: 1/Your identity
+    order: 1
 ---
 
 ## User name

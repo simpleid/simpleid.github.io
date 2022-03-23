@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: return_to discovery failure
 date: 2009-08-28 14:54:12
 permalink: /docs/1/return_to/
 redirect_from: /documentation/troubleshooting/returnto-discovery-failure/
+eleventyNavigation:
+    key: 1/return_to discovery failure
+    title: return_to discovery failure
+    parent: 1/Troubleshooting
+    order: 3
 ---
 
 You may encounter the following warning when logging into a web site using SimpleID:

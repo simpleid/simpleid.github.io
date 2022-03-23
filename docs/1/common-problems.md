@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Common problems
 date: 2013-05-03 20:33:12
 permalink: /docs/1/common-problems/
 redirect_from: /documentation/troubleshooting/login-verification-recovery/
+eleventyNavigation:
+    key: 1/Common problems
+    title: Common problems
+    parent: 1/Troubleshooting
+    order: 2
 ---
 
 Here are some common problems and how to fix them.

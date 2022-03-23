@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: System Requirements
 date: 2012-03-23 21:27:13
 permalink: /docs/1/system-requirements/
 redirect_from: /documentation/getting-started/system-requirements/
+eleventyNavigation:
+    key: 1/System requirements
+    title: System requirements
+    parent: 1/Getting started
+    order: 1
 ---
 
 The following are the requirements to run SimpleID.

@@ -1,9 +1,14 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Logging into OpenID-enabled web sites
 date: 2009-07-11 18:09:39
 permalink: /docs/1/openid/
+eleventyNavigation:
+    key: 1/Logging into OpenID-enabled web sites
+    title: Logging into OpenID-enabled web sites
+    parent: 1/Using SimpleID
+    order: 1
 ---
 
 To log in into an OpenID-enabled site:

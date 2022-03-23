@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Setting up an identity
 date: 2009-05-15 21:29:37
 permalink: /docs/1/identity/
 redirect_from: /documentation/getting-started/setting-identity/
+eleventyNavigation:
+    key: 1/Setting up an identity
+    title: Setting up an identity
+    parent: 1/Getting started
+    order: 3
 ---
 
 ## What is an identity?

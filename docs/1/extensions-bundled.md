@@ -1,8 +1,13 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Extensions bundled with SimpleID
 date: 2011-07-21 20:58:06
+eleventyNavigation:
+    key: 1/Extensions bundled with SimpleID
+    title: Extensions bundled with SimpleID
+    parent: 1/Using SimpleID
+    order: 6
 ---
 
 A number of extensions are bundled with the default SimpleID distribution.  These are described below.

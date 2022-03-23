@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Logging in using client SSL certificates
 date: 2011-09-01 22:10:18
 permalink: /docs/1/certauth/
 redirect_from: /documentation/advanced-topics/logging-using-client-ssl-certificates-version-0.9-and-later/
+eleventyNavigation:
+    key: 1/Logging in using client SSL certificates
+    title: Logging in using client SSL certificates
+    parent: 1/Advanced topics
+    order: 1
 ---
 
 ## Introduction

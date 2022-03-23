@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Identity files
 date: 2009-05-15 21:36:20
 redirect_from: /documentation/getting-started/setting-identity/identity-files/
 permalink: /docs/1/identity-files/
+eleventyNavigation:
+    key: 1/Identity files
+    title: Identity files
+    parent: 1/Your identity
+    order: 2
 ---
 
 ## About Identity Files

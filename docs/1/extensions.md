@@ -1,12 +1,17 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Extensions
 date: 2009-07-12 14:49:15
 permalink: /docs/1/extensions/
 redirect_from: 
     - /documentation/using-simpleid/extensions/
     - /documentation/using-simpleid/extensions/installing-and-uninstalling-extensions/
+eleventyNavigation:
+    key: 1/Extensions
+    title: Extensions
+    parent: 1/Using SimpleID
+    order: 5
 ---
 
 SimpleID has the ability to support "extensions".  Extensions are PHP files containing code which extends the functionality of SimpleID.  The code within extensions follow a set of conventions which allows SimpleID to call them during key parts of the OpenID authentication process.

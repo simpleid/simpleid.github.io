@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Installing SimpleID
 date: 2009-05-15 21:20:18
 permalink: /docs/1/installing/
 redirect_from: /documentation/getting-started/installing-simpleid/
+eleventyNavigation:
+    key: 1/Installing SimpleID
+    title: Installing SimpleID
+    parent: 1/Getting started
+    order: 2
 ---
 
 ## 1. Download SimpleID

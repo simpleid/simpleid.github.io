@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Claim your identifier
 date: 2009-05-27 21:00:48
 permalink: /docs/1/identity-claim/
 redirect_from: /documentation/getting-started/setting-identity/claim-your-identifier/
+eleventyNavigation:
+    key: 1/Claim your identifier
+    title: Claim your identifier
+    parent: 1/Your identity
+    order: 3
 ---
 
 Claiming your identifier is the way you show that you have control over that identifier.  This involves editing the page with the identifier URL to embed information about your SimpleID installation.  This then allows web sites to find out where to find SimpleID when you attempt to log into them using OpenID authentication. 

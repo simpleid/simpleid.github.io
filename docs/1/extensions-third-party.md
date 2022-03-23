@@ -1,10 +1,15 @@
 ---
 layout: docs
-doctree: doctree1
+doctree: SimpleID 1 Documentation
 title: Third party extensions
 date: 2012-06-14 19:48:05
 permalink: /docs/1/extensions-third-party/
 redirect_from: /documentation/advanced-topics/third-party-extensions/
+eleventyNavigation:
+    key: 1/Third party extensions
+    title: Third party extensions
+    parent: 1/Using SimpleID
+    order: 7
 ---
 
 A number of third party extensions and plugins are available.  See the links below for details.
