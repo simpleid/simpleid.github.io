@@ -48,7 +48,7 @@ permalink: /search/
         {% if dataset[1].title %}
             {% unless first %},{% endunless %}
             {% assign first = false %}
-            {{ dataset[0] | jsonify }}: {{ dataset[1].title | jsonify }}
+            {{ dataset[0] | json }}: {{ dataset[1].title | json }}
         {% endif %}
     {% endfor %}
             },

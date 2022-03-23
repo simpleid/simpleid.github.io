@@ -1,7 +1,7 @@
 {% unless include.first %},{% endunless %}{
     "id": "{{ include.prefix }}{{ include.index }}",
-    "url": {{ page.url | jsonify }},
-    "title": {{ page.title | jsonify }},
+    "url": {{ page.url | json }},
+    "title": {{ page.title | json }},
     "body": {{ page.content | 
                replace: '</h', ' . </h' |
                replace: '<hr', ' . <hr' | 
@@ -14,6 +14,6 @@
                replace: '<td', ' | <td' | replace: '</td', ' | </td' | 
                strip_html | normalize_whitespace | 
                replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | 
-               append: ' ' | jsonify }},
-    "doctree": {{ page.doctree | jsonify }}
+               append: ' ' | json }},
+    "doctree": {{ page.doctree | json }}
 }

@@ -57,9 +57,6 @@ module.exports = function(conf) {
         dynamicPartials: true
     });
 
-    conf.addFilter('jsonify', function (s) {
-        return JSON.stringify(s);
-    });
     conf.addLiquidFilter('getNewestCollectionItemDate', pluginRss.getNewestCollectionItemDate);
     return {
         dir: {
