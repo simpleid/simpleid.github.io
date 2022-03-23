@@ -26,12 +26,12 @@ For what can be specified in this section, see the [specifications](http://openi
 
 An example is given below.
 
-{% highlight ini %}
+```ini
 [ax]
 http://openid.net/schema/company/name="Example Company Limited"
 http://openid.net/schema/company/title="Managing Director"
 http://openid.net/schema/contact/web/blog="http://simpleid.sourceforge.net/"
-{% endhighlight %}
+```
 
 ### Sending identity data to an OpenID site
 
@@ -53,7 +53,7 @@ For what can be specified in this section, see the [specifications](http://openi
 
 An example is given below.
 
-<blockcode language="ini">
+```ini
 [sreg]
 nickname=Example
 email=example@example.com
@@ -64,7 +64,7 @@ postcode=1234
 country=en
 language=au
 timezone=Australia/Sydney
-</blockcode>
+```
 
 ### Sending registration information to an OpenID site
 

@@ -24,10 +24,10 @@ If login verification is enabled and you have lost the device that generates the
 
 1. You will need to edit the [identity file](/docs/1/identity-files) stored on the server.  Open the identity file and add the following lines:
 
-    {% highlight ini %}
+```ini
 [otp]
     type=recovery
-    {% endhighlight %}
+```
 
 2. You will now be able to [log in](/docs/1/login) without the verification code.
 

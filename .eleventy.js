@@ -43,7 +43,12 @@ module.exports = function(conf) {
             .use(require('markdown-it-anchor'), { tabIndex: false })
     );
 
-    conf.addPlugin(pluginSyntaxHighlight);
+    conf.addPlugin(pluginSyntaxHighlight, {
+        preAttributes: {
+            tabindex: 0,
+            'data-highlight': 'true'
+        }
+    });
     conf.addPlugin(pluginXml);
     conf.addPlugin(pluginNavigation);
     conf.addPlugin(pluginToc);

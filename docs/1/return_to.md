@@ -36,9 +36,9 @@ If you know the operator of the web site, you may ask them to implement this par
 
 If this occurs because your web server is not configured to allow external connections, you can tell SimpleID to skip this process.  **However, note that disabling this verification can expose your identity and personal information to malicious parties.**  If you really want to do this, edit the <code>config.inc</code>/<code>config.php</code> file to edit the following configuration option:
 
-{% highlight php %}
+```php
 define('SIMPLEID_VERIFY_RETURN_URL_USING_REALM', false);
-{% endhighlight %}
+```
 
 (Earlier versions of SimpleID do not have this configuration option.  You may need to add this line to <code>config.inc</code> manually.)
 

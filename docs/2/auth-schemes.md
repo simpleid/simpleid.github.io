@@ -88,15 +88,15 @@ Your certificate is identified using two parameters:
 
 You can find out these two values using OpenSSL by running the following commands (replacing the file name of the certificate as required):
 
-{% highlight bash %}
+```shell
 openssl x509 -noout -serial -in certificate.crt
 openssl x509 -noout -issuer -in certificate.crt
-{% endhighlight %}
+```
 
 These two values are then combined and placed in the `cert` section of your user file as follows:
 
-{% highlight yaml %}
+```yaml
 - cert:
     certs: 
         - "02A97C;/C=Example/O=Example CA/OU=Example CA Certificate Signing/CN=Example Client CA"
-{% endhighlight %}
+```

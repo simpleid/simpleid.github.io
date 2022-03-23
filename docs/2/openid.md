@@ -39,10 +39,10 @@ User configuration for the OpenID protocol is set out under the `openid` object 
 In order to use the OpenID protocol, the user configuration must contain an `identity` value,
 containing the [OpenID identifier](#identifier) for the user.  For example:
 
-{% highlight yaml %}
+```yaml
 openid: 
     identity: "http://example.com/"
-{% endhighlight %}
+```
 
 ### Identifier  {#identifier}
 
@@ -82,10 +82,10 @@ The easiest way to claim your identifier is to use &lt;link&gt; tags.
 
 To do this, edit the web page returned by the identifier URL.  Copy and paste the following section between the &lt;head&gt; and &lt;/head&gt; tags:
 
-{% highlight html %}
+```html
 <link rel="openid.server" href="http://www.example.com/simpleid/" />
 <link rel="openid2.provider" href="http://www.example.com/simpleid/" />
-{% endhighlight %}
+```
 
 Replace the URL http://www.example.com/simpleid/ with one which points to where you have moved the <code>www</code> directory of the SimpleID installation.
 
@@ -105,13 +105,13 @@ The YADIS protocol specifies three ways in which you can modify the web page ret
 
 2. If the web page returned by the identifier URL is generated programmatically, you can also return the following HTTP header in your response:
 
-    <code>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</block>
+    <code>X-XRDS-Location: http://www.example.com/simpleid/index.php?q=xrds/username</code>
 
 3. Otherwise, you can include the following section between the &lt;head&gt; and &lt;/head&gt; tags.
 
-{% highlight html %}
+```html
 <meta http-equiv="X-XRDS-Location" content="http://www.example.com/simpleid/index.php?q=xrds/username" />
-{% endhighlight %}
+```
 
 ## Using OpenID
 

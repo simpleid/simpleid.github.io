@@ -35,10 +35,10 @@ SimpleID installation.
 
 For example, if SimpleID is installed at `server.example.net`:
 
-{% highlight yaml %}
+```yaml
 webfinger: 
     acct: "bob@server.example.net"
-{% endhighlight %}
+```
 
 ## Client configuration
 

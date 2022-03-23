@@ -22,10 +22,10 @@ If login verification is enabled and you have lost the device that generates the
 
 1. You will need to edit your user file stored on the server.  Open the identity file and add the `otp` section as follows:
 
-    {% highlight yaml %}
+```yaml
 otp: 
     type: recovery
-    {% endhighlight %}
+```
 
 2. You will now be able to [log into SimpleID](/docs/2/login) without the verification code.
 

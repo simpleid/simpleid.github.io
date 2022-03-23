@@ -32,7 +32,7 @@ The file contains comments explaining what each line does.
 
 The following is an extract from the <code>example.identity.dist</code> file to provide an example of the contents of an identity file.
 
-{% highlight ini %}
+```ini
 ;
 ; The OpenID Identifier associated with this identity.  This is typically a
 ; URL, although the OpenID specifications allow the use of URIs and even XRIs.
@@ -111,4 +111,4 @@ pass="cca6e030d81f0de52eb3f75c790ad056e57abaae:sha1:C2WG7PRM7PICMN5R"
 ; line below.
 ;
 administrator=1
-{% endhighlight %}
+```

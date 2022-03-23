@@ -20,9 +20,9 @@ contains more information on the migration process.</div>
 SimpleID uses [Composer](https://getcomposer.org/) for installation.  To
 install SimpleID, use the following command on the web server:
 
-{% highlight bash %}
+```shell
 composer create-project simpleid/simpleid:dev-master simpleid --no-dev
-{% endhighlight %}
+```
 
 This will create a new directory `simpleid` containing all SimpleID files
 and directories, as well as all its dependencies.
@@ -84,21 +84,21 @@ OpenID Connect requires each server to have a RSA key pair.
 
 You can generate an RSA key pair using the following OpenSSL commands:
 
-{% highlight bash %}
+```shell
 openssl genrsa -out private.pem 2048
 openssl rsa -in private.pem -out public.pem -pubout
-{% endhighlight %}
+```
 
 The private and public keys, `private.pem` and `public.pem` have to be
 converted into separate JSON Web Key Sets. The easiest way of doing this
 is to use the `jwkstool` utility that is included with the SimpleJWT library.
 
-{% highlight bash %}
+```shell
 www/vendor/bin/jwkstool add -c private.json private.pem
 www/vendor/bin/jwkstool add -c public.json public.pem
 rm private.pem
 rm public.pem
-{% endhighlight %}
+```
 
 `private.json` and `public.json` should now be moved into secure locations.
 The paths to these two files will need to be specified in `config.php` under

@@ -59,16 +59,16 @@ Your certificate is identified using two parameters:
 
 You can find out these two values using OpenSSL by running the following commands (replacing the file name of the certificate as required):
 
-{% highlight bash %}
+```shell
 openssl x509 -noout -serial -in certificate.crt
 openssl x509 -noout -issuer -in certificate.crt
-{% endhighlight %}
+```
 
 These two values are then combined and placed in the `certauth` section of your [identity file](/docs/1/identity-files) as follows:
 
-{% highlight ini %}
+```ini
 [certauth]
 cert[]="02A97C;/C=Example/O=Example CA/OU=Example CA Certificate Signing/CN=Example Client CA"
-{% endhighlight %}
+```
 
 Note the brackets in the `cert[]` name.  This allows you to associate your identity with more than one certificate.
