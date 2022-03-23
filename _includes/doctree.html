@@ -31,11 +31,9 @@
   {%- endunless -%}
     {% for section in sections %}
       {%- assign section_current = false -%}
-      {%- assign page_id_size = page.url | size | minus: 1 -%}
-      {%- assign page_id = page.url | slice: 0, page_id_size | remove_first: "/docs/" -%}
-      {%- if section.docs contains page_id -%}
-        {%- assign section_current = true -%}
-      {%- endif -%}
+      {%- for item in section.children -%}
+        {%- if item.url == page.url -%}{%- assign section_current = true -%}{%- endif -%}
+      {%- endfor -%}
       <{{ section_tag }} class="doc-section" data-key="{{ section.key }}" data-order="{{ section.order }}" {% if section_widget %}x-data="{ open: {{section_current}} }" x-bind:class="{ 'doc-section-current': open }"{% endif %}>
         <{{ section_title_tag }} class="doc-section-title"
           {% if section_headings %}id="{{ section.title | slugify }}"{% endif %}
