@@ -1,6 +1,16 @@
 name: Test build
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches-ignore:
+      - 'features/11ty'
+      - 'gh-pages'
+      - 'prod'
+  pull_request:
+    branches-ignore:
+      - 'features/11ty'
+      - 'gh-pages'
+      - 'prod'
 
 jobs:
   github-pages:
