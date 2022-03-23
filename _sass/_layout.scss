@@ -42,7 +42,7 @@ main {
 
   @include breakpoint($bp-large) { 
     display: block; 
-    width: $bp-xlarge / 4;
+    width: calc($bp-xlarge / 4);
     flex-shrink: 0;
     @include margin-y(0);
     @include padding-y(4);
