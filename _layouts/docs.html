@@ -36,7 +36,7 @@
 
     <div class="page-content">
       <div class="wrapper">
-        {% unless page.hide_doc_header %}
+        {% unless hide_doc_header %}
           <div class="sidebar-container">          
             <div class="sidebar" x-data="{ open: false }">
             
@@ -63,12 +63,12 @@
 
             {% if site.github.repository_url %}
             <footer class="edit-docs">
-            <a href="{{ site.github.reporitory_url }}/edit/master/{{ page.inputPath }}" title="">Edit this page in GitHub</a>
+            <a href="{{ site.github.repository_url }}/edit/master/{{ page.inputPath }}" title="">Edit this page in GitHub</a>
             </footer>
             {% endif %}
 
           </main>
-        {% unless page.hide_doc_header %}</div>{% endunless %}
+        {% unless hide_doc_header %}</div>{% endunless %}
       </div>
     </div>
 
