@@ -41,7 +41,7 @@
             <div class="sidebar" x-data="{ open: false }">
             
               <nav class="doc-doctree">
-              {% include "doctree.html" title='h2' title_widget=true section_widget=true %}
+              {% include "doctree.html", key: doctree, doc_title: 'h2', title_widget: true, section_widget: true %}
               </nav>
             </div>
           {% endunless %}
