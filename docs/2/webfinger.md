@@ -3,9 +3,8 @@ layout: docs
 doctree: doctree2
 title: WebFinger
 permalink: /docs/2/webfinger/
+toc: true
 ---
-
-{% include "doc_toc.md" %}
 
 ## Introduction
 

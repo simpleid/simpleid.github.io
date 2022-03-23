@@ -3,9 +3,8 @@ layout: docs
 doctree: doctree2
 title: OpenID Connect
 permalink: /docs/2/openid-connect/
+toc: true
 ---
-
-{% include "doc_toc.md" %}
 
 ## Introduction
 

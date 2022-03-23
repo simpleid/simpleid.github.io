@@ -6,6 +6,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginXml = require('eleventy-xml-plugin');
 const pluginNavigation = require('@11ty/eleventy-navigation');
+const pluginToc = require('eleventy-plugin-toc');
 
 module.exports = function(conf) {
     conf.addDataExtension('yml', function(contents) {
@@ -34,16 +35,18 @@ module.exports = function(conf) {
     });
 
     let md = require('markdown-it');
-    let mdAttrs = require('markdown-it-attrs');
-    let mdOptions = {
-        html: true
-    };
   
-    conf.setLibrary('md', md(mdOptions).use(mdAttrs));
+    conf.setLibrary(
+        'md',
+        md({ html: true })
+            .use(require('markdown-it-attrs'))
+            .use(require('markdown-it-anchor'), { tabIndex: false })
+    );
 
     conf.addPlugin(pluginSyntaxHighlight);
     conf.addPlugin(pluginXml);
     conf.addPlugin(pluginNavigation);
+    conf.addPlugin(pluginToc);
 
     conf.setLiquidOptions({
         dynamicPartials: true

@@ -6,8 +6,6 @@ permalink: /docs/2/openid/
 toc: true
 ---
 
-{% include "doc_toc.md" %}
-
 ## Introduction
 
 The [OpenID protocol](http://openid.net/specs/openid-authentication-2_0.html) is the original

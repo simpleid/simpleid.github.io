@@ -3,9 +3,8 @@ layout: docs
 doctree: doctree2
 title: Authentication schemes
 permalink: /docs/2/auth-schemes/
+toc: true
 ---
-
-{% include "doc_toc.md" %}
 
 ## What is an authentication scheme?
 
