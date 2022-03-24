@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Installing SimpleID
 permalink: /docs/2/installing/
 published: true

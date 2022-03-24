@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Logging into SimpleID
 permalink: /docs/2/login/
 eleventyNavigation:

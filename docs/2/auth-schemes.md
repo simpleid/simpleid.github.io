@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Authentication schemes
 permalink: /docs/2/auth-schemes/
 toc: true

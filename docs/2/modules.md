@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Modules
 permalink: /docs/2/modules/
 eleventyNavigation:

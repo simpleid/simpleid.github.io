@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: System Requirements
 date: 2012-03-23 21:27:13
 permalink: /docs/1/system-requirements/

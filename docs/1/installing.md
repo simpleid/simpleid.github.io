@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Installing SimpleID
 date: 2009-05-15 21:20:18
 permalink: /docs/1/installing/

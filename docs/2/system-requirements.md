@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: System requirements
 permalink: /docs/2/system-requirements/
 eleventyNavigation:

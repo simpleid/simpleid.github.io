@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Setting up clients
 permalink: /docs/2/clients/
 eleventyNavigation:

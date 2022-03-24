@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Logging in using client SSL certificates
 date: 2011-09-01 22:10:18
 permalink: /docs/1/certauth/

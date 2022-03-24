@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Identity files
 date: 2009-05-15 21:36:20
 redirect_from: /documentation/getting-started/setting-identity/identity-files/

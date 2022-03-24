@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Managing your SimpleID profile
 date: 2011-07-21 21:16:07
 permalink: /docs/1/profile/

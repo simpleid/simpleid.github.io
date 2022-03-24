@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Claim your identifier
 date: 2009-05-27 21:00:48
 permalink: /docs/1/identity-claim/

@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: WebFinger
 permalink: /docs/2/webfinger/
 toc: true

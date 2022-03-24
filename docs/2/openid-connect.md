@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: OpenID Connect
 permalink: /docs/2/openid-connect/
 toc: true

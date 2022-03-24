@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Data stores
 permalink: /docs/2/stores/
 eleventyNavigation:

@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Extensions bundled with SimpleID
 date: 2011-07-21 20:58:06
 eleventyNavigation:

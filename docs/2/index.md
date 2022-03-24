@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 hide_doc_header: true
 title: SimpleID 2 User Documentation
 permalink: /docs/2/

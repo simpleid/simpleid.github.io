@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Requirements for an identity
 date: 2009-05-28 08:48:37
 permalink: /docs/1/identity-requirements/

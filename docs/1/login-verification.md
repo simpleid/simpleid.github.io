@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: Login verification
 date: 2013-05-03 20:39:33
 permalink: /docs/1/login-verification/

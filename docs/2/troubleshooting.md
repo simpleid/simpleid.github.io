@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: How to troubleshoot
 permalink: /docs/2/troubleshooting/
 eleventyNavigation:

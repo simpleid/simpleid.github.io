@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 1 Documentation
 title: return_to discovery failure
 date: 2009-08-28 14:54:12
 permalink: /docs/1/return_to/

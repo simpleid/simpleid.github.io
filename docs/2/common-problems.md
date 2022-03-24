@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Common problems
 permalink: /docs/2/common-problems/
 eleventyNavigation:

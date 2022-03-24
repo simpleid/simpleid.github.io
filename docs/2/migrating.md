@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Migrating from SimpleID 1.x
 permalink: /docs/2/migrating/
 eleventyNavigation:

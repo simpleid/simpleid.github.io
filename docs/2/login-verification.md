@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Login verification
 permalink: /docs/2/login-verification/
 eleventyNavigation:

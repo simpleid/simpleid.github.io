@@ -1,6 +1,5 @@
 ---
 layout: docs
-doctree: SimpleID 2 Documentation
 title: Managing your SimpleID profile
 permalink: /docs/2/profile/
 eleventyNavigation:
