@@ -6,6 +6,7 @@ title: SimpleID 2 User Documentation
 permalink: /docs/2/
 eleventyNavigation:
     key: SimpleID 2 Documentation
+    title: SimpleID 2 User Documentation
     parent: Documentation
     order: 2
 ---

@@ -8,6 +8,7 @@ permalink: /docs/1/
 redirect_from: /documentation/getting-started/
 eleventyNavigation:
     key: SimpleID 1 Documentation
+    title: SimpleID 1 User Documentation
     parent: Documentation
     order: 1
 ---

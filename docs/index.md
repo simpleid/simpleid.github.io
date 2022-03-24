@@ -13,8 +13,13 @@ eleventyNavigation:
 
 The following user documentation is available.
 
-- [SimpleID 1 User Documentation](/docs/1/)
-- [SimpleID 2 User Documentation](/docs/2/)
+
+{% assign docsets = collections.all | eleventyNavigation: eleventyNavigation.key %}
+
+{% for docset in docsets %}
+- [{{ docset.title }}]({{ docset.url }})
+{%- endfor %}
+
 
 ## Developer Documentation
 
