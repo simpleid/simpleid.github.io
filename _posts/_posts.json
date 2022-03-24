@@ -1,4 +1,0 @@
-{
-    "permalink": "news/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/",
-    "tags": [ "posts" ]
-}
