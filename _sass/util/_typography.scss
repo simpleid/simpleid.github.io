@@ -44,6 +44,9 @@ $reading-width: 65ch;
   }
 }
 
+/**
+ * Basic typography
+ */
 html {
   font-family: $base-font-family, $emoji-font-family;
   @include lead(normal);

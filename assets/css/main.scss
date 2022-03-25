@@ -12,6 +12,7 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #1144aa;
 $brand-color-light: #4488ee;
+$brand-color-dark: color.adjust($brand-color, $lightness: -15%);
 
 $grey-color:       #888888;
 $grey-color-light: #cccccc;
@@ -27,20 +28,35 @@ $yellow-color: color.adjust($yellow-color-light, $lightness: -50%);
 $red-color-light: #ffddee;
 $red-color: color.adjust($red-color-light, $lightness: -50%);
 
-$colors: ();
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @use "vendor/sanitize.css/sanitize";
 @use "vendor/sanitize.css/forms";
 
 @use "util/typography" as *;
-@use "util/spacing" as *;
-@use "util/media" as *;
-@use "util/grid" as *;
 
+@use "base";
 @use "layout";
+@use "components";
 @use "prismjs";
 
-@import  
-  "base",
-  "components";
+:root {
+  --text-color: #{$text-color};
+  --background-color: #{$background-color};
+  --brand-color: #{$brand-color};
+  --brand-color-light: #{$brand-color-light};
+  --brand-color-dark: #{$brand-color-dark};
+
+  --grey-color: #{$grey-color};
+  --grey-color-light: #{$grey-color-light};
+  --grey-color-dark: #{$grey-color-dark};
+  --grey-color-super-light: #{$grey-color-super-light};
+
+  --blue-color-light: #{$blue-color-light};
+  --blue-color: #{$blue-color};
+
+  --yellow-color-light: #{$yellow-color-light};
+  --yellow-color: #{$yellow-color};
+
+  --red-color-light: #{$red-color-light};
+  --red-color: #{$red-color};
+}

@@ -1,3 +1,9 @@
+@use "util/typography" as *;
+@use "util/spacing" as *;
+@use "util/grid" as *;
+@use "util/media" as *;
+@use "base";
+
 @mixin vertical-gradient($from-color, $to-color) {
   background: linear-gradient(to bottom, $from-color 0%, $to-color 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
@@ -7,8 +13,8 @@
  */
 .site-header {
   @include padding-y(4);
-  background-color: $grey-color-dark;
-  color: $grey-color-light;
+  background-color: var(--grey-color-dark);
+  color: var(--grey-color-light);
 }
 
 .site-nav {
@@ -38,7 +44,7 @@
       align-items: center;
       @include padding-x(3);
       @include padding-y(2);
-      border: 1px solid $grey-color-light;
+      border: 1px solid var(--grey-color-light);
       border-radius: 5px;
     }
 
@@ -46,7 +52,7 @@
       width: 3 * $base-unit;
       height: 3 * $base-unit;
 
-      color: $grey-color-light;
+      color: var(--grey-color-light);
     }
 
     @include breakpoint($bp-large) { display: none; }
@@ -90,12 +96,12 @@
   
   .current {
     @include padding-x(4);
-    background-color: $background-color;
-    color: $grey-color-dark;
+    background-color: var(--background-color);
+    color: var(--grey-color-dark);
   }
 
   .menu-download {
-    @include vertical-gradient($brand-color-light, $brand-color);
+    @include vertical-gradient(var(--brand-color-light), var(--brand-color));
     @include padding-x(4);
     color: #ffffff !important;
     text-align: center;
@@ -116,7 +122,7 @@
 }
 
 .sidebar {
-  border: 1px solid $grey-color-dark;
+  border: 1px solid var(--grey-color-dark);
   @include padding(left, 2);
 
   @include breakpoint($bp-large) {
@@ -124,7 +130,7 @@
     border-top: 0;
     border-bottom: 0;
     border-left: 0;
-    border-right: 1px solid $grey-color-light;
+    border-right: 1px solid var(--grey-color-light);
   }
 
   .doc-sections {
@@ -156,7 +162,7 @@
 
     &:hover { 
       text-decoration: underline; 
-      .doc-section-expander { color: $grey-color-dark; }
+      .doc-section-expander { color: var(--grey-color-dark); }
     }
   }
   .doc-section-expander {
@@ -165,7 +171,7 @@
     @include padding-x(2);
     width: 8 * $base-unit;
     height: $font-small * 1.5;  // 1.5 = line-height
-    color: $grey-color;
+    color: var(--grey-color);
   }
   .doc-section-title-text {
     display: block;
@@ -184,7 +190,7 @@
 
     a { 
       display: inline;
-      color: $grey-color-dark !important;
+      color: var(--grey-color-dark) !important;
     }
   }
 }
@@ -192,7 +198,7 @@
 .doc-title {
   position: relative;
   cursor: pointer;
-  color: $grey-color-dark;
+  color: var(--grey-color-dark);
   @include margin-y(0);
   font-size: $font-base;
   font-weight: bold;
@@ -208,7 +214,7 @@
 
   @include breakpoint($bp-large) { 
     cursor: auto;
-    color: $text-color;
+    color: var(--text-color);
     font-size: $font-xlarge;
     font-weight: normal;
     @include margin-text(top, 2);
@@ -223,13 +229,13 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--grey-color-light);
   @include padding-y(4);
 }
 
 .footer-message {
   font-size: $font-base;
-  color: $grey-color;
+  color: var(--grey-color);
   text-align: right;
 
   p { @include margin-y(2); }
@@ -262,7 +268,7 @@
 
 .post-meta {
   font-size: $font-small;
-  color: $grey-color;
+  color: var(--grey-color);
   // h1.post-title has a margin-bottom of 2
   h1.post-title + & { @include margin-text(top, -2); }
 }
@@ -316,7 +322,7 @@
  */
 .home {
   .hero-panel {
-    @include vertical-gradient($grey-color-super-light, $grey-color-light);
+    @include vertical-gradient(var(--grey-color-super-light), var(--grey-color-light));
     @include padding-y(16);
     @include margin(bottom, 8);
 
@@ -325,7 +331,7 @@
 
       h1 {
         margin: 0;
-        color: $grey-color-dark;
+        color: var(--grey-color-dark);
         @include lead(tight);
         font-size: $font-3xlarge !important;
         font-weight: normal;
@@ -360,7 +366,7 @@
   .panel {
     @include margin(bottom, 8);
     @include padding(bottom, 8);
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 1px solid var(--grey-color-light);
 
     &:last-child { border-bottom: 0; }
 
@@ -377,20 +383,20 @@
     margin: 0;
     @include padding-y(3);
     @include padding-x(4);
-    @include vertical-gradient($grey-color, $grey-color-dark);
+    @include vertical-gradient(var(--grey-color), var(--grey-color-dark));
     @include lead(tight);
 
     &:hover {
-      background-color: $grey-color-dark;
+      background-color: var(--grey-color-dark);
       background-image: none;
     }
   }
 
   .hero-panel a.front-link, .downloads-panel a.front-link {
-    @include vertical-gradient($brand-color-light, $brand-color);
+    @include vertical-gradient(var(--brand-color-light), var(--brand-color));
         
     &:hover {
-      background-color: $brand-color-light;
+      background-color: var(--brand-color-light);
       background-image: none;
     }
   }
@@ -413,10 +419,10 @@
     display: inline-block;
     @include padding-y(3);
     @include padding-x(4);
-    @include vertical-gradient($grey-color, $grey-color-dark);
+    @include vertical-gradient(var(--grey-color), var(--grey-color-dark));
         
     &:hover {
-      background-color: $grey-color-dark;
+      background-color: var(--grey-color-dark);
       background-image: none;
     }
   }
@@ -432,7 +438,7 @@
   @include margin-y(2);
   @include padding-all(4);
 
-  border-left: 4px solid $grey-color;
+  border-left: 4px solid var(--grey-color);
   display: flex;
   align-items: center;
 }
@@ -447,40 +453,40 @@
 }
 
 .doc .note {
-  background-color: $blue-color-light;
-  border-left-color: $blue-color;
-  .note-icon { color: $blue-color; }
+  background-color: var(--blue-color-light);
+  border-left-color: var(--blue-color);
+  .note-icon { color: var(--blue-color); }
 }
 .doc .warning { 
-  background-color: $yellow-color-light;
-  border-left-color: $yellow-color;
-  .note-icon { color: $yellow-color; }
+  background-color: var(--yellow-color-light);
+  border-left-color: var(--yellow-color);
+  .note-icon { color: var(--yellow-color); }
 }
 .doc .error {
-  background-color: $red-color-light;
-  border-left-color: $red-color;
-  .note-icon { color: $red-color; }
+  background-color: var(--red-color-light);
+  border-left-color: var(--red-color);
+  .note-icon { color: var(--red-color); }
 }
 
 .doc .anchorjs-link {
-  color: $grey-color-light;
+  color: var(--grey-color-light);
   &:hover { text-decoration: none; }
 }
 
 .edit-docs {
   @include margin-y(8);
   @include padding-y(8);
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--grey-color-light);
   font-size: $font-small;
 
   a, a:visited { 
-    color: $grey-color;
-    border-bottom: 1px dotted $grey-color;
+    color: var(--grey-color);
+    border-bottom: 1px dotted var(--grey-color);
   }
   a:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: none;
-    border-bottom: 1px solid $text-color;
+    border-bottom: 1px solid var(--text-color);
   }
 }
 
@@ -507,14 +513,14 @@ pre[class*="language-"] {
   button { 
     @include margin-x(2);
     @include padding-x(2);
-    @include vertical-gradient($grey-color, $grey-color-dark);
+    @include vertical-gradient(var(--grey-color), var(--grey-color-dark));
     border: 0;
     color: white;
     font-weight: bold;
     cursor: pointer;
 
     &:hover {
-      background-color: $grey-color-dark;
+      background-color: var(--grey-color-dark);
       background-image: none;
     }
   }
@@ -532,8 +538,8 @@ pre[class*="language-"] {
       font-size: $font-xsmall;
       font-weight: bold;
       text-transform: uppercase;
-      background-color: $grey-color-dark;
-      color: $grey-color-super-light;
+      background-color: var(--grey-color-dark);
+      color: var(--grey-color-super-light);
     }
   }
 }
