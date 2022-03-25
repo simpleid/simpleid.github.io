@@ -2,6 +2,11 @@
 layout: docs
 title: Upgrading
 permalink: /docs/2/upgrading/
+eleventyNavigation:
+    key: 2/upgrading
+    title: Upgrading
+    parent: 2/_getting-started
+    order: 60
 ---
 
 SimpleID is currently in heavy development, with the software changing rapidly.

@@ -3,6 +3,11 @@ layout: docs
 title: Upgrading to version 0.9
 date: 2014-03-11 22:28:44
 permalink: /docs/1/upgrading/0.9/
+eleventyNavigation:
+    key: 1/Upgrading to version 0.9
+    title: Upgrading to version 0.9
+    parent: 1/Upgrading
+    order: 9
 ---
 
 SimpleID version 0.9 introduced numerous changes and additional
