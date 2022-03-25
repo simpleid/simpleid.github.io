@@ -41,11 +41,9 @@ If all else fails, you may consider [raising a ticket](https://github.com/simple
 
 SimpleID 0.7 enables a log file to be written as it processes OpenID requests.  The log file, when produced, contains information on what is happening behind the scenes in an OpenID authentication session, which may provide useful information for troubleshooting purposes.
 
-<div class="warning">
-
+{% panel 'warning' %}
 Note that sensitive security information may be written into the log file.  Only enable logging when performing troubleshooting, and disable it when you are done.
-
-</div>
+{% endpanel %}
 
 To enable logging, open <code>config.php</code>, and edit the <code>SIMPLEID_LOGFILE</code> and <code>SIMPLEID_LOGLEVEL</code> options.
 

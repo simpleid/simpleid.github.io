@@ -10,11 +10,9 @@ eleventyNavigation:
     order: 2
 ---
 
-<div class="warning">
-
+{% panel 'warning' %}
 This page only applies to SimpleID versions 0.8 and earlier.  SimpleID versions 0.9 and later mandate the use of HTTPS.
-
-</div>
+{% endpanel %}
 
 You can use enhance the security of your SimpleID server by using Transport Layer Security (TLS) to protect connections via HTTPS.  The easiest way of doing this is to set both SIMPLEID_BASE_URL configuration option in `config.inc`, and [the SimpleID URL you provide with your identifer](http://simpleid.org/documentation/getting-started/setting-identity/claim-your-identifier), to an HTTPS URL.
 

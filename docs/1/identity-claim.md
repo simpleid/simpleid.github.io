@@ -28,9 +28,9 @@ To do this, edit the web page returned by the identifier URL.  Copy and paste th
 
 Replace the URL http://www.example.com/simpleid/ with one which points to where you have moved the <code>www</code> directory of the SimpleID installation.
 
-<div class="warning">
+{% panel 'warning' %}
 The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>SIMPLEID_BASE_URL</code> configuration option in your <code>config.inc</code>. Otherwise, your installation may not work for certain web sites.
-</div>
+{% endpanel %}
 
 ## Use the YADIS Protocol
 

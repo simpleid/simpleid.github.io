@@ -30,10 +30,10 @@ To log in into an OpenID-enabled site:
 
     If you select the **Automatically send my information to this site for any future requests** check box, this page won't appear again the next time you log in to this site.
 
-<div class="note">
-
+{% panel 'note' %}
 Some sites require you to log into SimpleID *before* logging into the site.
+{% endpanel %}
 
-</div>
-
-<div class="warning">You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.</div>
+{% panel 'warning' %}
+You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.
+{% endpanel %}

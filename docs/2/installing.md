@@ -11,8 +11,10 @@ eleventyNavigation:
 ---
 
 
-<div class="note" markdown="span">If you are upgrading from SimpleID 1.0 or earlier, the [migration page](/docs/2/migrating/)
-contains more information on the migration process.</div>
+{% panel 'note' %}
+If you are upgrading from SimpleID 1.0 or earlier, the [migration page](/docs/2/migrating/)
+contains more information on the migration process.
+{% endpanel %}
 
 ## 1. Download SimpleID using composer
 
