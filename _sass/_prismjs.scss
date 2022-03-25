@@ -1,11 +1,6 @@
 /**
  * Syntax highlighting styles
  */
-pre[class*="language-"] {
-    margin-left: 40px;
-    @extend %vertical-rhythm;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
     // https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript

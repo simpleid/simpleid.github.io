@@ -139,7 +139,7 @@
       display: block;
       font-weight: normal;
     }
-    .current a { font-weight: bold; }
+    .current > a { font-weight: bold; }
   }
 
   .doc-sections-open { display: block; }
@@ -416,8 +416,8 @@
  * Documentation
  */
 .doc-section-title-text { display: inline; }  // Overridden in sidebar
-
-.doc-toc {
+ 
+/*.doc-toc {
   display: inline-block;
   min-width: 33%;
   border: 1px solid $grey-color-light;
@@ -436,7 +436,7 @@
   ul { margin: 0; }
   li { font-size: $font-small; }
   a { font-weight: normal; }
-}
+}*/
 
 .doc .note, .doc .warning, .doc .error {
   @include margin-y(2);
@@ -492,6 +492,14 @@
     text-decoration: none;
     border-bottom: 1px solid $text-color;
   }
+}
+
+/**
+ * Syntax highlighting
+ */
+pre[class*="language-"] {
+    margin-left: 40px;
+    @extend %vertical-rhythm;
 }
 
 /**

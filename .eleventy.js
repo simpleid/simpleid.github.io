@@ -5,6 +5,7 @@ const yaml = require('js-yaml');
 const searchFilter = require("./_src/searchFilter");
 
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginSass = require('eleventy-sass');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginXml = require('eleventy-xml-plugin');
 const pluginNavigation = require('@11ty/eleventy-navigation');
@@ -30,23 +31,6 @@ module.exports = function(conf) {
     conf.addPassthroughCopy('assets/*.png');
 
     // Templates
-    conf.addTemplateFormats("scss");
-    conf.addExtension('scss', {
-        outputFileExtension: 'css',
-        compile: async function(content, inputPath) {
-            let parsed = path.parse(inputPath);
-            if (parsed.name.startsWith("_")) return;
-      
-            let result = sass.compileString(content, {
-                loadPaths: [ parsed.dir || '.', '_sass' ]
-            });
-
-            return async (data) => {
-                return result.css;
-            }
-        }
-    });
-
     let md = require('markdown-it');
     conf.setLibrary(
         'md',
@@ -59,6 +43,7 @@ module.exports = function(conf) {
         dynamicPartials: true
     });
 
+    // Filters
     conf.addFilter('doctree', (collection, key) => {
         if (!key) return collection;
         return collection.filter((page) => page.data.doctree == key);
@@ -81,6 +66,11 @@ ${content}
         preAttributes: {
             tabindex: 0,
             'data-highlight': 'true'
+        }
+    });
+    conf.addPlugin(pluginSass, {
+        sass: {
+            loadPaths: [ '_sass' ]
         }
     });
     conf.addPlugin(pluginXml);

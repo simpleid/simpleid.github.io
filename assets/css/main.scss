@@ -5,10 +5,7 @@ eleventyExcludeFromCollections: true
 ---
 @charset "utf-8";
 
-
-// Typography (used in utils/typography)
-$base-font-family: "Helvetica Neue", Helvetica, Arial, Roboto, "Liberation Sans", sans-serif;
-$monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace;
+@use "sass:color";
 
 // Colours
 $text-color:       #111;
@@ -22,23 +19,28 @@ $grey-color-dark:  #666666;
 $grey-color-super-light: #eeeeee;
 
 $blue-color-light: #ddeeff;
-$blue-color: darken($blue-color-light, 50%);
+$blue-color: color.adjust($blue-color-light, $lightness: -50%);
 
 $yellow-color-light: #ffffdd;
-$yellow-color: darken($yellow-color-light, 50%);
+$yellow-color: color.adjust($yellow-color-light, $lightness: -50%);
 
 $red-color-light: #ffddee;
-$red-color: darken($red-color-light, 50%);
+$red-color: color.adjust($red-color-light, $lightness: -50%);
+
+$colors: ();
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "vendor/sanitize.css/sanitize",
-  "vendor/sanitize.css/forms",
-  "util/typography",
-  "util/spacing",
-  "util/media",
-  "util/grid",
+@use "vendor/sanitize.css/sanitize";
+@use "vendor/sanitize.css/forms";
+
+@use "util/typography" as *;
+@use "util/spacing" as *;
+@use "util/media" as *;
+@use "util/grid" as *;
+
+@use "layout";
+@use "prismjs";
+
+@import  
   "base",
-  "layout",
-  "components",
-  "syntax-highlighting";
+  "components";
