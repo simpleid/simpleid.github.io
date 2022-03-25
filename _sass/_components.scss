@@ -119,7 +119,7 @@
   border: 1px solid $grey-color-dark;
   @include padding(left, 2);
 
-  @include breakpoint($bp-large) { 
+  @include breakpoint($bp-large) {
     padding-left: 0;
     border-top: 0;
     border-bottom: 0;
@@ -175,6 +175,17 @@
   .doc-item {
     @include padding(left, 4);
     @extend %sidebar-nav-item; 
+  }
+
+  .doc-toc {
+    @include padding(left, 4);
+    @include padding-y(1);
+    font-size: $font-xsmall;
+
+    a { 
+      display: inline;
+      color: $grey-color-dark !important;
+    }
   }
 }
 
@@ -416,27 +427,6 @@
  * Documentation
  */
 .doc-section-title-text { display: inline; }  // Overridden in sidebar
- 
-/*.doc-toc {
-  display: inline-block;
-  min-width: 33%;
-  border: 1px solid $grey-color-light;
-  background: $grey-color-super-light;
-  @include margin-y(2);
-  @include padding-all(2);
-
-  h4 {
-    @include margin-text(top, 0);
-    @include margin-text(bottom, 2);
-    text-align: center;
-    font-size: $font-small; 
-    font-weight: bold;
-  }
-
-  ul { margin: 0; }
-  li { font-size: $font-small; }
-  a { font-weight: normal; }
-}*/
 
 .doc .note, .doc .warning, .doc .error {
   @include margin-y(2);

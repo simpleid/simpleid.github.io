@@ -52,12 +52,6 @@
             </header>
 
             <article class="post-content">
-              {% if toc %}
-              <nav class="doc-toc">
-                <h4>Table of Contents</h4>
-                {{ content | toc: '{"ul": true, "wrapper": ""}' }}
-              </nav>
-              {% endif %}
               {{ content }}
             </article>
 

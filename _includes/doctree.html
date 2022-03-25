@@ -50,7 +50,11 @@
             {%- else -%}
               {%- assign item_class = "" -%}
             {%- endif -%}
-            <li class="doc-item {{ item_class }}" data-key="{{ item.key }}" data-order="{{ item.order }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+            <li class="doc-item {{ item_class }}" data-key="{{ item.key }}" data-order="{{ item.order }}"><a href="{{ item.url }}">{{ item.title }}</a>
+{%- if item.url == page.url -%}
+{{ content | toc: '{"tags": ["h2"], "ul": true, "wrapperClass": "doc-toc"}' }}
+{%- endif -%}
+</li>
           {% endfor -%}
         </ul>
       </{{ section_tag }}>
