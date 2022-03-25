@@ -1,0 +1,13 @@
+---js
+{
+    pagination: {
+        data: "collections.docsets",
+        size: 1,
+        alias: "doctree",
+        addAllPagesToCollections: false
+    },
+    permalink: '{{ doctree.url }}/search_index.json',
+    eleventyExcludeFromCollections: true
+}
+---
+{{ collections.all | doctree: doctree.data.doctree | search_index | json }}
