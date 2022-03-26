@@ -43,12 +43,6 @@
 
           <a class="nav-link {{ current_class }} {% if link.menuClass %}{{ link.menuClass }}{% endif %}" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>          
         {% endfor %}
-
-        <a class="nav-link nav-link-search" href="{{ '/search' | prepend: site.baseurl }}">
-          <svg viewBox="0 0 24 24">
-            <use xlink:href="#svg-search"></use>
-          </svg>
-        </a>
       </div>
     </nav>
 

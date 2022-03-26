@@ -10,8 +10,8 @@ module.exports = function(collection) {
         collection.forEach(function (page) {
             if (page.data.lunr_exclude) return;
 
-            // Strip HTML and punctuation
-            let body = stripHtml(page.templateContent).result.replace(/[^\w]/g, ' ');
+            // Strip HTML
+            let body = stripHtml(page.templateContent).result;
 
             let doc = {
                 id: page.url,

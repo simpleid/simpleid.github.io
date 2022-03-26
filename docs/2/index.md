@@ -1,6 +1,7 @@
 ---
 layout: docs
 hide_doc_header: true
+lunr_exclude: true
 title: SimpleID 2 User Documentation
 permalink: /docs/2/
 eleventyNavigation:

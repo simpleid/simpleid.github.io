@@ -37,7 +37,7 @@
     <div class="page-content">
       <div class="wrapper">
         {% unless hide_doc_header %}
-          <div class="sidebar-container">          
+          <div class="sidebar-container">
             <div class="sidebar" x-data="{ open: false }">
             
               <nav class="doc-doctree">
@@ -50,6 +50,10 @@
             <header class="post-header">
               <h1 class="post-title">{{ title }}</h1>
             </header>
+
+            {% if hide_doc_header %}
+              {% include "doc_search.html", key: doctree %}
+            {% endif %}
 
             <article class="post-content">
               {{ content }}

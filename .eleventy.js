@@ -29,6 +29,7 @@ module.exports = function(conf) {
     conf.addPassthroughCopy('assets/files');
     conf.addPassthroughCopy('assets/*.ico');
     conf.addPassthroughCopy('assets/*.png');
+    conf.addPassthroughCopy('assets/**/*.js');
 
     // Templates
     let md = require('markdown-it');
