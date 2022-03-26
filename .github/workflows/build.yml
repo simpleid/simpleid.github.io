@@ -1,0 +1,61 @@
+name: Build and deploy
+
+on:
+  push:
+    branches-ignore:
+      - 'gh-pages'
+  pull_request:
+    branches-ignore:
+      - 'gh-pages'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Eleventy build
+        run: npm run-script build
+
+      - name: Archive build output
+        run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v2
+        with:
+          name: gh-pages
+          path: artifact.tar
+          if-no-files-found: warn
+
+  # deploy:
+  #   name: Deploy
+  #   needs: build
+  #   if: github.ref == 'refs/heads/master'
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Download build output
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: gh-pages
+
+  #     - name: Decompress
+  #       run: tar -xvf artifact.tar -C _site
+
+  #     - name: Deploy to Github pages
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         publish_dir: _site 
+  #         publish_branch: gh-pages
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
