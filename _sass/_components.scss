@@ -1,3 +1,4 @@
+@use "vendor/sanitize.css/forms";
 @use "util/typography" as *;
 @use "util/spacing" as *;
 @use "util/grid" as *;
@@ -434,6 +435,16 @@
  */
 .doc-section-title-text { display: inline; }  // Overridden in sidebar
 
+.doc-hidden-header-search {
+  @include padding-y(8);
+  border-bottom: 1px solid var(--grey-color-light);
+
+  form {
+    margin: 0 auto;
+    max-width: calc($bp-xlarge / 2);
+  }
+}
+
 .doc .note, .doc .warning, .doc .error {
   @include margin-y(2);
   @include padding-all(4);
@@ -508,39 +519,58 @@ pre[class*="language-"] {
     justify-content: space-between;
   }
 
-  input[type="text"] { flex-grow: 1; }
-
-  button { 
-    @include margin-x(2);
-    @include padding-x(2);
-    @include vertical-gradient(var(--grey-color), var(--grey-color-dark));
-    border: 0;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--grey-color-dark);
-      background-image: none;
-    }
-  }
-
-  .results {
-    @include padding-y(4);
+  .search-results {
+    font-size: $font-small;
         
-    ul { list-style: none; }
-    li { @include margin-text(bottom, 2); }
-    .result-title { font-weight: bold; }
-    .result-label {
-      display: inline-block;
-      padding: 0.2em 0.4em;
-      border-radius: 3px;
-      font-size: $font-xsmall;
-      font-weight: bold;
-      text-transform: uppercase;
-      background-color: var(--grey-color-dark);
-      color: var(--grey-color-super-light);
+    ul { 
+      list-style: none; 
+      padding-left: 0;
+      margin: 0;
     }
+    a {
+      display: block;
+      @include padding-x(2);
+      @include padding-y(1);
+
+      .result-preview {
+        font-weight: normal;
+        color: var(--grey-color);
+      }
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+      background-color: var(--grey-color-super-light);
+    }
+    .search-results-head {
+      color: var(--grey-color-dark);
+      font-weight: bold;
+      @include padding-x(2);
+      @include margin-y(2);
+    }
+    .result-title { font-weight: bold; }
+  }
+}
+
+.search-app-search-widget {
+  display: flex;
+  flex-grow: 1;
+  @extend input;
+
+  input {
+    border: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  input:focus { border: 0; }
+
+  .search-icon {
+    background-color: var(--grey-color-super-light);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color);
+    border-radius: 3px;
+    font-size: $font-xsmall;
+    padding: 0.2em;
+    @include padding-x(2);
   }
 }
 

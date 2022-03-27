@@ -52,7 +52,9 @@
             </header>
 
             {% if hide_doc_header %}
-              {% include "doc_search.html", key: doctree %}
+              <div class="doc-hidden-header-search">
+                {% include "doc_search.html", key: doctree %}
+              </div>
             {% endif %}
 
             <article class="post-content">

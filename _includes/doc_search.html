@@ -1,15 +1,19 @@
 {%- for docset in collections.docsets -%}
-  {%- if docset.data.doctree == key %}{% assign search_index = "search_index.json" | prepend: docset.url | prepend: site.baseurl %}{% endif -%}
+  {%- if docset.data.doctree == key -%}
+    {%- assign search_index = "search_index.json" | prepend: docset.url | prepend: site.baseurl -%}
+    {%- assign docset_title = docset.data.eleventyNavigation.title -%}
+  {%- endif -%}
 {%- endfor -%}
 
-<div x-data="searchApp({ baseurl: '{{ site.baseurl }}'})" x-init="loadIndex('{{ search_index }}')" x-on:keydown.slash.window="slashKeyPress">
+<div class="search-app" x-data="searchApp({ baseurl: '{{ site.baseurl }}'})" x-init="loadIndex('{{ search_index }}')" x-on:keydown.slash.window="slashKeyPress">
     <form>
-        <div>
-            <input type="textbox" x-model="q" x-ref="searchBox" x-on:keydown.escape="escKeyPress">
-            <div>/</div>
+        <div class="search-app-search-widget">
+            <input type="text" placeholder="Search {{ docset_title }}" x-model="q" x-ref="searchBox" x-on:keydown.escape="escKeyPress">
+            <div class="search-icon">/</div>
         </div>
     </form>
     <div class="search-results">
+        <template x-if="searchResults.length > 0"><div class="search-results-head">Search Results</div></template>
         <ul>
             <template x-for="result in searchResults" x-bind:key="result">
                 <li>
