@@ -113,6 +113,40 @@
   }
 }
 
+/**
+ * Documentation header
+ */
+.doc-header {
+  @include padding-y(4);
+  border-bottom: 1px solid var(--grey-color-light);
+
+  .doc-header-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc($bp-xlarge / 40);
+  }
+
+  .doc-header-title {
+    display: none;
+
+    @include breakpoint($bp-large) {
+      display: block;
+      max-width: calc($bp-xlarge / 3);
+    }
+  }
+
+  .doc-header-search {
+    flex-grow: 1;
+    max-width: calc(2 * $bp-xlarge / 3);
+  }
+
+  .doc-title {
+    @include margin-y(0);
+    font-size: $font-xlarge;
+  }
+}
 
 /**
  * Sidebar (for documentation navigation)
@@ -197,13 +231,6 @@
 }
 
 .doc-title {
-  position: relative;
-  cursor: pointer;
-  color: var(--grey-color-dark);
-  @include margin-y(0);
-  font-size: $font-base;
-  font-weight: bold;
-
   .doc-title-expander {
     position: absolute;
     right: 0;
@@ -214,12 +241,6 @@
   .doc-title-expander-open { transform: rotate(180deg); }
 
   @include breakpoint($bp-large) { 
-    cursor: auto;
-    color: var(--text-color);
-    font-size: $font-xlarge;
-    font-weight: normal;
-    @include margin-text(top, 2);
-    padding-top: $font-3xlarge - $font-xlarge;
 
     .doc-title-expander { display: none; }
   }

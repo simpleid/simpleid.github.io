@@ -3,27 +3,10 @@
 {%- if section_headings -%}
   {%- assign section_tag = 'div' -%}
   {%- capture section_title_tag -%}h{{ section_headings }}{%- endcapture -%}  
-  {%- if doc_title -%}
-    {%- capture doc_title_tag -%}h{{ section_headings | minus: 1 }}{%- endcapture -%}
-  {%- endif -%}
 {%- else -%}
   {%- assign section_tag = 'li' -%}
   {%- assign section_title_tag = 'div' -%}
-  {%- if doc_title -%}
-    {%- capture doc_title_tag -%}{{ doc_title }}{%- endcapture -%}
-  {%- endif -%}
 {%- endif -%}
-
-{% if doc_title %}
-  <{{ doc_title_tag }} class="doc-title" {% if title_widget %}x-on:click="open = !open"{% endif %}>
-    {%- if section_widget -%}
-      <div class="doc-title-expander" x-bind:class="{ 'doc-title-expander-open': open }">
-        <svg viewBox="0 0 24 24"><use xlink:href="#svg-expander"></use></svg>
-      </div>
-    {%- endif -%}
-    <span>{{ sections[0].parent }}</span>
-  </{{ doc_title_tag }}>
-{% endif %}
 
 <div class="doc-sections" {% if title_widget %}x-bind:class="{ 'doc-sections-open': open }"{% endif %}>
   {%- unless section_headings -%}

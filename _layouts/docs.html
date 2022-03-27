@@ -34,6 +34,21 @@
 
     {% include "header.html" %}
 
+    {% unless hide_doc_header %}
+    <header class="doc-header">
+      {%- assign docset_title = collections.all | eleventyNavigation: doctree | first | map: 'parent' -%}
+      <div class="wrapper">
+        <div class="doc-header-container">
+          <div class="doc-header-title">
+            <h2 class="doc-title">{{ docset_title }}</h2>
+          </div>
+          <div class="doc-header-search">
+            {% include "doc_search.html", key: doctree %}
+          </div>
+      </div>
+    </header>
+    {% endunless %}
+
     <div class="page-content">
       <div class="wrapper">
         {% unless hide_doc_header %}
@@ -41,7 +56,7 @@
             <div class="sidebar" x-data="{ open: false }">
             
               <nav class="doc-doctree">
-              {% include "doctree.html", key: doctree, doc_title: 'h2', title_widget: true, section_widget: true %}
+              {% include "doctree.html", key: doctree, title_widget: true, section_widget: true %}
               </nav>
             </div>
           {% endunless %}
