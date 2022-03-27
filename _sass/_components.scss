@@ -45,13 +45,11 @@
       align-items: center;
       @include padding-x(3);
       @include padding-y(2);
-      border: 1px solid var(--grey-color-light);
-      border-radius: 5px;
     }
 
     svg {
-      width: 3 * $base-unit;
-      height: 3 * $base-unit;
+      width: $font-xlarge;
+      height: $font-xlarge;
 
       color: var(--grey-color-light);
     }
