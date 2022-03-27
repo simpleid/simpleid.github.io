@@ -4,6 +4,7 @@
 
 // Colours
 $text-color:       #111;
+$code-background-color: rgba($text-color, 0.1);
 $background-color: #fdfdfd;
 $brand-color:      #1144aa;
 $brand-color-light: #4488ee;
@@ -36,6 +37,7 @@ $red-color: color.adjust($red-color-light, $lightness: -50%);
 
 :root {
   --text-color: #{$text-color};
+  --code-background-color: #{$code-background-color};
   --background-color: #{$background-color};
   --brand-color: #{$brand-color};
   --brand-color-light: #{$brand-color-light};

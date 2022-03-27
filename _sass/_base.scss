@@ -109,7 +109,7 @@ blockquote {
 pre, code {
   font-size: $font-small;
   border-radius: 3px;
-  background-color: rgba(var(--text-color), 0.1);
+  background-color: var(--code-background-color);
 }
 
 // Don't reduce font size in headings
@@ -117,7 +117,7 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; }
 
 code { padding: 0.2em 0.4em; }
 
-pre.highlight { background-color: rgba(var(--text-color), 0.1); }
+pre.highlight { background-color: var(--code-background-color); }
 pre {
   padding: 8px 12px;
   overflow-x: auto;
