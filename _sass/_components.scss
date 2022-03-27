@@ -575,6 +575,7 @@ pre[class*="language-"] {
 .search-app-search-widget {
   display: flex;
   flex-grow: 1;
+  gap: 0.375em;
   @extend input;
 
   input {
