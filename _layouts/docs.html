@@ -3,7 +3,7 @@
 
   {% include "head.html" %}
 
-  <body>
+  <body x-data="{ sidebarOpen: false }" x-bind:class="{ 'doc-sidebar-open': sidebarOpen }">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <!-- https://feathericons.com/ -->
       <symbol id="svg-warning" viewBox="0 0 24 24">
@@ -42,6 +42,13 @@
           <div class="doc-header-title">
             <h2 class="doc-title">{{ docset_title }}</h2>
           </div>
+          <div class="doc-header-expander">
+            <a href="#" x-on:click.prevent="sidebarOpen = !sidebarOpen">
+              <svg viewBox="0 0 24 24">
+                <use xlink:href="#svg-menu"></use>
+              </svg>
+            </a>
+          </div>
           <div class="doc-header-search">
             {% include "doc_search.html", key: doctree %}
           </div>
@@ -53,10 +60,10 @@
       <div class="wrapper">
         {% unless hide_doc_header %}
           <div class="sidebar-container">
-            <div class="sidebar" x-data="{ open: false }">
+            <div class="sidebar">
             
               <nav class="doc-doctree">
-              {% include "doctree.html", key: doctree, title_widget: true, section_widget: true %}
+              {% include "doctree.html", key: doctree, section_widget: true %}
               </nav>
             </div>
           {% endunless %}
