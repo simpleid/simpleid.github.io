@@ -26,6 +26,7 @@ module.exports = function(conf) {
     });
 
     // Copy
+    conf.addPassthroughCopy('CNAME');
     conf.addPassthroughCopy('assets/files');
     conf.addPassthroughCopy('assets/*.ico');
     conf.addPassthroughCopy('assets/*.png');
