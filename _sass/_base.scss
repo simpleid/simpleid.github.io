@@ -1,10 +1,13 @@
+@use "util/typography" as *;
+@use "util/spacing" as *;
+
 /**
  * Basic styling
  */
 html {
   font-weight: 300;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 
@@ -68,16 +71,16 @@ h4, h5, h6 { font-size: $font-large; }
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   font-weight: bold;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: var(--brand-color-dark);
   }
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: underline;
   }
 }
@@ -88,8 +91,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
   @include padding(left, 4);
   font-style: italic;
 
@@ -106,7 +109,7 @@ blockquote {
 pre, code {
   font-size: $font-small;
   border-radius: 3px;
-  background-color: rgba($text-color, 0.1);
+  background-color: var(--code-background-color);
 }
 
 // Don't reduce font size in headings
@@ -114,7 +117,7 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; }
 
 code { padding: 0.2em 0.4em; }
 
-pre.highlight { background-color: rgba($text-color, 0.1); }
+pre.highlight { background-color: var(--code-background-color); }
 pre {
   padding: 8px 12px;
   overflow-x: auto;
@@ -145,14 +148,14 @@ table {
 //  Adds table cell padding, and adds a top border to each cell.
 .table th, .table td {
   @include padding-all(1);
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--grey-color-light);
 }
 
 //  Sets table header font-weight to bold.  Aligns table header text to the bottom of each cell.
 .table th {
   font-weight: bold;
   color: #ffffff;
-  background-color: $grey-color;
+  background-color: var(--grey-color);
   text-align: left;
   vertical-align: bottom;
 }
@@ -170,11 +173,11 @@ table {
 
 //  Adds border-top between two table-body sections.
 .table tbody + tbody {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--grey-color-light);
 }
 
 .table-banded tr.even td {
-  background-color: $grey-color-super-light;
+  background-color: var(--grey-color-super-light);
 }
 
 

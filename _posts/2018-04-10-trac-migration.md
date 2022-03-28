@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Closure of trac.simpleid.koinic.net
-categories: ["news"]
+tags: ["news"]
 ---
 For many years, [Trac](https://trac.edgewall.org/) has been used as the
 source code browser, issuer tracker and development documentation tool for the

@@ -13,12 +13,12 @@ title: Security advisories
 <p>To report a security issue, <a href="https://github.com/simpleid/simpleid/security/policy">see here</a>.</p>
 
 <ul class="post-list">
-{% for post in site.categories.advisory %}
+{% for post in collections.advisory %}
   <li>
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
     <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.data.title }}</a>
     </h2>
   </li>
 {% endfor %}

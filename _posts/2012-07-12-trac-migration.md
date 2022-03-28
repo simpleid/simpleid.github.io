@@ -2,7 +2,7 @@
 layout: post
 title: Trac migration
 created: 1342016697
-categories: ["news"]
+tags: ["news"]
 ---
 As part of Sourceforge's closure of trac has a Hosted App feature, SimpleID's trac has been moved to [http://simpleid.sourceforge.net/cgi-bin/trac.cgi](http://simpleid.sourceforge.net/cgi-bin/trac.cgi).
 

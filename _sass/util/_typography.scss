@@ -1,9 +1,14 @@
+// Base fonts
+$base-font-family: "Helvetica Neue", Helvetica, Arial, Roboto, "Liberation Sans", sans-serif !default;
+
+$monospace-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace !default;
+
 // Emoji fonts
-$emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 // System fonts
 $system-font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-  "Cantarell", "Noto Sans", sans-serif, $emoji-font-family;
+  "Cantarell", "Noto Sans", sans-serif, $emoji-font-family !default;
 
 
 // Font sizes
@@ -39,6 +44,9 @@ $reading-width: 65ch;
   }
 }
 
+/**
+ * Basic typography
+ */
 html {
   font-family: $base-font-family, $emoji-font-family;
   @include lead(normal);

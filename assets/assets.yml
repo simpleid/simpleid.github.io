@@ -1,0 +1,2 @@
+lunr_exclude: true
+eleventyExcludeFromCollections: true

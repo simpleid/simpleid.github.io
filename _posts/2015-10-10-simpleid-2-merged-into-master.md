@@ -2,7 +2,7 @@
 layout: post
 title: SimpleID 2.0 codebase merged into master
 date: 2015-10-10 02:00:00
-categories:
+tags:
 - news
 ---
 

@@ -48,8 +48,9 @@ published: true
 
           <div class="panel-content">
             <div>Latest releases</div>
-            {%- for post in site.categories.release limit:1 -%}
-              <div><a href="{{ post.url | prepend: site.baseurl }}">SimpleID {{ post.release_version }}</a></div>
+            {%- assign releases = collections.release | reverse -%}
+            {%- for post in releases limit:1 -%}
+              <div><a href="{{ post.url | prepend: site.baseurl }}">SimpleID {{ post.data.release_version }}</a></div>
             {%- endfor -%}
 
             <p><a href="/releases" class="front-link">Download now</a></p>

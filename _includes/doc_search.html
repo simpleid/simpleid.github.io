@@ -1,0 +1,31 @@
+{%- for docset in collections.docsets -%}
+  {%- if docset.data.doctree == key -%}
+    {%- assign search_index = "search_index.json" | prepend: docset.url | prepend: site.baseurl -%}
+    {%- assign docset_title = docset.data.eleventyNavigation.title -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="search-app" x-data="searchApp({ baseurl: '{{ site.baseurl }}'})" x-init="loadIndex('{{ search_index }}')" x-on:keydown.slash.window="slashKeyPress">
+    <form>
+        <div class="search-app-search-widget">
+            <input type="text" placeholder="Search {{ docset_title }}" x-model="q" x-ref="searchBox" x-on:keydown.escape="escKeyPress">
+            <div class="search-icon">/</div>
+        </div>
+    </form>
+    <div class="search-results">
+        <template x-if="searchResults.length > 0"><div class="search-results-head">Search Results</div></template>
+        <ul>
+            <template x-for="result in searchResults" x-bind:key="result">
+                <li>
+                    <a x-bind:href="config.baseurl + result.url">
+                        <div class="result-title" x-text="result.title"></div>
+                        <div class="result-preview" x-text="preview(result.body)"></div>
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9/elasticlunr.min.js" type="text/javascript"></script>
+<script src="{{ "/assets/javascript/search.js" | prepend: site.baseurl }}" type="text/javascript"></script>

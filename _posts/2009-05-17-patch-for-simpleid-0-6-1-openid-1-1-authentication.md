@@ -2,7 +2,7 @@
 layout: post
 title: ! 'Patch for SimpleID 0.6.1: OpenID 1.1 Authentication'
 created: 1242529387
-categories:
+tags:
 - news
 ---
 <p>A patch has been released for SimpleID version 0.6.1.  The patch fixes an issue in relation to the <code>session_type</code> parameter being blank under OpenID version 1.1.</p>

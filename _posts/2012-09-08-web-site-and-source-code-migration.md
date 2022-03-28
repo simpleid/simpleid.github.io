@@ -2,7 +2,7 @@
 layout: post
 title: Web site and source code migration
 created: 1347081923
-categories:
+tags:
 - news
 ---
 As a result of SourceForge's [hosted apps retirement](http://sourceforge.net/p/forge/community-docs/Hosted%20Apps%20Retirement/), a number of changes have been made to SimpleID's web site and source code management.
