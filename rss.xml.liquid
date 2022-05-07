@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
     <pubDate>{{ site.posts | getNewestCollectionItemDate | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.posts | getNewestCollectionItemDate | date_to_rfc822 }}</lastBuildDate>
     <generator>Eleventy</generator>
-    {%- assign posts = collections.all | reverse -%}
+    {%- assign posts = collections.posts | reverse -%}
     {% for post in posts limit:10 %}
       <item>
         <title>{{ post.data.title | xml_escape }}</title>
