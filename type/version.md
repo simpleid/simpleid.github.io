@@ -4,6 +4,7 @@ title: SimpleID Version Type URI
 date: 2009-10-05 22:39:31
 permalink: /type/version/
 lunr_exclude: true
+eleventyExcludeFromCollections: true
 ---
 
 `http://simpleid.sourceforge.net/type/version` is the XRD and XRDS type URI identifying the version of SimpleID being run at the OpenID provider.
