@@ -22,7 +22,7 @@ SimpleID uses [Composer](https://getcomposer.org/) for installation.  To
 install SimpleID, use the following command on the web server:
 
 ```shell
-composer create-project simpleid/simpleid:dev-master simpleid --no-dev
+composer create-project simpleid/simpleid:2.0.x-dev simpleid --no-dev
 ```
 
 This will create a new directory `simpleid` containing all SimpleID files
