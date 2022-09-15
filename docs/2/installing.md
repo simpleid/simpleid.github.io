@@ -69,7 +69,22 @@ match rule in the web server configuration).
 
 The URL to this directory becomes the URL of the SimpleID server.
 
-## 3. Set up configuration options   {#config}
+## 3. Configure the web server   {#webserver}
+
+For OpenID Connect or WebFinger support, you will need to configure your
+web server to rewrite `/.well-known/<path>` to point to
+`index.php?q=/.well-known/<path>`, where `index.php` is located in the
+web directory (`www`) of the SimpleID installation.
+
+You may additionally want to rewrite all other paths to point to the
+SimpleID `index.php`.
+
+If you are using Apache web server, a ready-made `.htaccess` file is
+available.  Simply rename `.htaccess.dist` to `.htaccess` and make sure
+`AllowOverride` is set with respect to the SimpleID web directory
+in your Apache configuration.
+
+## 4. Set up configuration options   {#config}
 
 Make a copy of the file `config.php.dist` in the web directory and rename it
 `config.php`.
@@ -79,7 +94,7 @@ is formatted as a plain PHP file.
 
 The file contains comments explaining what each configuration option does.
 
-## 4. Generate a key pair for server   {#keys}
+## 5. Generate a key pair for server   {#keys}
 
 OpenID Connect requires each server to have a RSA key pair.
 
@@ -105,7 +120,7 @@ rm public.pem
 The paths to these two files will need to be specified in `config.php` under
 `private_jwks_file` and `public_jwks_file` respectively.
 
-## 5. Set up WebFinger   {#webfinger}
+## 6. Set up WebFinger   {#webfinger}
 
 OpenID Connect uses WebFinger as its discovery protocol.  This means you
 will need to set up a WebFinger server.

@@ -23,7 +23,7 @@ If you are upgrading from version 1.0, please make sure your server meets the ne
 To host a SimpleID installation requires:
 
 1. your own domain name, or at least access to the `/.well-known` subdirectory of the domain name
-(this is required for OpenID Connect support);
+(this is required for OpenID Connect or WebFinger support);
 2. a web server with [HTTPS](#https) support for that domain name;
 3. the ability for the web server to write files to the filesystem;
 4. [PHP](http://www.php.net/), version 7.2 or greater.  The following extensions must be enabled (they are enabled for most PHP installations):
