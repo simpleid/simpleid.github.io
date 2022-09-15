@@ -27,8 +27,8 @@ Additional modules related to the OpenID protocol are set out in the table below
 
 | Module                                                         | Description                                             | Enabled by default? |
 |----------------------------------------------------------------|---------------------------------------------------------|---------------------|
-| SimpleID\Protocols\OpenID\Extensions\SRegOpenIDExtensionModule | Implements the Simple Registration Extension            | Yes                 |
-| SimpleID\Protocols\OpenID\Extensions\AXOpenIDExtensionModule   | Implements the Attribute Exchange Extension             | No                  |
+| SimpleID\Protocols\OpenID\Extensions\SRegOpenIDExtensionModule | Implements the [Simple Registration Extension](#sreg)   | Yes                 |
+| SimpleID\Protocols\OpenID\Extensions\AXOpenIDExtensionModule   | Implements the [Attribute Exchange Extension](#ax)      | No                  |
 | SimpleID\Protocols\OpenID\Extensions\PAPEOpenIDExtensionModule | Implements the Provider Authentication Policy Extension | No                  |
 
 ## User configuration
@@ -62,6 +62,50 @@ The identifier must satisfy the following requirements.
     **Pay particular attention to whether or not your identifier URL contains a trailing slash (/).**  Web servers may automatically append a trailing slash to your identifier URL if your URL points to a directory rather than a file.
 
 - **The identifier must be "claimable".**  You must be able to edit the web page with your identifier URL to include information about your SimpleID installation.
+
+### Simple Registration Extension    {#sreg}
+
+The extension module `SimpleID\Protocols\OpenID\Extensions\SRegOpenIDExtensionModule` implements the [OpenID Simple Registration Extension](http://openid.net/specs/openid-simple-registration-extension-1_0.html).  It allows you to specify details which you normally provide when you register for web sites (such as your name and e-mail address), and have SimpleID provide them automatically to web sites which request them.
+
+The registration information is specified under the `sreg` object under the
+`openid` object in the user file.  For what can be specified in this section,
+see the [specifications](http://openid.net/specs/openid-simple-registration-extension-1_0.html).
+Note that the registration information in the identity file are specified without the `openid.sreg.` prefix.
+
+An example is given below.
+
+```yaml
+openid:
+    ax:
+        nickname: Example
+        email: example@example.com
+        fullname: Example
+        dob: 2000-00-00
+        gender: M
+        postcode: 1234
+        country: en
+        language: au
+        timezone: Australia/Sydney
+```
+
+### Attribute Exchange Extension    {#ax}
+
+The extension module `SimpleID\Protocols\OpenID\Extensions\AXOpenIDExtensionModule` partially implements the [OpenID Attribute Exchange Extension](http://openid.net/specs/openid-attribute-exchange-1_0.html).  It allows you to specify identity information, and have SimpleID provide them automatically to web sites which request them.
+
+This module only implements the [fetch message](http://openid.net/specs/openid-attribute-exchange-1_0.html#fetch) section of the specification.  That is, it allows relying parties to retrieve identity data from SimpleID, but it does not allow relying parties to push data back to SimpleID.
+
+The attributes are specified under the `ax` object under the
+`openid` object in the user file.  For what can be specified in this section, see the [specifications](http://openid.net/specs/openid-attribute-exchange-1_0.html).  For a list of common attributes, see the [draft specifications](http://openid.net/specs/openid-attribute-properties-list-1_0-01.html).
+
+An example is given below.
+
+```yaml
+openid:
+    ax:
+        "http://openid.net/schema/company/name": Example Company Limited
+        "http://openid.net/schema/company/title": Managing Director
+        "http://openid.net/schema/contact/web/blog": http://simpleid.sourceforge.net/
+```
 
 ## Client configuration
 
