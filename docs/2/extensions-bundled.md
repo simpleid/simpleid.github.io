@@ -19,11 +19,12 @@ For what can be specified in this section, see the [specifications](http://openi
 
 An example is given below.
 
-```ini
-[ax]
-http://openid.net/schema/company/name="Example Company Limited"
-http://openid.net/schema/company/title="Managing Director"
-http://openid.net/schema/contact/web/blog="http://simpleid.sourceforge.net/"
+```yaml
+openid:
+    ax:
+        "http://openid.net/schema/company/name": Example Company Limited
+        "http://openid.net/schema/company/title": Managing Director
+        "http://openid.net/schema/contact/web/blog": http://simpleid.sourceforge.net/
 ```
 
 ### Sending identity data to an OpenID site
@@ -46,17 +47,18 @@ For what can be specified in this section, see the [specifications](http://openi
 
 An example is given below.
 
-```ini
-[sreg]
-nickname=Example
-email=example@example.com
-fullname=Example
-dob=2000-00-00
-gender=M
-postcode=1234
-country=en
-language=au
-timezone=Australia/Sydney
+```yaml
+openid:
+    ax:
+        nickname: Example
+        email: example@example.com
+        fullname: Example
+        dob: 2000-00-00
+        gender: M
+        postcode: 1234
+        country: en
+        language: au
+        timezone: Australia/Sydney
 ```
 
 ### Sending registration information to an OpenID site
