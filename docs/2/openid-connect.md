@@ -60,12 +60,26 @@ up WebFinger.  The SimpleID distribution includes a simple WebFinger server.  Se
 Alternatively, if you wish to run your own WebFinger server, you will need to point
 the relationship `http://openid.net/specs/connect/1.0/issuer` for each user to your SimpleID server.
 
-## Client configuration
+## Client configuration  {#client}
 
-### Registering clients with SimpleID
+Clients can be registered with SimpleID manually or through the OpenID Connect Dynamic Registration protocol (if this is enabled).
 
+### Registering a client manually  {#client-manual}
 
-### Configuring clients
+To register a client manually, create a client file for the client using the instructions set out in [Setting up clients](/docs/2/clients/).
 
-Clients that use WebFinger for discovery will automatically obtain the configuration information
-required to connect to SimpleID.  If a client does not use WebFinger, you will need
+The OpenID Connection configuration is specified under the `oauth` and `connect` objects in the client file.  At a minimum, at least one redirect URI must be specified in `oauth.redirect_uris`.
+
+```yaml
+oauth:
+    redirect_uris:
+        - https://example.com/oauth/redirect
+```
+
+See `example.client.yml` in the identities directory for further details of the configuration options.
+
+In addition to registering the client, the client itself needs to be configured to use SimpleID as the server.
+
+### OpenID Connect Dynamic Registration  {#client-dynamic}
+
+Alternatively, if the client is supports the [OpenID Connect Dynamic Registration](https://openid.net/specs/openid-connect-registration-1_0.html) and the `SimpleID\Protocols\Connect\ConnectClientRegistrationModule` module is enabled, then the client can register itself as part of the [discovery](#discovery) process.
