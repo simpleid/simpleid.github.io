@@ -55,12 +55,51 @@ up WebFinger.  The SimpleID distribution includes a simple WebFinger server.  Se
 Alternatively, if you wish to run your own WebFinger server, you will need to point
 the relationship `http://openid.net/specs/connect/1.0/issuer` for each user to your SimpleID server.
 
-## Client configuration
+## Client configuration  {#client}
 
-### Registering clients with SimpleID
+Clients can be registered with SimpleID manually or through the OpenID Connect Dynamic Registration protocol (if this is enabled).
 
+### Registering a client manually  {#client-manual}
 
-### Configuring clients
+To register a client manually, create a client file for the client using the instructions set out in [Setting up clients](/docs/2/clients/).
 
-Clients that use WebFinger for discovery will automatically obtain the configuration information
-required to connect to SimpleID.  If a client does not use WebFinger, you will need
+The OpenID Connection configuration is specified under the `oauth` and `connect` objects in the client file.  At a minimum, at least one redirect URI must be specified in `oauth.redirect_uris`.
+
+```yaml
+oauth:
+    redirect_uris:
+        - https://example.com/oauth/redirect
+```
+
+See `example.client.yml` in the identities directory for further details of the configuration options.
+
+In addition to registering the client, the client itself needs to be configured to use SimpleID as the server.
+
+### OpenID Connect Dynamic Registration  {#client-dynamic}
+
+Alternatively, if the client is supports the [OpenID Connect Dynamic Registration](https://openid.net/specs/openid-connect-registration-1_0.html) and the `SimpleID\Protocols\Connect\ConnectClientRegistrationModule` module is enabled, then the client can register itself as part of the [discovery](#discovery) process.
+
+## Endpoint configuration  {#endpoint}
+
+In addition to registering the client with SimpleID, each client also needs to be configured to use SimpleID as the OpenID Connect endpoints.  This configuration may occur automatically through OpenID Connect Discovery or you may need to configure the client manually.
+
+### OpenID Connect Discovery  {#discovery}
+
+If the client supports [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html), then it will be able to query the `/.well-known/openid-configuration` endpoint to retrieve the relevant configuration.
+
+Clients using WebFinger should support OpenID Connect Discovery.  Alternatively, the client may allow you to specify the domain name or the OpenID Connect Discovery endpoint.
+
+{% panel 'note' %}
+You need to make sure that the web server is correctly configured to point the `/.well-known/openid-configuration` to SimpleID.  See the [installation instructions](/docs/2/installing/#webserver) for further details.
+{% endpanel %}
+
+### Manual configuration
+
+To manually configure a client, specify the following endpoints, with the URL of the SimpleID installation prepended:
+
+| Endpoint               | URI                 |
+| ---------------------- | ------------------- |
+| Authorisation endpoint | `/oauth/auth`       |
+| Token endpoint         | `/oauth/token`      |
+| UserInfo endpoint      | `/connect/userinfo` |
+
