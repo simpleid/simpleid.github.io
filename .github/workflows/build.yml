@@ -7,6 +7,7 @@ on:
   pull_request:
     branches-ignore:
       - 'gh-pages'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,36 +29,23 @@ jobs:
       - name: Run Eleventy build
         run: npm run-script build
 
-      - name: Archive build output
-        run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
-
       - name: Upload build output
-        uses: actions/upload-artifact@v2
-        with:
-          name: gh-pages
-          path: artifact.tar
-          if-no-files-found: warn
+        uses: actions/upload-pages-artifact@v1
 
   deploy:
     name: Deploy
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     if: ${{ github.ref == 'refs/heads/master' && github.event_name == 'push' && github.actor != 'dependabot' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: gh-pages
-
-      - name: Extract build
-        run: |
-          mkdir _site
-          tar -xvf artifact.tar -C _site
-
-      - name: Deploy to Github pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: _site 
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
