@@ -83,3 +83,28 @@ In addition to registering the client, the client itself needs to be configured 
 ### OpenID Connect Dynamic Registration  {#client-dynamic}
 
 Alternatively, if the client is supports the [OpenID Connect Dynamic Registration](https://openid.net/specs/openid-connect-registration-1_0.html) and the `SimpleID\Protocols\Connect\ConnectClientRegistrationModule` module is enabled, then the client can register itself as part of the [discovery](#discovery) process.
+
+## Endpoint configuration  {#endpoint}
+
+In addition to registering the client with SimpleID, each client also needs to be configured to use SimpleID as the OpenID Connect endpoints.  This configuration may occur automatically through OpenID Connect Discovery or you may need to configure the client manually.
+
+### OpenID Connect Discovery  {#discovery}
+
+If the client supports [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html), then it will be able to query the `/.well-known/openid-configuration` endpoint to retrieve the relevant configuration.
+
+Clients using WebFinger should support OpenID Connect Discovery.  Alternatively, the client may allow you to specify the domain name or the OpenID Connect Discovery endpoint.
+
+{% panel 'note' %}
+You need to make sure that the web server is correctly configured to point the `/.well-known/openid-configuration` to SimpleID.  See the [installation instructions](/docs/2/installing/#webserver) for further details.
+{% endpanel %}
+
+### Manual configuration
+
+To manually configure a client, specify the following endpoints, with the URL of the SimpleID installation prepended:
+
+| Endpoint               | URI                 |
+| ---------------------- | ------------------- |
+| Authorisation endpoint | `/oauth/auth`       |
+| Token endpoint         | `/oauth/token`      |
+| UserInfo endpoint      | `/connect/userinfo` |
+
