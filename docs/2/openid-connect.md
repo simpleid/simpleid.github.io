@@ -16,11 +16,6 @@ The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.ht
 successor to the [OpenID protocol](/docs/2/openid/) for federated identity.  It is an extension
 of the OAuth protocol.
 
-OpenID Connect requires the following:
-
-- OAuth
-- [WebFinger](/docs/2/webfinger/)
-
 ## Modules
 
 The core OpenID Connect protocol is implemented in the `SimpleID\Protocols\Connect\ConnectModule` module.
