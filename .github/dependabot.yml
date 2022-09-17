@@ -6,3 +6,8 @@ updates:
     directory: '/'
     schedule:
       interval: weekly
+
+    ignore:
+      - dependency-name: string-strip-html
+        update-types:
+          - 'version-update:semver-major'
