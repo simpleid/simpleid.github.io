@@ -1,13 +1,13 @@
 const path = require('path');
 const sass = require('sass');
 const yaml = require('js-yaml');
+const html_entities = require('html-entities');
 
 const searchFilter = require("./_src/searchFilter");
 
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginSass = require('eleventy-sass');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginXml = require('eleventy-xml-plugin');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const pluginToc = require('eleventy-plugin-toc');
 
@@ -51,7 +51,11 @@ module.exports = function(conf) {
         return collection.filter((page) => page.data.doctree == key);
     })
     conf.addFilter('search_index', searchFilter);
+    conf.addFilter('xml_escape', (str) => {
+        return html_entities.encode(str, { level: 'xml' })
+    })
     conf.addLiquidFilter('getNewestCollectionItemDate', pluginRss.getNewestCollectionItemDate);
+    conf.addLiquidFilter('date_to_rfc822', pluginRss.dateToRfc822);
 
     // Short codes
     conf.addPairedShortcode('panel', (content, type) => {
@@ -75,7 +79,6 @@ ${content}
             loadPaths: [ '_sass' ]
         }
     });
-    conf.addPlugin(pluginXml);
     conf.addPlugin(pluginNavigation);
     conf.addPlugin(pluginToc);
 
