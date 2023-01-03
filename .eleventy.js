@@ -42,7 +42,8 @@ module.exports = function(conf) {
     );
 
     conf.setLiquidOptions({
-        dynamicPartials: true
+        dynamicPartials: true,
+        ownPropertyOnly: true  // Fix for CVE-2022-25948 for liquidjs < v10
     });
 
     // Filters
