@@ -82,18 +82,26 @@ identity="http://example.com/"
 ;
 ;    - md5
 ;    - sha1
+;    - if the hash module is enabled, pbkdf2 and any algorithms available from that
+;      module
 ;
-; 3. The salt that is used to hash the password.  If the salt is not an empty
-;    string, the password is appended by a colon character (:) then the salt
-;    before a hash is calculated, that is:
+; 3. Other parameters.
+;
+;    For md5 and sha1, this is an optional salt used to hash the password.  If
+;    used, the password is appended by a colon character (:) then the salt before
+;    a hash is calculated, that is:
 ;
 ;    hash(password:salt)
 ;
+;    For pbkdf2, it is the underlying pseudorandom function, the number of
+;    iterations and the salt, separated by colons.
+;
 ; Examples (these contain the same password):
-;    ea07017619350413c8a0d604cffdbe50                   ; MD5 hash and no salt
-;    81059d819510280a9a14c3ace78226159c70e3cf:sha1      ; SHA1 hash and no salt
-;    5ed9216011934c1fecfe978c00c7aaf2::ideally-a-large-number-of-random-characters-to-use-as-salt                   ; MD5 hash with salt
-;    0f491332ba8fc76f6157da05a62ff6e45a622990:sha1:ideally-a-large-number-of-random-characters-to-use-as-salt       ; SHA1 hash with salt
+;    1a79a4d60de6718e8e5b326e338ae533                   ; MD5 hash and no salt
+;    c3499c2729730a7f807efb8676a92dcb6f8a3f8f:sha1      ; SHA1 hash and no salt
+;    f5e6ea5714945786623ad3932ccc757d::ideally-a-large-number-of-random-characters-to-use-as-salt                   ; MD5 hash with salt
+;    9bce4e6997c6f2590717686bd62f99e33d5c6e1c:sha1:ideally-a-large-number-of-random-characters-to-use-as-salt       ; SHA1 hash with salt
+;    c6e1aa5914c6e4e55fae69093afbc02e180810dcc7d3da9f863aa54f3d76e2c3:pbkdf2:sha256:100000:ideally-a-large-number-of-random-characters-to-use-as-salt ; PBKDF2
 ;
 pass="cca6e030d81f0de52eb3f75c790ad056e57abaae:sha1:C2WG7PRM7PICMN5R"
 
