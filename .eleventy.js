@@ -27,6 +27,7 @@ module.exports = function(conf) {
 
     // Copy
     conf.addPassthroughCopy('CNAME');
+    conf.addPassthroughCopy('robots.txt');
     conf.addPassthroughCopy('assets/files');
     conf.addPassthroughCopy('assets/*.ico');
     conf.addPassthroughCopy('assets/*.png');
