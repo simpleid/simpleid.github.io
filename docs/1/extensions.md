@@ -35,9 +35,8 @@ To install an extension:
 
 2. To enable the extension, edit the <code>SIMPLEID_EXTENSIONS</code> configuration option in the <code>config.php</code> file and add the name of the extension.  Separate multiple extensions with commas.
 
-{% panel 'note' %}
-If the version of SimpleID you originally installed was before 0.5, the <code>SIMPLEID_EXTENSIONS</code> configuration option may not exist in your <code>config.inc</code> file.  You can add it in manually.
-{% endpanel %}
+> [!NOTE]
+> If the version of SimpleID you originally installed was before 0.5, the <code>SIMPLEID_EXTENSIONS</code> configuration option may not exist in your <code>config.inc</code> file.  You can add it in manually.
 
 ### Uninstalling an extension
 

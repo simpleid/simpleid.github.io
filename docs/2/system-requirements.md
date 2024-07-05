@@ -11,12 +11,11 @@ eleventyNavigation:
 
 ## Introduction
 
-{% panel 'note' %}
-Server requirements for SimpleID version 2.0 and later are significantly more stringent than version 1.0 and earlier.
-As a general rule, you will need to be hosting your own server to be able to run SimpleID 2.0 without significant workarounds.
-
-If you are upgrading from version 1.0, please make sure your server meets the new requirements.
-{% endpanel %}
+> [!NOTE]
+> Server requirements for SimpleID version 2.0 and later are significantly more stringent than version 1.0 and earlier.
+> As a general rule, you will need to be hosting your own server to be able to run SimpleID 2.0 without significant workarounds.
+> 
+> If you are upgrading from version 1.0, please make sure your server meets the new requirements.
 
 ## Minimum requirements
 

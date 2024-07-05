@@ -19,7 +19,7 @@ $blue-color-light: #ddeeff;
 $blue-color: color.adjust($blue-color-light, $lightness: -50%);
 
 $yellow-color-light: #ffffdd;
-$yellow-color: color.adjust($yellow-color-light, $lightness: -50%);
+$yellow-color: color.adjust($yellow-color-light, $lightness: -60%); // Need a bit more for contrast
 
 $red-color-light: #ffddee;
 $red-color: color.adjust($red-color-light, $lightness: -50%);

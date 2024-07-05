@@ -40,6 +40,7 @@ module.exports = function(conf) {
         md({ html: true })
             .use(require('markdown-it-attrs'))
             .use(require('markdown-it-anchor'), { tabIndex: false })
+            .use(require('markdown-it-github-alerts'))
     );
 
     conf.setLiquidOptions({
@@ -58,16 +59,6 @@ module.exports = function(conf) {
     })
     conf.addLiquidFilter('getNewestCollectionItemDate', pluginRss.getNewestCollectionItemDate);
     conf.addLiquidFilter('date_to_rfc822', pluginRss.dateToRfc822);
-
-    // Short codes
-    conf.addPairedShortcode('panel', (content, type) => {
-        return `<div class="${type}"><div class="note-icon"><svg viewBox="0 0 24 24"><use xlink:href="#svg-${type}"></use></svg></div>
-<div class="note-content">
-
-${content}
-
-</div></div>`;
-    });
 
     // Plugins
     conf.addPlugin(pluginSyntaxHighlight, {

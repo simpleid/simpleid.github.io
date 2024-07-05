@@ -15,9 +15,8 @@ The following are the requirements to run SimpleID.
 
 ## Server Requirements
 
-{% panel 'note' %}
-Server requirements for version 0.9 and later versions for SimpleID are significantly different from version 0.8 and earlier.  If you are upgrading, please make sure your server meets the new requirements.
-{% endpanel %}
+> [!NOTE]
+> Server requirements for version 0.9 and later versions for SimpleID are significantly different from version 0.8 and earlier.  If you are upgrading, please make sure your server meets the new requirements.
 
 To host a SimpleID installation requires:
 

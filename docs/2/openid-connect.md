@@ -89,9 +89,8 @@ If the client supports [OpenID Connect Discovery](https://openid.net/specs/openi
 
 Clients using WebFinger should support OpenID Connect Discovery.  Alternatively, the client may allow you to specify the domain name or the OpenID Connect Discovery endpoint.
 
-{% panel 'note' %}
-You need to make sure that the web server is correctly configured to point the `/.well-known/openid-configuration` to SimpleID.  See the [installation instructions](/docs/2/installing/#webserver) for further details.
-{% endpanel %}
+> [!NOTE]
+> You need to make sure that the web server is correctly configured to point the `/.well-known/openid-configuration` to SimpleID.  See the [installation instructions](/docs/2/installing/#webserver) for further details.
 
 ### Manual configuration
 
