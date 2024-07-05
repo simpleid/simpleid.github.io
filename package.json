@@ -30,6 +30,7 @@
     "js-yaml": "^4.1.0",
     "markdown-it-anchor": "^9.0.1",
     "markdown-it-attrs": "^4.1.6",
+    "markdown-it-github-alerts": "^0.3.0",
     "string-strip-html": "~8.5.0"
   }
 }
