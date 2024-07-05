@@ -47,9 +47,8 @@ openid:
 
 Under the OpenID specifications, an identifier can be a [URI](http://en.wikipedia.org/wiki/URI) or an [XRI](http://en.wikipedia.org/wiki/XRI).  In most cases, an identifier will be a [URL](http://en.wikipedia.org/wiki/URI), a form of a URI.  This section assumes that you will choose an identifier in the form of a URL.
 
-{% panel 'warning' %}
-It is very important that you follow the requirements in this section carefully.  A substantial number of problems encountered when using SimpleID is caused by not having the identifier specified correctly.
-{% endpanel %}
+> [!WARNING]
+> It is very important that you follow the requirements in this section carefully.  A substantial number of problems encountered when using SimpleID is caused by not having the identifier specified correctly.
 
 The identifier must satisfy the following requirements.
 
@@ -132,9 +131,8 @@ To do this, edit the web page returned by the identifier URL.  Copy and paste th
 
 Replace the URL http://www.example.com/simpleid/ with one which points to where you have moved the <code>www</code> directory of the SimpleID installation.
 
-{% panel 'warning' %}
-The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>canonical_base_path</code> configuration option in your <code>config.php</code>. Otherwise, your installation may not work for certain web sites.
-{% endpanel %}
+> [!WARNING]
+> The URL specified by these link tags <strong>must contain a trailing slash</strong>, unlike the <code>canonical_base_path</code> configuration option in your <code>config.php</code>. Otherwise, your installation may not work for certain web sites.
 
 #### Use the YADIS Protocol
 
@@ -180,10 +178,8 @@ To log in into an OpenID-enabled site:
 
     If you select the **Automatically send my information to this site for any future requests** check box, this page won't appear again the next time you log in to this site.
 
-{% panel 'note' %}
-Some sites require you to log into SimpleID *before* logging into the site.
-{% endpanel %}
+> [!NOTE]
+> Some sites require you to log into SimpleID *before* logging into the site.
 
-{% panel 'warning' %}
-You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.
-{% endpanel %}
+> [!WARNING]
+> You can only log in to each SimpleID installation as one user (and so one OpenID identifier) at any one time.

@@ -11,10 +11,9 @@ eleventyNavigation:
 ---
 
 
-{% panel 'note' %}
-If you are upgrading from SimpleID 1.0 or earlier, the [migration page](/docs/2/migrating/)
+> [!NOTE]
+> If you are upgrading from SimpleID 1.0 or earlier, the [migration page](/docs/2/migrating/)
 contains more information on the migration process.
-{% endpanel %}
 
 ## 1. Download SimpleID using composer
 
@@ -25,11 +24,10 @@ install SimpleID, use the following command on the web server:
 composer create-project simpleid/simpleid:2.0.x-dev simpleid --prefer-source --no-dev
 ```
 
-{% panel 'note' %}
-The `--prefer-source` option will result in a local clone of the SimpleID
+> [!NOTE]
+> The `--prefer-source` option will result in a local clone of the SimpleID
 git repository. This is useful it allows you to pull any changes made to the upstream
 repository.
-{% endpanel %}
 
 This will create a new directory `simpleid` containing all SimpleID files
 and directories, as well as all its dependencies.
