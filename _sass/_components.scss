@@ -453,38 +453,47 @@
   }
 }
 
-.doc .note, .doc .warning, .doc .error {
+.doc .markdown-alert {
   @include margin-y(2);
   @include padding-all(4);
 
   border-left: 4px solid var(--grey-color);
-  display: flex;
-  align-items: center;
-}
-.doc .note-icon {
-  flex: 0 0 auto;
-  width: 8 * $base-unit;
-  @include margin(right, 4);
-}
-.doc .note-content { 
-  flex: 1 1 auto;
-  @include lead(snug); 
-}
 
-.doc .note {
-  background-color: var(--blue-color-light);
-  border-left-color: var(--blue-color);
-  .note-icon { color: var(--blue-color); }
-}
-.doc .warning { 
-  background-color: var(--yellow-color-light);
-  border-left-color: var(--yellow-color);
-  .note-icon { color: var(--yellow-color); }
-}
-.doc .error {
-  background-color: var(--red-color-light);
-  border-left-color: var(--red-color);
-  .note-icon { color: var(--red-color); }
+  &>:first-child { margin-top: 0; }
+  &>:last-child { margin-bottom: 0; }
+
+  .markdown-alert-title {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    line-height: 1;
+
+    .octicon {
+      @include margin(right, 2);
+      display: inline-block;
+      overflow: visible !important;
+      vertical-align: bottom;
+      fill: currentColor;
+    }
+  }
+
+  &.markdown-alert-note, &.markdown-alert-tip {
+    background-color: var(--blue-color-light);
+    border-left-color: var(--blue-color);
+    .markdown-alert-title { color: var(--blue-color); }
+  }
+
+  &.markdown-alert-important, &.markdown-alert-warning {
+    background-color: var(--yellow-color-light);
+    border-left-color: var(--yellow-color);
+    .markdown-alert-title { color: var(--yellow-color); }
+  }
+
+  &.markdown-alert-caution {
+    background-color: var(--red-color-light);
+    border-left-color: var(--red-color);
+    .markdown-alert-title { color: var(--red-color); }
+  }
 }
 
 .doc .anchorjs-link {
