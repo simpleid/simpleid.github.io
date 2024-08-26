@@ -28,7 +28,7 @@
     "eleventy-sass": "^2.2.6",
     "html-entities": "^2.5.2",
     "js-yaml": "^4.1.0",
-    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-anchor": "^9.1.0",
     "markdown-it-attrs": "^4.2.0",
     "markdown-it-github-alerts": "^0.3.0",
     "string-strip-html": "~8.5.0"
