@@ -25,7 +25,7 @@ To host a SimpleID installation requires:
 (this is required for OpenID Connect or WebFinger support);
 2. a web server with [HTTPS](#https) support for that domain name;
 3. the ability for the web server to write files to the filesystem;
-4. [PHP](http://www.php.net/), version 7.3 or greater.  The following extensions must be enabled (they are enabled for most PHP installations):
+4. [PHP](http://www.php.net/), version 7.4 or greater.  The following extensions must be enabled (they are enabled for most PHP installations):
     - gmp;
     - pcre;
     - session;
