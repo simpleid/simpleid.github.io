@@ -111,7 +111,7 @@ openssl rsa -in private.pem -out public.pem -pubout
 
 The private and public keys, `private.pem` and `public.pem` have to be
 converted into separate JSON Web Key Sets.  One way of doing this is using
-the [`jwkstool`](https://github.com/kelvinmo/jwkstool) utility.
+the [jwkstool utility](https://github.com/kelvinmo/jwkstool).
 
 ```shell
 php jwkstool.phar add --generate-id=thumbnail -c private.json private.pem
