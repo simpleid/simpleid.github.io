@@ -110,12 +110,12 @@ openssl rsa -in private.pem -out public.pem -pubout
 ```
 
 The private and public keys, `private.pem` and `public.pem` have to be
-converted into separate JSON Web Key Sets. The easiest way of doing this
-is to use the `jwkstool` utility that is included with the SimpleJWT library.
+converted into separate JSON Web Key Sets.  One way of doing this is using
+the [jwkstool utility](https://github.com/kelvinmo/jwkstool).
 
 ```shell
-www/vendor/bin/jwkstool add -c private.json private.pem
-www/vendor/bin/jwkstool add -c public.json public.pem
+php jwkstool.phar add --generate-id=thumbnail -c private.json private.pem
+php jwkstool.phar add --generate-id=thumbnail -c public.json public.pem
 rm private.pem
 rm public.pem
 ```

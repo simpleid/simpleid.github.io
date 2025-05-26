@@ -25,7 +25,7 @@ To host a SimpleID installation requires:
 (this is required for OpenID Connect or WebFinger support);
 2. a web server with [HTTPS](#https) support for that domain name;
 3. the ability for the web server to write files to the filesystem;
-4. [PHP](http://www.php.net/), version 7.3 or greater.  The following extensions must be enabled (they are enabled for most PHP installations):
+4. [PHP](http://www.php.net/), version 8.0 or greater.  The following extensions must be enabled (they are enabled for most PHP installations):
     - gmp;
     - pcre;
     - session;
@@ -33,7 +33,8 @@ To host a SimpleID installation requires:
     - xmlreader;
     - openssl;
     - hash;
-    - sodium.
+    - sodium;
+    - intl.
 5. PHP needs to be configured so that <code>register_globals</code> and <code>short_open_tag</code> are switched **off**. See the [PHP manual](http://www.php.net/manual/en/security.globals.php) for further details.
 6. If you are using [PHP Suhosin](http://www.hardened-php.net/suhosin/index.html), or some other query filter, you may need to increase the [`suhosin.get.max_value_length`](http://www.hardened-php.net/suhosin/configuration.html#suhosin.get.max_value_length) configuration to at least 1024, as SimpleID uses very long query strings.
 
