@@ -60,6 +60,7 @@ module.exports = function(conf) {
     conf.addLiquidFilter('date_to_rfc822', pluginRss.dateToRfc822);
 
     // Extensions
+    conf.addTemplateFormats('scss');
     conf.addExtension('scss', {
         outputFileExtension: 'css',
         useLayouts: false,
@@ -69,9 +70,10 @@ module.exports = function(conf) {
 
             let result = sass.compileString(inputContent, {
                 loadPaths: [
-                    parsed.dir || ".",
-					this.config.dir.includes,
-                ]
+                    parsedPath.dir || ".",
+                    '_sass'
+                ],
+                style: 'compressed'
             });
 
             this.addDependencies(inputPath, result.loadedUrls);
