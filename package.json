@@ -20,7 +20,7 @@
   "homepage": "https://github.com/simpleid/simpleid.github.io#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "elasticlunr": "^0.9.5",
