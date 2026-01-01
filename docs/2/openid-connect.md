@@ -33,7 +33,7 @@ Additional modules related to the OpenID protocol are set out in the table below
 
 ## User configuration
 
-### User information
+### User information {#userinfo}
 
 One of the objectives of the OpenID Connect protocol is to supply information about the user to
 the requesting app or web site.  Therefore the protocol is only useful if you store your user
