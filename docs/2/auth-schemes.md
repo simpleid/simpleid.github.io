@@ -23,7 +23,9 @@ The following authentication schemes are enabled by default:
 - A cookie-based "remember me" authentication scheme (`SimpleID\Auth\RememberMeAuthSchemeModule`) 
 
 For additional [login verification](/docs/2/login-verification/), the OTP authentication scheme
-(`SimpleID\Auth\OTPAuthSchemeModule`) can be enabled on top of the default modules.
+(`SimpleID\Auth\OTPAuthSchemeModule`) and/or the WebAuthn
+authentication scheme
+(`SimpleID\Auth\WebAuthnAuthSchemeModule`) can be enabled on top of the default modules.
 
 The extensibility of SimpleID means an entirely different set of authentication schemes can
 be implemented.  One such scheme is the [CertAuthSchemeModule](#certauth) distributed with
