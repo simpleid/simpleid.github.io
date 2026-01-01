@@ -20,7 +20,7 @@ jobs:
       - name: Set up nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: '.nvmrc'
           cache: npm
 
       - name: Install dependencies
@@ -28,6 +28,8 @@ jobs:
 
       - name: Run Eleventy build
         run: npm run-script build
+        env:
+          NODE_OPTIONS: "--experimental-require-module"
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3

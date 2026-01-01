@@ -6,7 +6,6 @@ const html_entities = require('html-entities');
 const searchFilter = require("./_src/searchFilter");
 
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginSass = require('eleventy-sass');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const pluginToc = require('eleventy-plugin-toc');
@@ -60,16 +59,36 @@ module.exports = function(conf) {
     conf.addLiquidFilter('getNewestCollectionItemDate', pluginRss.getNewestCollectionItemDate);
     conf.addLiquidFilter('date_to_rfc822', pluginRss.dateToRfc822);
 
+    // Extensions
+    conf.addTemplateFormats('scss');
+    conf.addExtension('scss', {
+        outputFileExtension: 'css',
+        useLayouts: false,
+        compile: async function(inputContent, inputPath) {
+            let parsedPath = path.parse(inputPath);
+            if (parsedPath.name.startsWith('_')) return;
+
+            let result = sass.compileString(inputContent, {
+                loadPaths: [
+                    parsedPath.dir || ".",
+                    '_sass'
+                ],
+                style: 'compressed'
+            });
+
+            this.addDependencies(inputPath, result.loadedUrls);
+
+            return async (data) => {
+                return result.css;
+            };
+        }
+    });
+
     // Plugins
     conf.addPlugin(pluginSyntaxHighlight, {
         preAttributes: {
             tabindex: 0,
             'data-highlight': 'true'
-        }
-    });
-    conf.addPlugin(pluginSass, {
-        sass: {
-            loadPaths: [ '_sass' ]
         }
     });
     conf.addPlugin(pluginNavigation);

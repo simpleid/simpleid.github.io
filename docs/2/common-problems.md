@@ -23,7 +23,7 @@ If login verification is enabled and you have lost the device that generates the
 
 ```yaml
 otp: 
-    type: recovery
+    recovery: true
 ```
 
 2. You will now be able to [log into SimpleID](/docs/2/login) without the verification code.
