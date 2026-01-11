@@ -46,6 +46,7 @@ For WebAuthn-based authentication, you will need a physical security key such as
 3. From the **My Profile** page, go to the **Login Verification** box, then click **Enable**.
 4. Enter the key shown on the page into your device.  If your device supports scanning QR codes, you can also scan the QR code shown.
 5. Enter the 6 digit verification code shown on your device and click **Verify**.
+6. If shown, save the [recovery codes](#recovery-codes) in a same place.
 
 Login verification is then enabled.  Every time you attempt to log in using this account, you will be prompted to enter the 6 digit verification code shown on your device.
 
@@ -57,6 +58,7 @@ Login verification is then enabled.  Every time you attempt to log in using this
 3. From the **My Profile** page, go to the **Passkeys and security keys** box, then click **Add**.
 4. Enter a user-friendly name for the key, then click **Add security key**.
 5. Follow the instructions on your device and insert your security key.
+6. If shown, save the [recovery codes](#recovery-codes) in a same place.
 
 Login verification is then enabled.  Every time you attempt to log in using this account, you will be prompted to insert the security key (and enter a PIN if required).
 
@@ -65,6 +67,16 @@ Login verification is then enabled.  Every time you attempt to log in using this
 1. [Log in to SimpleID](/docs/2/login)
 2. From the **My Profile** page, go to the **Login Verification** box, then click **Disable**.
 
-## How to recover
+## Recovery codes {#recovery-codes}
 
-If login verification is enabled and you have lost the device that generates the verification code, you can [recover your account](/docs/2/common-problems#otp).
+If you are enabling login verification for the first time, a list of recovery codes will be shown at the conclusion of that process.  These recovery codes can be used to recover your account if you have lost the device that generates the verification code.
+
+Make sure you copy and save the recovery codes in a safe place.  They are only shown once.
+
+To use a recovery code:
+
+1. When prompted to enter a verification code, click **Use a recovery code**.
+2. Enter one of the recovery codes you have saved, and click **Verify**.
+3. If successful, you will be logged in normally.  Once a recovery code has been used it cannot be used again.
+
+If you have lost your recovery codes or have used all of them up, you can regenerate the recovery codes by going to the **Dashboard**, then the **Recovery codes** box, then click **Reset**.
