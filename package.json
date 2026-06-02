@@ -28,7 +28,7 @@
     "html-entities": "^2.6.0",
     "js-yaml": "^4.2.0",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "^4.5.0",
+    "markdown-it-attrs": "^5.0.0",
     "markdown-it-github-alerts": "~0.3.2",
     "sass": "^1.100.0",
     "string-strip-html": "~8.5.0"
