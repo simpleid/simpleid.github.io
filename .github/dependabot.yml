@@ -8,6 +8,11 @@ updates:
       interval: weekly
 
     ignore:
+      - dpeendency-name: *
+        update-types:
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
+          
       - dependency-name: string-strip-html
         update-types:
           - 'version-update:semver-major'
