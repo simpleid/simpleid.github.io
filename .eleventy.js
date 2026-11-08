@@ -40,6 +40,7 @@ module.exports = function(conf) {
             .use(require('markdown-it-attrs'))
             .use(require('markdown-it-anchor'), { tabIndex: false })
             .use(require('markdown-it-github-alerts'))
+            .use(require('markdown-it-mermaid-plugin'))
     );
 
     conf.setLiquidOptions({
