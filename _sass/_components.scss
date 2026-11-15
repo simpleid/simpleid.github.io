@@ -116,6 +116,7 @@
  */
 .doc-header {
   @include padding-y(4);
+  background-color: var(--background-color);
   border-bottom: 1px solid var(--grey-color-light);
   position: sticky;
   top: 0;
